@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  animation: transform 3s ease-in-out 1s infinite alternate both;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.box-crimson {
+  background: crimson;
+  margin: 0;
+}
+
+.box-steelblue {
+  background: steelblue;
+  margin: 0;
+}
+
+.box-green {
+  background: #46ff36;
+  margin: 0;
+}
+
+.box-orange {
+  background: #ffaf24;
+  margin: 0;
+}
+
+@keyframes transform {
+  to {
+    /* transform: translate(50vw, 50vh) scaleX(5) skew(60deg); */
+    transform: translate(50vw, 50vh) scaleX(5) skewY(60deg);
+  }
+}

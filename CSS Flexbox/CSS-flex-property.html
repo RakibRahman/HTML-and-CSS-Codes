@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Property</title>
+    <style>
+        html,
+        body {
+            background-color: #addeff;
+            margin: 10px;
+
+        }
+
+        .nav-list>div {
+            padding: 10px;
+            font-size: 2rem;
+            text-align: center;
+            color: whitesmoke;
+
+        }
+
+        .nav-list> :nth-child(1) {
+            background-color: indianred;
+        }
+
+        .nav-list> :nth-child(2) {
+            background-color: rgb(133, 205, 92);
+        }
+
+        .nav-list> :nth-child(3) {
+            background-color: indianred;
+        }
+
+        .nav-list> :nth-child(4) {
+            background-color: rgb(133, 205, 92);
+        }
+
+        /* ===========
+          Flexbox
+          ============= */
+        .nav-list {
+            border: 0.5rem goldenrod solid;
+            display: flex;
+        }
+
+        .home {
+            /* flex: 0 3 200px; */
+            /*shorthand of f-grow,f-shrink and f-basis*/
+            flex-basis: 200px;
+            /* initial length of a flexible item.*/
+            flex-grow: 0;
+            /*specifies how much the item will grow relative to the rest of the flexible items inside the same container.*/
+            flex-shrink: 3; 
+         /* specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+         /*higher the value higher the shrink/grow speed*/
+        }
+        .cnt{
+            /* flex: 10 1 200px; */
+            flex-grow: 10;
+            flex-shrink: 1;
+            flex-basis: 200px;
+         
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-list">
+        <div class="home">Home</div>
+        <!-- <div class="abt">About</div> -->
+        <div class="cnt">Contact</div>
+
+    </nav>
+</body>
+
+</html>

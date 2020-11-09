@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Alignment V2</title>
+    <style>
+        body{
+            background-color: coral;
+        }
+        header{
+            border: 1px solid rosybrown;
+            width: 48%;
+            margin: 20px 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* equal padding-top and padding-bottom to make element vertically centered */
+
+        }
+        span h2{
+            border: 1px solid rebeccapurple;
+            margin: 20px 0;
+            width: 48%;
+            padding:30px;
+            height: 30px;
+            line-height: 30px;
+            white-space: nowrap;
+            /*equal line-height and the height will center the text. */
+        }
+        table {
+  background: white;
+  width: 240px;
+  border-collapse: separate;
+  margin: 20px;
+  height: 250px; 
+   /* default is vertical-align: middle; */
+}
+table td{
+    color: whitesmoke;
+    background-color: black;
+    padding: 20px;
+  border: 10px solid white;
+}
+    .center-table{
+        background-color: black;
+        width: 240px;
+        height: 250px;
+        margin: 20px;
+        display: table;
+        
+    }
+    .center-table p{
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        color: white;
+  padding: 20px;
+  border: 10px solid white;
+    }
+    .ghost-center{
+        
+  background: white;
+  width: 240px;
+  height: 200px;
+  margin: 20px;
+  color: rgb(17, 245, 131);
+  resize: vertical;
+  overflow: auto;
+  padding: 20px;
+        position: relative;
+    }
+    .ghost-center::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1%;
+  vertical-align: middle;
+}
+.ghost-center p {
+  display: inline-block;
+  vertical-align: middle;
+  width: 190px;
+  margin: 0;
+  padding: 20px;
+  background: black;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            welcome to the world of CSS!
+        </h1>
+    </header>
+    <span>
+        <h2>Never stop practicing!</h2>
+    </span>
+    <br><hr>
+    <table>
+        <tr>
+          <td>
+            I'm vertically centered multiple lines of text in a real table cell.
+          </td>
+        </tr>
+      </table>
+      
+      <div class="center-table">
+        <p>I'm vertically centered multiple lines of text in a CSS-created table layout.</p>
+      </div>
+      <div class="ghost-center">
+        <p>I'm vertically centered multiple lines of text in a container. Centered with a ghost pseudo element</p>
+      </div>
+</body>
+</html>

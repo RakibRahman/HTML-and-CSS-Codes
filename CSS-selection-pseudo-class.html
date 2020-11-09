@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ::selection Pseudo Element</title>
+    <style>
+        h1::selection,h3::selection{
+            color: whitesmoke;
+            background-color: rgb(19, 18, 18);
+            text-shadow: -3px 2px 1px rgb(0, 195, 255);
+        }
+        .p1::selection{
+            background-color: blueviolet;
+            color: whitesmoke;
+        }
+         .p2::selection{
+            background-color: rgb(43, 226, 119);
+            color: rgb(160, 6, 6);
+        }
+        /*:::selection only supports the color, background, background-color, cursor, outline and text-shadow properties.  */
+    </style>
+</head>
+<body>
+    <h1>The ::selection fragment pseudo-element</h1>
+    <h3>The ::selection selector matches the portion of an element that is selected by a user.</h3>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fuga voluptates iure fugiat, hic excepturi quisquam dolor accusantium cum tempora numquam ut? Suscipit doloremque necessitatibus repudiandae quos, magni deleniti ullam!</p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fuga voluptates iure fugiat, hic
+        excepturi quisquam dolor accusantium cum tempora numquam ut? Suscipit doloremque necessitatibus repudiandae quos,
+        magni deleniti ullam!</p>
+</body>
+</html>

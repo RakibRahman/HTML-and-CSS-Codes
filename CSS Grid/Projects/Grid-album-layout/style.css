@@ -1,0 +1,53 @@
+/* ========
+Basic Styles
+=========== */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #22d1ee;
+  font-size: 14px;
+  font-weight: 500;
+}
+:root {
+  --p-color: rgb(9, 230, 38);
+  --h2-color: white;
+  --bg1: black;
+  --bg2: #3d5bf149;
+}
+
+.album img {
+ width: 100%;
+
+}
+
+.album {
+  background: var(--bg2);
+  padding: 20px;
+}
+.album h2 {
+  color: var(--h2-color);
+}
+.album p {
+  color: var(--p-color);
+}
+
+/* ===========
+Grid
+============*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.album{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}

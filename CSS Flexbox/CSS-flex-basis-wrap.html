@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis & Wrap</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        .box {
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .box1 {
+            background: red;
+        }
+
+        .box2 {
+            background: green;
+        }
+
+        .box3 {
+            background: yellow;
+        }
+
+        .box4 {
+            background: royalblue;
+        }
+
+        .box5 {
+            background: cyan;
+        }
+
+        .box6 {
+            background: violet;
+        }
+        .box1 img{
+            width: 16px;
+            height: 16px;
+            /* object-fit: cover; */
+        }
+        .container {
+            display: flex;
+           flex-wrap:wrap;
+           flex-direction: column;
+           height: 100vh;
+           border:11px solid black;
+
+        }
+        .box{
+            flex-basis: 250px;
+            flex-grow: 1;
+        }
+        .box3{
+            color: black;
+            flex-grow: 5;
+        }
+        .box4{
+            flex-basis: 100px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">One <img src="img/lock.png" alt=""></div>
+        <div class="box box2">Two <img src="img/user.png" alt=""></div>
+        <div class="box box3">Three <img src="img/icons8-shirt-20.png" alt=""></div>
+        <div class="box box4">Four <img src="img/icons8-registration-20.png" alt=""></div>
+        <div class="box box5">Five <img src="img/icons8-paypal-20.png" alt=""></div>
+        <div class="box box6">Six <img src="img/icons8-home-20.png" alt=""></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        body {
+			font: 100% arial, helvetica, sans-serif;
+		}
+
+		fieldset {
+			padding: 0 1em 1em 1em;
+            border:2px solid blueviolet;
+		}
+
+		legend {
+			padding: 1em;
+		}
+        /* label{
+            float: left;
+            clear: left;
+            width: 90px;
+        } */
+        textarea:focus{
+            background-color: chartreuse;
+        }
+        select:focus{
+            background-color: tomato;
+            color: whitesmoke;
+        }
+       /* ============== */
+       form.exam{
+           display: table;
+       }
+       div.exam{
+           display: table-row;
+       }
+       div label,input{
+           display: table-cell;
+           margin-bottom: 0.625rem;
+       }
+       label {
+    padding-right:  0.625rem;
+}
+/* ========= */
+.day{
+    padding-left: 5rem;
+
+}
+.day select,button{
+    margin-left: 5rem;
+
+}
+:required{
+    background-color: rgba(0, 128, 128, 0.39);
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="top">Basic Form</h1>
+    <form action="contactus.php" method="post">
+
+        <p>Name:</p>
+        <p><input type="text" name="name" value="Your name"></p>
+    
+        <p>Address:</p>
+        <p><input name="location"></p>
+        <!-- remember: 'type="text"' isn't actually necessary -->
+    
+        <p>Comments: </p>
+        <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+    
+        <p>Are you:</p>
+        <p><input type="radio" name="areyou" value="male"> Male</p>
+        <p><input type="radio" name="areyou" value="female"> Female</p>
+        <p><input type="radio" name="areyou" value="other">Other</p>
+
+        <p>how would you rate our service?</p>
+        <p><input type="checkbox" name="" id="">Good</p>
+        <p><input type="checkbox" name="" id="">Average</p>
+        <p><input type="checkbox" name="" id="">Bad</p>
+        <p><input type="checkbox" name="" id="">Worse</p>
+
+        <p><input type="submit"></p>
+    
+    </form>
+<hr>
+<h1>Label</h1>
+
+<form action="">
+    <label for="username">Username:</label>
+			<input name="username" id="username" value="Some Text"><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="Password">
+			
+</form>
+<hr>
+<h1>Field sets and legends</h1>
+<form action="">
+   <fieldset>
+    <fieldset>
+        <legend>Name</legend>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="yourName"><br>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="yourName">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Upload NID</legend>
+        <label for="uploadfile">File name: </label>
+        <input type="file" name="uploadfile" id="uploadfile">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Address</legend>
+        <label for="address">Area:<textarea name="address"></textarea></label>
+      
+        <label for="pcode">Postal code:  <input type="text" name="postcode"></label>
+       
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>City</legend>
+        <select name="country" id="">
+            <optgroup label="Bangladesh">
+                <option value="dak">Dhaka</option>
+                <option value="syl">Sylhet</option>
+                <option value="chitt">Chittagong</option>
+            </optgroup>
+            <optgroup label="England">
+                <option value="ldn">London</option>
+                <option value="Lvrpl">Liverpool</option>
+                <option value="newct">Newcastle</option>
+            </optgroup>
+            <optgroup label="Africa">
+                <option value="gam">Gambia</option>
+                <option value="mad">Madagascar</option>
+                <option value="nam">Namibia</option>
+            </optgroup>
+        </select>
+
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit!">
+   </fieldset>
+</form>
+<hr>
+<form action="" class="exam">
+    <div class="exam">
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" required  autofocus>
+    </div>
+    <div class="exam">
+        <label for="ID">Your ID:</label>
+        <input type="text" id="ID" name="ID" required>
+    </div>
+    <div class="exam">
+        <label for="semester">Current Semester:</label>
+        <p><input type="checkbox" value="Spring">Spring</p>
+        <p><input type="checkbox" value="Summer">Summer</p>
+        <p><input type="checkbox" value="Fall">Fall</p>
+    </div>
+    <div class="exam">
+        <label for="message">Your Message:</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </div>
+    <div class="exam">
+        <input type="submit" value="Submit!">
+      </div>
+</form>
+<hr>
+<hr>
+<!-- <input type="date" name="birthday">
+<input type="time" name="game-time">
+<input type="email" name="email-address">
+<input type="url" name="website">
+<input type="number" name="cost">
+<input type="tel" name="phone-number"> -->
+<div class="day">
+    <p>Chose a day:</p>
+    <select name="day" multiple>
+       
+        <option value="Friday" selected>Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+      <br>
+      <button name="submit">
+        <strong>Send Us</strong> a Message
+      </button>
+      
+</div>
+  <a href="#top">Back to top</a>
+</body>
+</html>

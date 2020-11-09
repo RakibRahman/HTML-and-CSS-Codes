@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child pseudo class</title>
+    <style>
+        div p:nth-of-type(3n){
+            color: blueviolet;
+        }
+        article p:nth-last-of-type(2n+1){
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>:nth-of-type(n) & :nth-last-of-type(n)</h1>
+    <h3>nth-of-type</h3>
+    <h4>3n</h4>
+    <div>
+        <h1>...</h1>
+        <p>...</p>
+        <p>...</p>
+        <p>This paragraph will be selected</p>
+        <h2>...</h2>
+        <p>...</p>
+        <p>...</p>
+        <p>This paragraph will be selected</p>
+    </div>
+
+    <hr>
+    <h3>nth-last-of-type</h3>
+    <h4>(2n+1)</h4>
+    <article>
+        <h1>...</h1>
+        <p>...</p>
+        <p>This paragraph will be selected</p>
+        <p>...</p>
+        <h2>...</h2>
+        <p>This paragraph will be selected</p>
+        <p>...</p>
+        <p>This paragraph will be selected</p>
+    </article>
+
+</body>
+</html>

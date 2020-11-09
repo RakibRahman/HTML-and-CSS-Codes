@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS List Item Styling</title>
+    <style>
+      #list1 {
+        list-style-type: upper-roman;
+        /*other types:upper/lower-roman,latin,greek,alpha,armenian,georgian and decimal*/
+        color: brown;
+      }
+      .list1 {
+        list-style-type: square; /*other types: circle,disc*/
+        color: blueviolet;
+        list-style-position: inside;
+      }
+      .list2 li {
+        /* list-style-image: repeating-linear-gradient(red, yellow); */
+        /* display: inline-block; => display items horizontally*/
+        margin: 0;
+        padding-left: 20px;
+        list-style: none;
+        background: url(img/arrow.png) 0 50% no-repeat; /*image, vertical & horizontal repeat value,repeat value  */
+        background-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="list1">
+      <li>
+        Mango
+        <ul class="list1">
+          <li>Kesar mango</li>
+          <li>Alphonso Mango</li>
+        </ul>
+      </li>
+      <li>
+        Apple
+        <ul class="list1">
+          <li>Red Apple</li>
+          <li>Green Apple</li>
+        </ul>
+      </li>
+      <li>
+        Pear
+        <ul class="list1">
+          <li>Red Anjou</li>
+          <li>Green Anjou</li>
+        </ul>
+      </li>
+    </ul>
+    <hr />
+    <ul>
+      <li>Sylhet</li>
+      <ul>
+        <li>
+          Moulvibazar
+          <ul class="list2">
+            <li>Rajnagar</li>
+            <li>Sreemangal</li>
+          </ul>
+        </li>
+        <li>
+          Habiganj
+          <ul class="list2">
+            <li>Chunarughat</li>
+            <li>Habiganj Sadar</li>
+          </ul>
+        </li>
+      </ul>
+      <li>
+        Dhaka
+        <ul>
+          <li>
+            Gazipur
+            <ul class="list2">
+              <li>Kaliganj</li>
+              <li>Sreepur</li>
+            </ul>
+          </li>
+          <li>
+            Tangail
+            <ul class="list2">
+              <li>Mirzapur</li>
+              <li>Nagarpur</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The box-sizing property</title>
+  <style>
+    /* 
+    *{
+      box-sizing: border-box; [applies box-sizing to all elements]
+    } 
+    */
+    .div1 {
+      border: 3px dashed red;
+      width: 300px;
+      height: 110px;
+      padding: 23px;
+    }
+
+    .div2 {
+      border: 3px dashed rgb(0, 255, 55);
+      width: 300px;
+      height: 110px;
+
+    }
+
+    hr {
+      height: 10px;
+      width: 120%;
+      background-color: red;
+    }
+
+    h1 {
+      text-align: center;
+      color: royalblue;
+    }
+
+    .div3 {
+      border: 3px dashed red;
+      width: 300px;
+      height: 110px;
+      box-sizing: border-box;
+      /*To include padding and border in an element's total width and height.*/
+    }
+
+    .div4 {
+      border: 3px dashed rgb(0, 255, 55);
+      width: 300px;
+      height: 110px;
+      padding: 23px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      border: 5px solid black;
+    }
+
+    .box {
+      width: 50%;
+      border: 5px solid red;
+      float: left;
+    }
+
+    .box2 {
+      box-sizing: border-box;
+      width: 50%;
+      border: 5px solid red;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <p> box-sizing: Defines how the width and height of an element are calculated: should they include padding and
+    borders, or not</p>
+  <h1>Without Box-Sizing</h1>
+  <div class="div1">This Div is Bigger (W:300px and H:110px & Padding:23px)</div>
+  <br>
+  <div class="div2">This Div is Smaller (W:300px and H:110px) </div>
+  <hr>
+  <h1>With Box-Sizing</h1>
+  <div class="div3">Both divs are the same size now!</div>
+  <br>
+  <div class="div4">Miracle of box-sizing!</div>
+  <hr>
+  <h1>Without Box-Sizing</h1>
+  <div class="container">
+    <div class="box">This div occupies the left half</div>
+    <div class="box">This div occupies the right half</div>
+    <div style="clear: both;"></div>
+  </div>
+  <br>
+  <h1>With Box-Sizing</h1>
+  <div class="container">
+    <div class="box2">This div occupies the left half</div>
+    <div class="box2">This div occupies the right half</div>
+    <div style="clear: both;"></div>
+    <!--he clear property specifies on which sides of an element floating elements are not allowed to float.-->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #main-container{
+            background: chocolate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .flex-container{
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .flex-container .wrapper{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 40px;
+        }
+        .flex-container .wrapper .imgbx{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: 0.5s ease-in-out;
+          z-index: 2;
+        }
+        .flex-container .wrapper .imgbx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           
+        }
+        .flex-container .wrapper:hover .imgbx{
+            
+            transform:translate(-35px,-35px);
+        }
+
+        .flex-container .wrapper .text{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: 0.5s ease-in-out;
+            background: cadetblue;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .flex-container .wrapper:hover .text{
+            
+            transform:translate(35px,35px);
+        }
+        .flex-container .text h2{
+            text-align: center;
+            line-height: 20px;
+            font-size: 20px;
+            color: whitesmoke;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .flex-container .text h2 span{
+            color: tomato;
+            letter-spacing: 2px;
+        }
+        @media (max-width: 768px){
+            .flex-container .wrapper:hover .imgbx{
+            
+            transform:translate(0,-35px);
+        }
+        .flex-container .wrapper:hover .text{
+            transform: translate(0,35px);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div class="flex-container">
+            <div class="wrapper">
+                <div class="imgbx">
+                    <img src="img/shay-howe.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>
+                        Shay Howe <br>
+                        <span>CEO</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="imgbx">
+                    <img src="img/zakir.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>
+                       Zakir Hossain <br>
+                        <span>Full Stack Developer</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="imgbx">
+                    <img src="img/shuvo.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>
+                        Ashraful Islam <br>
+                        <span>Creative Designer</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

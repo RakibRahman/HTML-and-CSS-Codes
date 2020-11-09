@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position & Hover</title>
+    <style>
+      .parent {
+        position: relative;
+        width: 50vw;
+        height: 50vh;
+      }
+      .hiddenElement {
+        display: none;
+        position: absolute;
+      }
+      .hoverElement {
+        position: absolute;
+      }
+      .hoverElement:hover {
+        display: none;
+      }
+      .hoverElement:hover ~ .hiddenElement {
+        /* ~ (tilde) Selector*/
+        display: block;
+      }
+      .txt {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+      }
+      .hidden {
+        display: none;
+        position: absolute;
+      }
+      .visible {
+        position: absolute;
+      }
+      .visible:hover {
+        display: none;
+      }
+      .visible:hover ~ .hidden {
+        display: block;
+      }
+      /* similar class's can be merged to produce clean code */
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="hoverElement">Hover to reveal hidden pic!</div>
+      <div class="hiddenElement"><img src="img/birds.png" alt="" /></div>
+    </div>
+    <br />
+    <div class="parent">
+      <div class="visible">
+        <h2 class="txt">Hover Over Me</h2>
+        <img src="img/note.png" width="300" height="300" alt="notebook" />
+      </div>
+      <div class="hidden">
+        <img src="img/pencil.png" width="300" height="300" alt="pencil" />
+      </div>
+    </div>
+  </body>
+</html>

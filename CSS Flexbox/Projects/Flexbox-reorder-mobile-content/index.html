@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Mobile Reorder with Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-reorder.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="intro">
+            <h1>Welcome To Tree Site!</h1>
+        </header>
+        <nav class="nav-bar">
+            <a href="#" class="toggleNav">☰ Menu</a>
+            <ul class="open">
+                <li class="main"><a  href="#">Home</a></li>
+                <li class="main"><a href="">About</a></li>
+                <li class="main"><a href="">Faculty</a></li>
+                <li class="main"><a href="">F.A.Q</a></li>
+                <li class="main"><a href="">Register</a></li>
+                <li class="main"><a href="">Log In</a></li>
+                <li class="social"><a><img src="img/quora-white.svg" alt=""></a></li>
+                <li class="social"><a><img src="img/reddit-white.svg" alt=""></a></li>
+                <li class="social"><a><img src="img/rss-white.svg" alt=""></a></li>
+                <li class="social"><a><img src="img/world-white.svg" alt=""></a></li>
+            </ul>
+        </nav>
+        <section class="main-img">
+            <img src="img/tree.jpeg" alt="">
+        </section>
+        <section class="summary">
+            <p>Tree Plantation is one of the best activities for making the planet greener, livelier, and healthier</p><br>
+            <p>Planted trees help our biodiversity, ensure the supply of oxygen for the next generations, and provide us with various resources.</p>
+        </section>
+        <section class="sign-form">
+            <form action="">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <input type="submit" value="Subscribe">
+            </form>
+        </section>
+        <footer>
+            <p>&copy; Rakib Talukder</p>
+          </footer>
+
+          <!-- Script -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+          <script>
+            
+            $(function() {
+              $('.toggleNav').on('click',function() {
+                $('.nav-bar ul').toggleClass('open');
+              });
+            });
+        
+          </script>
+    </div>
+</body>
+</html>

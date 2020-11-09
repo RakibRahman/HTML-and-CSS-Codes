@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positions</title>
+  <link rel="stylesheet" href="css-positioning.css">
+</head>
+<body>
+  <h2>Relative Position</h2>
+  <p>The relative value for the position property allows elements to appear within the normal flow a page, leaving space for an element as intended while not allowing other elements to flow around it.</p>
+  <div>
+    <code>&#60;div&#62;</code>
+  </div>
+
+  <div class="offset">
+    <code>&#60;div class= <br> "offset"&#62;
+      <br> left: 20px; <br> top: 20px;</code>
+  </div>
+
+  <div>
+    <code>&#60;div&#62;</code>
+  </div>
+  <hr>
+  <h2>Absolute Position</h2>
+  <p>
+      The absolute value for the position property is different from the relative value in that an element with a position value of absolute will not appear within the normal flow of a document, and the original space and position of the absolutely positioned element will not be preserved. 
+  </p>
+  <section>
+
+    <code>&#60;section&#62; <br> position: relative;</code>
+    <div class="offset2">
+      <code>&#60;div class="offset"&#62; <br> position: absolute;  <br> right: 20px; <br> top: 20px;</code>
+    </div>
+  </section>
+  <p> Absolutely positioned elements are moved in relation to their closest relatively positioned parent element. </p>
+</body>
+</html>

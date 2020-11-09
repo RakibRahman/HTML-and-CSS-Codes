@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <link rel="stylesheet" href="basic-style.css">
+    <style>
+        body{
+            background: black;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 500px 1fr;
+            grid-template-rows: 150px 150px 100px;
+            grid-template-areas:
+            "sidebar1 content sidebar2"
+            "sidebar1 content sidebar2"
+            "footer footer footer"
+            ;
+            grid-gap: 20px;
+        }
+        .item1{
+            grid-area: sidebar1;
+        }
+        .item2{
+            grid-area: content;
+        }
+        .item3{
+            grid-area: sidebar2;
+
+        }
+        .footer{
+            grid-area: footer;
+        }
+        /* =======
+        wrapper
+        =========== */
+        .wrapper p,.wrapper h3, .wrapper ul{
+          color: slateblue;
+          font-size: 18px;
+        }
+        .wrapper .item{
+          background: whitesmoke;
+        }
+        .head ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .head ul li{
+          display: inline-block;
+          margin-right: 20px;
+        }
+        .wrapper{
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: repeat(4,250px);
+          grid-template-areas: 
+          "head head head head"
+          "side side main main"
+          "ads ads main main"
+          "footer footer footer footer";
+        }
+        .head{
+          grid-area: head;
+        }
+        .side{
+          grid-area: side;
+        }
+        .main{
+          grid-area: main;
+        }
+        .ads{
+          grid-area: ads;
+          justify-content: start;
+        }
+  
+        .footer2{
+          grid-area: footer;
+        }
+        .wrapper > div>*{
+          padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">
+          <p>I'm Sidebar #1</p>
+        </div>
+        <div class="item item2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+          <p>Lorem ipsum d</p>
+        </div>
+        <div class="item item3">
+          <p>I'm Sidebar #2</p>
+        </div>
+        <div class="item footer">
+          <p>I'm the footer</p>
+        </div>
+      </div>
+      <hr>
+      <div class="wrapper">
+        <header class="head item">
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Faq</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </header>
+        <div class="side item">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corrupti nisi doloribus officia reprehenderit, temporibus quos sed iure. Assumenda odio expedita necessitatibus facilis in eius ea harum ipsum quam pain side?</p>
+        </div>
+
+        <div class="main item">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea ad, ab libero, dolor placeat omnis accusantium sunt qui sint rem minus dicta, magnam voluptatum modi quod quasi tenetur sequi quia!
+            Quos maxime beatae quam sapiente magni sint enim dolore excepturi quo ad voluptatibus tenetur dignissimos quas at repellat minus, voluptatem omnis cum modi natus delectus! Voluptatum neque minima quam voluptate.
+            Commodi neque velit dolore tempora, quaerat quo eaque delectus eum, recusandae officiis dolorem id sunt molestiae possimus ex harum repellendus! Sint enim, odit aperiam quam velit vel porro ullam? main.
+        </p>
+        </div>
+        <div class="ads item">
+          <h3>CSS Grid Rocks</h3>
+        </div>
+        <div class="footer2 item">
+          <footer>
+           <h3> ©Rakib Talukder 2020</h3>
+          </footer>
+        </div>
+      </div>
+</body>
+</html>

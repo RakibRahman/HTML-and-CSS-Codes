@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Bubble Arrow</title>
+    <style>
+      .box {
+        width: 10rem; /*rem unit will scale box or element auto if root's font-size is changed;*/
+        background: skyblue;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+      }
+
+      /*::before pseudo element will be used to make bubble arrow*/
+      .box::before {
+        content: ' ';
+        width: 2rem;
+        height: 2rem; /*the larger width/height,the larger arrow will be. */
+        background-color: skyblue;
+        overflow: hidden; /*the overflow is clipped, and the rest of the content is hidden*/
+        position: absolute;
+        right: -1rem; /*to move arrow on right side*/
+        top: 50%; /*Align vertically*/
+        margin-top: -1rem; /*to accurately center the arrow/element,negative half of height*/
+        transform: rotate(45deg); /*to make/look like a arrow shape*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, natus.
+        Beatae, voluptatem, quidem sed aliquam ducimus, id iusto illum
+        voluptates earum cum in harum possimus dolorem exercitationem veritatis
+        reprehenderit commodi! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Quaerat repellendus, nam eos reiciendis iste, ad
+        alias, saepe corrupti a quia neque architecto vitae et temporibus earum
+        similique officiis distinctio cupiditate.
+      </div>
+    </div>
+  </body>
+</html>

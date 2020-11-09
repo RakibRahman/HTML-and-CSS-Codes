@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Payment Form</title>
+  <link rel="stylesheet" href="payment-form.css">
+</head>
+<body>
+    <form action="">
+        <h1>Payment Form</h1>
+        <p><abbr title="required">*</abbr><strong>-Must be Filled up!</strong></p>
+        <section> <!--First Section-Contact Information-->
+            <h2>Contact Information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                    <label for="title-1">
+                        <input type="radio" name="title" id="title-1" value="Mr">
+                        Mr.
+                    </label>
+                    </li>
+                    <li>
+                        <label for="title-2">
+                            <input type="radio" name="title" id="title-2" value="Mrs.">
+                            Mrs.
+                        </label>
+                        </li>
+                        <li>
+                            <label for="title-3">
+                                <input type="radio" name="title" id="title-3" value="None">
+                              None
+                            </label>
+                            </li>
+                </ul>
+            </fieldset>
+           <div>
+                <p> <!--Input User Name-->
+                    <label for="name">
+                        <span>Name:</span>
+                        <strong>
+                            <abbr title="required">*</abbr>
+                        </strong>
+                    </label>
+                   
+                        <input type="text" class="valid" name="username" id="name" required>
+                        <span class="validation"></span>
+                    
+                </p>
+           </div>
+            <p> <!--Input User Mail-->
+                <label for="mail">
+                    <span>Email:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="usermail" id="mail">
+            </p>
+            <p> <!--Input User Password-->
+                <label for="password">
+                    <span>Password:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="password" name="userpassword" >
+            </p>
+        </section> <!--end of first section-->
+
+        <section> <!--Second Section-Payment Information-->
+            <h2>Payment Information</h2>
+            <p>
+                <label for="card">
+                    <span>Card Type:</span>
+                </label>
+                <select name="usercard" id="card">
+                    <option value="visa">Visa</option>
+                    <option value="american">American Express</option>
+                    <option value="mc">MasterCard</option>
+                    <option value="Paypal">Paypal</option>
+                </select>
+            </p>
+            <div>
+                <p>
+                    <label for="c-number">
+                        <span>Card Number:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="tel" name="cardnumber" id="c-number" pattern=".{11,}" minlength="11" required>
+                    <span class="validation"></span>
+                </p>
+            </div>
+            <p>
+                <label for="date">
+                    <span>Expiration Date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="date" name="expiration" id="date">
+            </p>
+        </section> <!--end of second section-->
+        <p> <button type="submit">Validate the payment</button> </p>
+    </form>
+</body>
+</html>

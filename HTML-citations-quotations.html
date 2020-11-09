@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citations and Quotations</title>
+    <style>
+      strong {
+        color: blueviolet;
+      }
+      blockquote {
+        margin: 0;
+        display: inline-block;
+      }
+      blockquote p {
+        margin: 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        background: blueviolet;
+      }
+      blockquote p::before {
+        content: '\201C';
+      }
+
+      blockquote p::after {
+        content: '\201D';
+      }
+      /*
+      \201C :Opening double quotes
+      \201D :Closing double quotes
+      \2018 :Opening single quotes
+      \2019 :Closing single quotes
+       */
+      footer {
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <strong>cite:</strong> Used to reference a creative work, author, or
+      resource. <br />
+      <strong>q:</strong> Used for short, inline quotations <br />
+      <strong>blockquote:</strong> Used to quote a large block of text that
+      comes from an external source and spans several lines
+    </p>
+    <h1>cite Tag:</h1>
+    <p>
+      One of the best site to learn HTML&CSS is
+      <cite><a href="https://learn.shayhowe.com">"Learn to Code"</a></cite> by
+      Shay Howe
+    </p>
+    <h1>q Tag:</h1>
+    <p>
+      Bruce Lee once said,
+      <q>The successful warrior is the average man, with laser-like focus.</q>
+    </p>
+    <h1>blockquote Tag:</h1>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+      <p>
+        Words can be like X-rays, if you use them properly—they’ll go through
+        anything. You read and you’re pierced.
+      </p>
+      <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+    </blockquote>
+  </body>
+</html>

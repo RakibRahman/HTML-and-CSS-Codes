@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform: Skew</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            border: 1px solid white;
+            background: greenyellow;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            animation-name: animated;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* animation: animated 2s infinite; */
+        }
+        @keyframes animated{
+            50%{
+                transform:skewX(190deg);
+                background: steelblue;
+            }
+            100%{
+                transform:skewY(190deg);
+                background: violet;
+              
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS child pseudo-classes</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        ul{
+           margin: 0;
+             padding: 0;
+        list-style: none;
+       
+        }
+        nav li{
+             display: inline-block;
+
+        }
+       li a{
+            background-color: tomato;
+            border-right: 1px solid black;
+            padding: 5px;
+            text-decoration: none;
+            margin-right:-4px ;
+        }
+        /* :first-child, :last-child, & :only-child */
+        nav li:first-child a{
+             border-radius: 14px 0 0 10px;
+        }
+       nav li:last-child a{
+            border-radius: 0 14px 10px 0;
+            border-right: 0;
+        }
+        a{
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            padding-left: 25px;
+        }
+         a[href$="ss"] /*Attribute selector*/
+      {
+        background-image: url("img/icons8-registration-20.png");
+      }
+      li:first-child{
+          color: blueviolet;
+      }
+      li:last-child{
+          color: crimson;
+      }
+      div:only-child{
+          color: darkgreen;
+      }
+      article p:first-child{
+          font-size: larger;
+          color: darkmagenta;
+      }
+      article p:last-child{
+          color: darkgreen;
+          font-weight: bold;
+      }
+
+      /* :first-of-type, :last-of-type, & :only-of-type */
+      .demo p:first-of-type{
+          color: chocolate;
+          font-size: medium;
+      }
+      .demo p:last-of-type{
+          color: chocolate;
+      }
+      .demo img:only-of-type{
+          width: 30%;
+
+      }
+    </style>
+</head>
+<body>
+    <h1>:first-child, :last-child, & :only-child</h1>
+   <nav>
+       <ul>
+           <li><a href="#ss">Home</a></li>
+           <li><a href="">About</a></li>
+           <li><a href="">Contact</a></li>
+           <li><a href="">Register</a></li>
+           <li><a href="">Log In</a></li>
+       </ul>
+   </nav>
+<br>
+<article>
+    <p>The :first-child pseudo-class will select an element if it’s the first child within its parent</p>
+    <p>the :last-child pseudo-class will select an element if it’s the last element within its parent.</p>
+    <p>the :only-child will select an element if it is the only element within a parent.</p>
+</article>
+<br>
+<ul>
+    <li>This list item will be selected(first child)</li>
+    <li>
+        <div>This div will be selected(only child)</div>
+    </li>
+    <li>
+        <div>...</div>
+        <div>...</div>
+    </li>
+    <li>This list item will be selected(last child)</li>
+</ul>
+<hr>
+<h1>:first-of-type, :last-of-type, & :only-of-type</h1>
+<article class="demo">
+    <p>Selected Tag</p>
+    <p>....C4</p>
+    <p>Katsu....</p>
+    <p>Selected Tag</p>
+    <img src="img/birds.png" alt="">
+    <h6>keep coding</h6>
+</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Fraction Unit & Repeat</title>
+    <style>
+        .wrapper{
+            max-width: 720px;
+            background: cornflowerblue;
+            padding: 30px 10px;
+            margin: 40px auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container>div:nth-child(even){
+            background: turquoise;
+        }
+        .container>div:nth-child(odd){
+            background: chartreuse;
+        }
+        .container{
+            font-size: 18px;
+            font-weight: 400;
+            color: floralwhite;
+            display: grid;
+            grid-template: repeat(2,100px) / repeat(3,3fr); /*rows / columns*/
+            /* grid-template-columns: repeat(3,3fr);
+            grid-template-rows: repeat(2,100px); */
+            grid-gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Six</div>
+        </div>
+</body>
+</html>

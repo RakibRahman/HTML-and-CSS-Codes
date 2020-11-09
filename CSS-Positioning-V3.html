@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position</title>
+    <style>
+      #container {
+        background: lightskyblue;
+        height: 200vh;
+      }
+      nav {
+        background-color: indigo;
+        color: lavender;
+        position: sticky;
+        top: 0px;
+      }
+      span {
+        font-weight: bolder;
+        color: tomato;
+      }
+      code {
+        border: 2px solid tomato;
+        background: green;
+        color: #fff;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <ul>
+          Home
+        </ul>
+        <ul>
+          Contact
+        </ul>
+        <ul>
+          FAQ
+        </ul>
+      </nav>
+      <h3><span>Position:sticky;</span> ::The nav is sticky to top position</h3>
+
+      <div>
+        <code
+          >Position:Fixed;<br />
+          right:0px; bottom:0px;
+        </code>
+      </div>
+    </div>
+  </body>
+</html>

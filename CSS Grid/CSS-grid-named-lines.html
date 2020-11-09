@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Lines</title>
+    <style>
+        html, body {
+    box-sizing: border-box;
+    background-color: #ffeead;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+}
+         .container>div{
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .container>div:nth-child(even){
+        background: turquoise;
+    }
+    .container>div:nth-child(odd){
+        background: chartreuse;
+    }
+    /* Grid */
+    /* .container */
+    .container{
+        display: grid;
+        grid-gap:5px;
+        grid-template-columns:[main-start] 1fr [content-start] 5fr [content-end main-end];
+        grid-template-rows:[main-start] 40px [content-start] auto [content-end] 40px [main-end];
+    }
+    .header{
+        grid-column: main-start / main-end;
+    }
+    .menu{
+       
+    }
+    .content{
+        grid-column: content-start / content-end;
+    }
+    .footer{
+        grid-column: main;
+    }
+     /* Grid */
+    /* .wrapper*/
+    .wrapper{
+        display: grid;
+        grid-gap:2px;
+        grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end] ;
+        grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end] ;
+        }
+          .box1{
+            background: rgba(255, 0, 0, 0.596);
+            grid-column: main-start;
+            grid-row: main-start / main-end;
+        }
+        .box2{
+            background: orange;
+            grid-column: content-end;
+            grid-row: main-start / content-end;
+        }
+        .box3{
+            background: orchid;
+            grid-column: content-start;
+            grid-row: main-start;
+        }
+        .box4{
+            background: palegreen;
+            grid-column: content-start / main-end;
+            grid-row:content-end ;
+        } 
+        .box1,.box2,.box3,.box4{
+            border-radius: 15px;
+            text-align: center; 
+            border:1px solid cornflowerblue;
+        }
+       /* .wrapper2 */
+      .wrapper2{
+           display:grid;
+           grid-gap: 2px;
+           grid-template-columns: [left] 100px 100px 100px [center] 100px 100px 100px [right];
+           grid-template-rows: [top] 100px 100px 100px [center] 100px 100px 100px [bottom];
+
+
+       }
+       .item1{
+        background: orange;
+        grid-column: left / center;
+           grid-row: top / center;
+           
+       }
+       .item2{
+        grid-column: center / right;
+           grid-row: top / center;
+        background: cadetblue;
+       }
+       .item3{
+           background: chocolate;
+           grid-column: left / center;
+           grid-row: center / bottom;
+       }
+       .item4{
+           grid-column: center / right;
+           grid-row: center / bottom;
+           background: cyan;
+       }
+       hr{
+           height: 10px;
+           background: blueviolet;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+    <hr>
+    <hr>
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+      </div>
+      <hr>
+      <hr>
+      <div class="wrapper2">
+          <div class="item1">Item One</div>
+          <div class="item2">Item 2</div>
+          <div class="item3">Item 3</div>
+          <div class="item4">Item 4</div>
+          <!-- <div class="item5"></div>
+          <div class="item6"></div> -->
+      </div>
+</body>
+</html>

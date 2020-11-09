@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color:mistyrose;
+}
+.container>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ===========
+Grid
+=============*/
+.container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+
+    /* grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(6,100px); */
+    /* column is width value
+        row is height value */
+}
+.horizontal{
+    grid-column:auto / span 2 ;
+}
+.vertical{
+    grid-row: span 2; /*same as "auto / span 2"*/
+}
+.big{
+    grid-row: span 2;
+    grid-column: span 2;
+}

@@ -1,0 +1,55 @@
+h2{
+  text-align: center;
+}
+code{
+  color:white;
+  background: darkviolet;
+  border-radius: 6px;
+  padding: 25px 20px;
+  display: block; /* takes up the full width available  */
+   /* display: inline-block; takes up the only necessary width available  */
+  text-align: center;
+  
+}
+.default{
+  background:none;
+  color: blue;
+}
+  .group:before,
+  .group:after{
+    content: "";
+    display: table; /*much like block-level elements*/
+  }
+  .group:after{
+    clear: both;
+  }
+  .group{
+    background: chartreuse;
+    border-radius: 16px;
+    clear: both;
+    *zoom: 1; /*scale for IE*/
+  }
+
+.group,header,section,aside,footer{
+  margin: 0 1.5% 23px 1.5%; 
+}
+section{
+  float: left;
+  width: 60%;
+}
+aside{
+float: right;
+width: 33%;
+}
+footer{
+  clear: both; 
+  /*Clearing floats is accomplished using the clear property,must use it after floating element*/
+  margin-bottom: 0;
+}
+
+.logo {
+  border-top: 4px solid #648880;
+  padding: 40px 0 22px 0;
+  float: left;
+}
+

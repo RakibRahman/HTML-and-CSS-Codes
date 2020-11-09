@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        * {
+           
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        em,b{
+            color:#661fe9ab;
+        }
+
+        div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        form {
+            border: 1px solid #0d34f5;
+            border-radius: 5px; 
+            width: 16rem;
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            
+          
+        }
+
+        .login-info {
+            padding: 20px 20px 0 20px;
+        }
+
+        .login-info label {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .submit-info {
+            background: #f0f0f2;
+            border-top: 1px inset #317908;
+            padding: 20px;
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        .submit-info label {
+            margin: 10px 0 0 20px;
+            font-size: 12px;
+        }
+
+        .btn {
+            
+            color: seashell;
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .login-info input {
+            background: #fff;
+            border: 1px solid #c6c7cc;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+            color: #f0a103;
+            padding: 6px;
+            margin-top: 6px;
+            width: 100%;
+        }
+
+        input:focus {
+            color: #f0a103;
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        }
+        .btn:hover{
+            color: rgba(105, 90, 205, 0.747);
+            border-radius: 20%;
+            font-size: 14px;
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            box-shadow: 0 0 1rem 0.225rem rgb(230, 51, 51);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <fieldset class="login-info">
+                <label>
+                    <b>Username:</b>
+                    <input type="text" autofocus>
+                </label>
+                <label>
+                    <b>Password:</b>
+                    <input type="password">
+                </label>
+
+            </fieldset>
+
+            <fieldset class="submit-info">
+                <input class="btn" type="submit" name="submit" value="Login">
+                <label>
+                    <input class="check" type="checkbox" name="remember">
+                   <em> Stay logged in?</em>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+
+</html>

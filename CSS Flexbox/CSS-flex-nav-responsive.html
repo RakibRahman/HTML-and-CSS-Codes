@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive NavBar</title>
+    <style>
+      html,
+      body {
+        background-color: #addeff;
+      }
+
+      .container > li {
+        padding: 10px;
+        text-align: center;
+        font-size: 2em;
+        color: #ffeead;
+        box-sizing: border-box;
+        background-color: #96ceb4;
+        list-style-type: none;
+      }
+
+      /* li:nth-child(1) {
+            background-color: indianred;
+        }
+
+         li:nth-child(2) {
+            background-color: rgb(133, 205, 92);
+        }
+
+       li:nth-child(3) {
+            background-color: indianred;
+        }
+
+         li:nth-child(4) {
+            background-color: rgb(133, 205, 92);
+        } */
+      /* =============
+        Flexbox
+        ================ */
+      .container {
+        border: 3px goldenrod solid;
+        display: flex;
+        padding: 0;
+      }
+      .search-input {
+        border: 0;
+
+        width: 100%;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #ffeead;
+        color: #ffeead;
+      }
+      ::placeholder {
+        color: #ffeead;
+        /* font-size: 2em; */
+      }
+      :placeholder-shown {
+        height: 80%;
+      }
+      input{
+        font-size: 1em;
+      }
+      .search-input:focus {
+        outline: 0;
+      }
+      .search>input{
+        text-align: center;
+      }
+      .search {
+        flex: 1;
+        order: 4;
+      }
+    
+      @media all and (max-width: 600px){
+        .container{
+          flex-wrap: wrap;
+        }
+        .container>li{
+          flex: 1 1 50%; /*grow,shrink,basis*/
+        }
+      }
+      @media all and (max-width: 400px){
+      
+      .container>li{
+        flex: 1 1 100%; 
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="container">
+        <li>Home</li>
+        <li>About</li>
+        <li class="search">
+          <input type="text" class="search-input" placeholder="Search" />
+        </li>
+        <li>FAQ</li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+/* General Styling  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #7f68a2;
+    color: whitesmoke;
+    margin: 0 10px;
+    line-height: 1.4;
+}
+img {
+    width: 100%;
+}
+
+/* Typography */
+h1{
+    margin: 10px 0;
+    color: tomato;
+}
+h2{
+    margin: 10px 0;
+    color: chocolate;
+}
+code{
+    padding: 2px 5px;
+    background: gainsboro;
+    color: black;
+}
+pre{
+    color: black;
+    background: gainsboro;
+    padding: 10px 15px;
+    overflow: auto;
+}
+.line-numbers a {
+    text-decoration: none;
+    color: #000;
+    padding-right: 1em;
+}
+pre > code {
+    padding: 0;
+}
+figure{
+    margin: 0;
+}
+figure figcaption {
+    color: coral;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* =============
+Grid
+============= */
+article{
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-gap: 10px;
+}
+article > *{
+    grid-column: 2; /*every element in article should start at column 2 */
+    min-width: 0; /*to shrink*/
+}
+article > figure{
+    grid-column: 1 / -1;
+    margin: 20px 0; /*add space at top and bottom*/
+}
+
+article>.aside{
+    grid-column: 3;
+    font-size: smaller;
+    color: rgb(200, 214, 241);
+    font-weight: bold;
+}
+article > blockquote {
+    grid-column: 1 / -1;
+    margin: 10px 0;
+    color: whitesmoke;
+    border-left: 10px solid rgb(238, 238, 238);
+    padding-left: 10px;
+}

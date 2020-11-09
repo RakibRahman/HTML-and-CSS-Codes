@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Elements via CSS</title>
+    <style>
+      div {
+        text-align: center;
+        border-radius: 10px;
+      }
+      .parent {
+        width: 80vw;
+        height: 200px;
+        background: rgba(90, 153, 206, 0.486);
+        margin: 8vw 10vw;
+        border: 5px dashed rosybrown;
+        position: relative;
+      }
+      .child {
+        height: 150px;
+        width: 300px;
+        border: 3px dashed rgb(235, 7, 7);
+        background: slateblue;
+        position: absolute;
+        top: 0;
+        opacity: 0.7;
+      }
+      .ch1 {
+        left: 0;
+      }
+      .ch2 {
+        left: 150px;
+      }
+      code {
+        padding: 15px 0px;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(5, 80, 42);
+      }
+
+      .outer {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /*^^^to position outer div on center*/
+
+        margin-top: 20px;
+        width: 500px;
+        height: 300px;
+        background-color: rgb(43, 226, 141);
+      }
+      .top {
+        position: absolute;
+        background: blueviolet;
+        width: 50px;
+        height: 20px;
+        /* opacity: 0.8; */
+      }
+      .bot {
+        position: absolute;
+        background: rgb(226, 141, 43);
+        width: 50px;
+        height: 20px;
+        top: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Method 1: Using the Position Property</h1>
+    <div class="parent">
+      <code>
+        PARENT <br />
+        position:relative;
+      </code>
+
+      <div class="child ch1">
+        <code
+          >position:absolute <br />
+          top:0 <br />
+          left:0</code
+        >
+      </div>
+      <div class="child ch2">
+        <code
+          >position:absolute <br />
+          top:0 <br />
+          left:150px</code
+        >
+      </div>
+    </div>
+    <div class="outer">
+      <div class="bot">Bottom</div>
+      <div class="top">Top</div>
+    </div>
+  </body>
+</html>

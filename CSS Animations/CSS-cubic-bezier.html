@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Cubic-Bezier</title>
+    <style>
+      .hover-text {
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(0.2, 0.83, 0.81, 0.46);
+      }
+
+      .hover-text:hover {
+        color: violet;
+        font-size: 30px;
+      }
+
+      .box {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background: crimson;
+        border: 1px solid black;
+        animation: grow cubic-bezier(0.2, 0.83, 0.81, 0.46) 0.5s infinite
+          alternate both;
+      }
+
+      @keyframes grow {
+        100% {
+          transform: scale(0.3, 0.3);
+          background: forestgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="hover-text">Hover over me!</p>
+    <div class="box"></div>
+  </body>
+</html>

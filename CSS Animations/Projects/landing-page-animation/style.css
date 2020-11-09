@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    color: #F14E0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(shinra-tensei.jpg);
+    background-size: cover;
+    animation: pain 1.5s ease-out;
+    animation-fill-mode: both;
+
+}
+.title{
+    font-size: 4em;
+	text-transform: uppercase;
+	margin: 0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-transform: uppercase;
+    text-align: center;
+    animation:text 1s ease-out 2s;
+    animation-fill-mode: both;
+
+}
+
+/* Wrapper Animation */
+@keyframes pain{
+    from{
+        opacity: 0%;
+        width: 0%;
+    }
+    to{
+        opacity: 100%;
+        width: 100%;
+    }
+}
+/* Title Animation */
+@keyframes text{
+from {opacity: 0%;}
+to {opacity: 100%;}
+}

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid{
+
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+.item{
+    background: thistle;
+    padding: 15px;
+}
+
+
+/* Flexbox & Grid */
+#nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+button{
+    margin: 0px auto;
+    display: block;
+    padding: 5px 10px;
+    border: none;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+}

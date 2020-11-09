@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Log-In Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(-30deg, #03a9f4 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+            filter: hue-rotate(120deg);
+            animation: animate 10s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+        }
+        .box{
+            position: relative;
+            padding: 50px;
+            width: 360px;
+            height: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+        }
+        .box::after{
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            left: 5px;
+            bottom: 5px;
+            pointer-events: none;
+            border-radius: 5px;
+            background:linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%,transparent 50%,transparent 85%, rgba(255, 255, 255, 0.3) 100% );
+        }
+        .box .form{
+            position: relative;
+            width: 100%;
+        }
+        .form h2{
+            color: #fff;
+            letter-spacing: 3px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        .form .inputbx{
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+
+        }
+        .form .inputbx input{
+            width: 100%;
+            outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: whitesmoke;
+            font-size: 16px;
+            padding: 8px 10px;
+            padding-left: 35px;
+            box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.2);;
+        }
+        .inputbx img{
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            transform: scale(0.7);
+            filter: invert(1);
+        }
+        .remember{
+            position: relative;
+            display: inline-block;
+            color: whitesmoke;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+      .form input[type="submit"]{
+            background: whitesmoke;
+            color: #333;
+            max-width: 100px;
+            padding:8px 10px ;
+            border-radius: 1em;
+            box-shadow: none;
+            letter-spacing: 2px;
+        }
+        input::placeholder{
+            color: whitesmoke;
+        }
+        .form p,a{
+            color: whitesmoke;
+            font-weight: 300;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+           <div class="form">
+                <form action="">
+                    <h2>Log In</h2>
+                    <div class="inputbx">
+                        <input type="text" name="username" id="" placeholder="UserName">
+                        <img src="img/user.png" alt="">
+                    </div>
+                    <div class="inputbx">
+                        <input type="password" name="user-pwd" id="" placeholder="Password">
+                        <img src="img/locked-padlock.png" alt="">
+                    </div>
+                    <label for="remember" class="remember">
+                        <input type="checkbox" name="" id="">Remember Me!
+                    </label>
+                    <div class="inputbx">
+                        <input type="submit" value="LogIn">
+
+                    </div>
+                </form>
+                <p>Password <a href="#">Forgotten?</a></p>
+                <p>Need an <a href="#">Account!?</a></p>
+           </div>
+        </div>
+    </section>
+</body>
+</html>

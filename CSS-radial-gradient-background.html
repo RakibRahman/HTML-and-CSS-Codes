@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Radial Gradient Background</title>
+    <style>
+      div {
+        height: 30vh;
+      }
+      #r-g1 {
+        width: 300px;
+        height: 300px;
+        background-image: radial-gradient(black, red, green);
+      }
+      #r-g2 {
+        background: radial-gradient(
+          circle at 100%,
+          #333,
+          #333 50%,
+          #eee 75%,
+          #333 75%
+        );
+      }
+      #r-g3 {
+        background: radial-gradient(ellipse at top, #e66465, transparent);
+      }
+      #r-g4 {
+        background: radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+      }
+      #r-g5 {
+        background-image: radial-gradient(
+          closest-side at 60% 55%,
+          blue,
+          green,
+          yellow,
+          black
+        );
+      }
+
+      #r-g6 {
+        background-image: radial-gradient(
+          farthest-side at 60% 55%,
+          blue,
+          green,
+          yellow,
+          black
+        );
+        /*
+        size	Defines the size of the gradient. Possible values:
+farthest-corner (default)
+closest-side
+closest-corner
+farthest-side */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Radial Gradient Background</h1>
+    <h5>Radial gradients work from the inside to the outside of an element.</h5>
+    <div id="r-g1"></div>
+    <h4>radial-gradient(red, green);</h4>
+    <br />
+    <div id="r-g2"></div>
+    <h4>radial-gradient(circle at 100%,#333,#333 50%, #eee 75%,#333 75%);</h4>
+    <h4>shape:circle</h4>
+    <br />
+    <div id="r-g3"></div>
+    <h4>radial-gradient(ellipse at top, #e66465, transparent);</h4>
+    <br />
+    <div id="r-g4"></div>
+    <h4>radial-gradient(ellipse at bottom, #4d9f0c, transparent);</h4>
+    <h4>ellipse is the default shape of radial gradient</h4>
+    <br />
+    <div id="r-g5"></div>
+    <h4>
+      radial-gradient(closest-side at 60% 55%, blue, green, yellow, black);
+    </h4>
+    <div id="r-g6"></div>
+    <h4>
+      radial-gradient(farthest-side at 60% 55%, blue, green, yellow, black);
+    </h4>
+  </body>
+</html>

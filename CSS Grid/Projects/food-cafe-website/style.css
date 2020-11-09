@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg1:skyblue;
+    --bg2:#ffc600;
+    --color:floralwhite;
+}
+body {
+    font-size: 15px;
+  }
+  
+  button {
+    background: var(--bg2);
+    border: 0;
+    padding: 10px 20px;
+  }
+img{
+    max-width: 100%;
+}  
+/* Wrapper */
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+    /* grid-template-columns: 20px 1fr 20px; */
+}
+/* .wrapper>*{
+    min-width: 0;
+    grid-column: 2;
+} */
+
+
+/* =======
+.Top 
+=========*/
+.top{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "intro intro cta1"
+    "intro intro cta2";
+}
+.intro{
+    grid-area: intro;
+    min-height: 400px;
+    background: white url(img/food1.jpg);
+    background-size:100% 100%;
+    /* background-position: bottom right; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+}
+.intro>*{
+    background: var(--bg1);
+    color: var(--color);
+    padding: 5px;
+    margin-top: 5px;
+
+}
+.cta{
+    background: var(--bg1);
+    font-size: 25px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    color: var(--color);
+}
+.cta p{
+    margin: 0;
+}
+.cta .price{
+    font-size: 50px;
+    font-weight: 400;
+}
+.cta1{
+    grid-area: cta1;
+}
+.cta2{
+    grid-area: cta2;
+}
+
+/* ========
+End Of Top
+=========*/
+
+/*==========
+Nav
+===========*/
+.menu ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    
+}
+.menu a{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--bg1);
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+}
+[aria-controls="menu-list" ]{
+    display: none;
+}
+
+/*==========
+End of nav
+============ */
+
+
+/*===========
+Features 
+=========== */
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
+}
+.feature{
+    background: var(--bg2);
+    border: 1px solid peru;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+}
+.feature span img{
+    width: 20%;
+}
+/* ===============
+End of .features
+================= */
+
+/* ===========
+About
+============== */
+.about{
+    background: #E7EFF2;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.about img{
+    margin-left: 350px;
+}
+.about_details{
+    margin-right: 50px;
+}
+.about_details>*{
+    color: black;
+    font-weight: 300;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.about_details button{
+    color: var(--color);
+}
+/* ==========
+End Of .about
+===========*/
+
+/* ===========
+Gallery
+============ */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
+}
+.gallery h2{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    grid-gap: 20px;
+
+}
+.gallery h2::before,.gallery h2::after{
+    display: block;
+    content: '';
+    background: linear-gradient(to var(--direction,left), var(--bg1),transparent);
+    height: 10px;
+}
+.gallery h2::after{
+    --direction:right;
+}
+
+/* ===========
+Responsiveness
+============= */
+@media (max-width:1000px){
+    .menu{
+        order: -1;
+    }
+}
+
+@media (max-width:700px){
+    .top{
+        grid-template-areas: 
+        "intro intro"
+        "cta1 cta2";
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about img{
+        width: 50%;
+        margin-right: 400px;
+    }
+}
+@media (max-width:500px){
+    .top{
+        grid-template-areas: 
+        "intro"
+        "cta1"
+        "cta2";
+    }
+    .about{
+        grid-template-columns: 1fr;
+        justify-items: start;
+        align-content: start;
+    }
+    .about img{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      
+    }
+}

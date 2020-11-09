@@ -1,0 +1,81 @@
+div {
+  border: solid 1px black;
+  padding: 5px;
+  text-align: center;
+  /* display: table; */
+  /* display: inline-block; */
+}
+div:before {
+  content: "Added BEFORE anything within the div! ";
+  color: red;
+}
+div:after {
+  content: "Added AFTER anything within the div!";
+  color: green;
+}
+/* before & :after are used to apply css properties JUST before/after the content WITHIN the matching element. */
+
+p::before {
+  content: "Read this -";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+p::after {
+  content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+/*
+  The ::before selector inserts something before the content of each selected element(s).
+  The ::after selector inserts something after the content of each selected element(s).
+  */
+/* a:after {
+  color: #9799a7;
+  content: " (" attr(href) ")";
+  font-size: 11px;
+} */
+
+.arrow {
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: royalblue;
+  display: inline-block; /*to make 'a tag' behaving like block element*/
+  height: 1.88rem;
+  line-height: 1.88rem;
+  /* same value line-height and height to make single text line vertically center  */
+  padding: 0 0.8rem;
+  margin-left: 20rem;
+  position: relative;
+}
+.arrow::before,
+.arrow::after {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.arrow::before {
+  border-bottom: 15px solid royalblue;
+  border-left: 15px solid transparent;
+  border-top: 15px solid royalblue;
+  left: -15px;
+}
+.arrow::after {
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid royalblue;
+  border-top: 15px solid transparent;
+  right: -15px;
+}
+.arrow:hover {
+  color: wheat;
+  background-color: tomato;
+}
+.arrow:hover::before {
+  border-top: 15px solid tomato;
+  border-bottom: 15px solid tomato;
+}
+.arrow:hover::after {
+  border-left: 15px solid tomato;
+}

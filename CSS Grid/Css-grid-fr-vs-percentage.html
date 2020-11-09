@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fr vs percentage</title>
+    <style>
+        .item{
+            background: firebrick;
+            color:#fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid{
+            display: grid;
+            width: 1000px;
+            border: 5px solid silver;
+            grid-gap: 20px;
+            grid-template-columns:8fr 2fr;
+        }
+        .grid2{
+            margin-top: 20px;
+            display: grid;
+            width: 1000px;
+            border: 5px solid silver;
+            grid-gap: 20px;
+            grid-template-columns:80% 20%;
+        }
+        .grid3{
+            margin-top: 20px;
+            display: grid;
+            width: 500px;
+            border: 5px solid silver;
+            grid-gap: 30px;
+            grid-template-columns:1fr 1fr 1fr;
+        }
+        .grid3 .item2{
+
+            width: 300px;
+        }
+    </style>
+<body>
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="grid2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="grid3">
+        <div class="item">1</div>
+        <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maiores quo dolorum, inventore consequatur ipsa aspernatur sed fugiat vel autem, eos, excepturi pariatur iure vero ducimus harum corporis alias mollitia?</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

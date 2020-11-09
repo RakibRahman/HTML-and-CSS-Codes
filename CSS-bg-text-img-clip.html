@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image in a Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bangers', cursive;
+        }
+        .text{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            font-size: 2rem;
+            background-color: rgb(103, 168, 230);
+         
+        }
+        h1{
+            
+            color: transparent;
+            background-image: url(img/crowd.jpg);
+            background-size:100% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+        }
+        h1:hover{
+            filter: drop-shadow(2px 3px 2px yellow);
+            transform: scale(1.5);
+            /* transform: rotate(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <h1>Rakib Rahman</h1>
+    </div>
+</body>
+</html>

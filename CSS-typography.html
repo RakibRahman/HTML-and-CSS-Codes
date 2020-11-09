@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Typography</title>
+    <style>
+      html {
+        color: blue;
+      }
+      body {
+        font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-size: 15px;
+      }
+      .demo1 {
+        font-style: italic;
+        font-variant: small-caps;
+        font-weight: 800;
+        line-height: 150%; /* Line height, the distance between two lines  */
+        /* this value is equivalent to 150%*/
+      }
+      .demo2 {
+        /* Shorthand Font Properties */
+        font: italic small-caps bold 18px/22px sans-serif, arial;
+        color: black;
+      }
+      .btn {
+        border: 1px solid green;
+        line-height: 122px;
+        height: 122px;
+        /*
+        single line text can be vertically centered with 'height' and 'line-height' property with same value;
+         */
+      }
+      a {
+        color: blueviolet;
+      }
+      a:hover {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CSS Typography Introduction</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+        pariatur alias delectus animi veniam perspiciatis, laboriosam quisquam
+        nemo voluptatem recusandae velit consequuntur dolorum vero doloribus
+        consequatur similique incidunt nihil tenetur.
+      </p>
+      <p class="demo1">
+        Lorem IS DEAD sit amet consectetur adipisicing elit. Sapiente pariatur
+        alias delectus animi veniam perspiciatis, laboriosam quisquam nemo
+        voluptatem recusandae velit consequuntur dolorum vero doloribus
+        consequatur similique incidunt nihil tenetur.
+      </p>
+      <p class="demo2">
+        Lorem THIS WORLD SHALL KNOW PAIN sit amet consectetur adipisicing elit.
+        Sapiente pariatur alias delectus animi veniam perspiciatis, laboriosam
+        quisquam nemo voluptatem recusandae velit consequuntur dolorum vero
+        doloribus consequatur similique incidunt nihil tenetur. Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Voluptatibus beatae harum
+        omnis numquam possimus voluptatem quia veritatis repellat eius? Tenetur
+        animi unde est dignissimos tempora? Explicabo, sint quo? Libero,
+        quibusdam!
+      </p>
+      <div class="btn"><a href="htpps://google">Search</a></div>
+    </div>
+  </body>
+</html>

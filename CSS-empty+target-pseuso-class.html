@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Empty & Target Pseudo-class</title>
+    <style>
+        /* Target Pseudo Class */
+        p:target {
+            background-color: gold;
+        }
+
+        /* Add a pseudo-element inside the target element */
+        p:target::before {
+            font: 70% sans-serif;
+            content: "►";
+            color: limegreen;
+            margin-right: 0.25em;
+        }
+        #bdr:target{
+            display: inline-block;
+            border: 2px solid green;
+        }
+        /* Style italic elements within the target element */
+        p:target i {
+            color: red;
+        }
+        /* Empty Pseudo Class */
+        div:empty{
+            width: 30vw;
+            height: 30vh;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>:target pseudo class</h2>
+    <p>
+        The :target CSS pseudo-class represents a unique element (the target
+        element) with an id matching the URL's fragment.The :target selector can be used to style the current active target element.
+    </p>
+    <h3>Table of Contents</h3>
+    <ol>
+        <li><a href="#p1">Jump to the first paragraph!</a></li>
+        <li><a href="#p2">Jump to the second paragraph!</a></li>
+        <li><a href="#bdr">Boom Border</a></li>
+        <li><a href="#nowhere">This link goes nowhere,
+                because the target doesn't exist.</a></li>
+    </ol>
+
+    <h3>My Fun Article</h3>
+    <p id="p1">You can target <i>this paragraph</i> using a
+        URL fragment. Click on the link above to try out!</p>
+    <p id="p2">This is <i>another paragraph</i>, also accessible
+        from the links above. Isn't that delightful?</p>
+        <p id="bdr">This paragraph contains a border</p>
+<hr>
+<h2>:empty pseudo class</h2>   
+<p>The :empty pseudo-class allows elements that do not contain children or text nodes to be selected.</p>     
+<div><!-- this div will be selected --></div><!-- this div will be selected -->
+<br>
+<div> </div><!-- this div will not be selected -->
+<div><b></b></div><!-- this div will not be selected -->
+<br>
+<div></div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Elements </title>
+    <style>
+        .container {
+            /* width: 300px;
+            margin: 0 auto; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+     input[type="password"] {
+            margin-left: 2.1rem;
+        }
+
+        .pin {
+            margin-left: 9px;
+        }
+ 
+        button {
+            margin: 0 auto;
+            display: block;
+
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <div>
+                <div>
+                    <label for="uname">
+                        Choose a User Name:
+                    </label>
+                    <input type="text" placeholder="lower case,one word" minlength="5" maxlength="10" size="16" name="name" required>
+                </div>
+            <br>
+                <div>
+                    <label for="pin" class="pin">Enter your Pin:</label>
+                    <input type="password" name="pin" id="" size="10">
+                </div>
+            </div>
+<br>
+           <div> <button>Submit</button></div>
+
+        </form>
+    </div>
+</body>
+
+</html>

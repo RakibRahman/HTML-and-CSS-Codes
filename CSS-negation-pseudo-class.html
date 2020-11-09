@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negation Pseudo-class</title>
+    <style>
+        p:not(.ptag){
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Negation Pseudo-class</h1>
+    <q>The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items
+    from being selected, it is known as the negation pseudo-class.</q>
+    <p>in below example class .ptag items/elements will not be selected because of p:not(.ptag),rest p or p classes are selected </p>
+        <article>
+            <p class="ptag">Hello,</p>
+            <p class="ptag">How</p>
+            <p class="ptag">Are</p>
+            <p>Kill me,heal me</p>
+            <p>Kill me,heal me</p>
+            <p>Kill me,heal me</p>
+            <p class="ptag">You?</p>
+        </article>
+</body>
+</html>

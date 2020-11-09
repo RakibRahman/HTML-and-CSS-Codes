@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Image Grid</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* border:0.5rem solid blueviolet; */
+       
+        }
+        .container>div>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            /* The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container. */
+                
+        }
+       
+        .container>div{
+            flex: 1 1 150px;
+            
+        }
+     /* .container>:nth-child(odd){
+            border:0.5rem solid transparent;
+        }
+        .container>:nth-child(even){
+            border:0.5rem solid transparent;
+        }  */
+        .container>:nth-child(odd){
+           margin: 0.2rem;
+        }
+        .container>:nth-child(even){
+            margin: 0.2rem;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><img src="img/demo1.jpg" alt=""></div>
+        <div><img src="img/demo2.jpg" alt=""></div>
+        <div><img src="img/demo3.jpg" alt=""></div>
+        <div><img src="img/demo4.jpg" alt=""></div>
+        <div><img src="img/demo5.jpg" alt=""></div>
+        <div><img src="img/demo6.jpg" alt=""></div>
+        <div><img src="img/demo7.jpg" alt=""></div>
+        <div><img src="img/demo8.jpg" alt=""></div>
+        <div><img src="img/demo9.jpeg" alt=""></div>
+        <div><img src="img/demo10.jpg" alt=""></div>
+        <div><img src="img/demo11.jpg" alt=""></div>
+        <div><img src="img/demo12.jpg" alt=""></div>
+    </div>
+</body>
+</html>

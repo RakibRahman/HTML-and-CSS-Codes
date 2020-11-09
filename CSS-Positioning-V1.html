@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position</title>
+    <style>
+      .container {
+        border: 3px groove blueviolet;
+        display: inline-block; /*so, it will not use full width*/
+      }
+      .box {
+        display: inline-block; /*to make elements horizontal*/
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        color: cornsilk;
+        text-align: center;
+      }
+      #two {
+        background: green;
+      }
+      #three {
+        background: black;
+      }
+      #four {
+        background: orange;
+      }
+      #two2 {
+        background: green;
+        position: relative;
+        left: 20px;
+        top: 20px;
+      }
+      .container2 {
+        position: relative;
+      }
+      #two3 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Static Position</h1>
+    <div class="container">
+      <div class="box" id="one">Red</div>
+      <div class="box" id="two">Green</div>
+      <div class="box" id="three">Black</div>
+      <div class="box" id="four">Orange</div>
+    </div>
+    <h1>Relative Position</h1>
+    <div class="container">
+      <div class="box" id="one">Red</div>
+      <div class="box" id="two2">Green</div>
+      <div class="box" id="three">Black</div>
+      <div class="box" id="four">Orange</div>
+    </div>
+    <p>Position:relative; ::layout is still same</p>
+    <h1>Absolute Position</h1>
+    <div class="container2">
+      <div class="box" id="one">Red</div>
+      <div class="box" id="two3">Green</div>
+      <div class="box" id="three">Black</div>
+      <div class="box" id="four">Orange</div>
+    </div>
+    <p>Position:absolute; ::layout is affected</p>
+    <hr />
+    <p>
+      position: relative places an element relative to its current position
+      without changing the layout around it, whereas position: absolute places
+      an element relative to its parent’s position and changing the layout
+      around it.
+    </p>
+  </body>
+</html>

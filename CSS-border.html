@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Border Property</title>
+
+  <style>
+    h1,
+    h3 {
+      text-align: center;
+    }
+
+    div {
+      margin: 5px;
+      padding: 5px;
+      border: 3px dashed green;
+
+    }
+
+    #bdr {
+      border-bottom: 3px dotted chocolate;
+      border-right: 4px double yellow;
+    }
+
+    code {
+      background-color: cyan;
+      color: tomato;
+      font-weight: bolder;
+      display: inline-block;
+      height: 90px;
+  line-height: 90px;
+  margin: 0 14px;
+  text-align: center;
+  width: 100px;
+    }
+    .border-rounded {
+  border-radius: 5px;
+}
+.border-circle {
+  border-radius: 50%;
+}
+.border-football {
+  border-radius: 15px 65px;
+}
+.rounded{
+  border-top-right-radius: 155px;
+}
+  </style>
+
+</head>
+
+<body>
+  <h1>The Border Property</h1>
+  <div>
+    <p>Borders fall between the padding and margin, providing an outline around an element. The border property requires
+      three values: width, style, and color. Shorthand values for the border property are stated in that order—width,
+      style, color. In longhand, these three values can be broken up into the border-width, border-style, and
+      border-color properties. These longhand properties are useful for changing, or overwriting, a single border value.
+    </p>
+  </div>
+  <h3>Individual Border Sides</h3>
+  <div id="bdr">
+
+    <p>borders can be placed on one side of an element at a time if we’d like. Doing so requires new properties:
+      border-top, border-right, border-bottom, and border-left. </p>
+  </div>
+  <h3>Border Radius</h3>
+  <code class="border-rounded">5px</code>
+
+  <code class="border-circle">50%</code>
+
+  <code class="border-football">15px 75px</code>
+  <code class="rounded">155px</code>
+</body>
+
+</html>

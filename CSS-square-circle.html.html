@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: rgb(24, 102, 180);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+      }
+      .sq {
+        width: 150px;
+        height: 150px;
+        border: 3px dashed rgb(43, 226, 125);
+        margin-left: 10px;
+        /* margin-bottom: 10px; */
+        position: relative;
+      }
+      #red,
+      #black,
+      #green,
+      #orange {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%; /* //to make the element circle */
+        background-color: red;
+        color: blanchedalmond;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sq">
+        <div id="red"><span>Red</span></div>
+      </div>
+      <div class="sq">
+        <div id="green"><span>Green</span></div>
+      </div>
+      <div class="sq">
+        <div id="black"><span>Black</span></div>
+      </div>
+      <div class="sq">
+        <div id="orange"><span>Orange</span></div>
+      </div>
+    </div>
+  </body>
+</html>

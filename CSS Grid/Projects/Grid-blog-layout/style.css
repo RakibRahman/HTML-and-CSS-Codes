@@ -1,0 +1,84 @@
+:root {
+    --yellow: #ffc600;
+  }
+
+  html {
+    color: rgb(211, 151, 151);
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  body{
+    background:#c5e3f6;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline wavy var(--yellow);
+  }
+
+  h1,
+  h2 {
+      color: #444;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  /* ==========
+  grid layout
+  ============= */
+  .post{
+      max-width: 1000px;
+      margin: 200px auto;
+      display: grid;
+      grid-gap: 10px 20px; /*row-gap: 10px; column-gap: 20px;*/
+      grid-template-columns: 3fr 12fr 5fr;
+  }
+  .post>*{
+      grid-column: 2 / -2;
+  }
+  .post>figure{
+      margin: 0;
+      grid-column: 1 / -1 ;
+  }
+ figcaption{
+      color: rgb(51, 178, 34);
+      font-size: 10px;
+  }
+  .post>blockquote{
+      grid-column: 1 / -1;
+      font-size: 60px;
+      font-style: italic;
+      text-align: center;
+      color: forestgreen;
+      margin: 0;
+  }
+
+  .tip{
+      padding: 5px;
+      color: black;
+      background: whitesmoke;
+  }
+  .tip-left{
+      grid-column: 1 / span 1;
+      text-align: right;
+      border-right:4px solid rgb(6, 6, 243);
+
+  }
+  .tip-right{
+    grid-column: span 1 / -1;
+    text-align: left;
+    border-left:4px solid rgb(6, 6, 243);
+    grid-row: span 5; /*To keep column fixed on normal size*/
+    align-self:start;
+
+}

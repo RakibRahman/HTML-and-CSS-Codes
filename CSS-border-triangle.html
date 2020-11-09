@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Triangle</title>
+    <style>
+      .in {
+        width: 0px;
+        height: 0px;
+        margin-left: 5%;
+        padding: 5px;
+        /* background-color: blueviolet; */
+        border: 200px salmon solid;
+        /* border-color: seagreen red black chartreuse; value: top>right>bottom>left; */
+        border-color: transparent transparent black transparent;
+        /* transform: rotate(180deg); */
+      }
+      .out {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 5px;
+        width: 500px;
+        height: 500px;
+        /* background: tomato; */
+      }
+      /* Another way*/
+      /* .out2 {
+        position: relative;
+      }
+      .in2 {
+        border-color: transparent transparent transparent #ec0303;
+        border-style: solid;
+        border-width: 50px 0 50px 95px;
+        height: 0;
+        width: 0;
+        position: absolute;
+
+        left: 51px;
+        margin-top: 100px;
+        margin-left: 40px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <div class="in"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="out2">
+      <div class="in2"></div>
+    </div>
+  </body>
+</html>

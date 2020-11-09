@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox Flex-Wrapping</title>
+    <style>
+      html,
+      body {
+        background-color: #addeff;
+        margin: 10px;
+       
+      }
+
+      .nav-list > div {
+        padding: 10px;
+        font-size: 2rem;
+        text-align: center;
+        color: whitesmoke;
+        width: 300px;
+        
+      }
+      .nav-list > :nth-child(1) {
+        background-color: indianred;
+      }
+      .nav-list > :nth-child(2) {
+        background-color: rgb(133, 205, 92);
+      }
+      .nav-list > :nth-child(3) {
+        background-color: indianred;
+      }
+      .nav-list > :nth-child(4) {
+        background-color: rgb(133, 205, 92);
+      }
+      /* ===========
+        Flexbox
+        ============= */
+      .nav-list {
+        border: 0.5rem goldenrod solid;
+        display: flex;
+        flex-wrap: wrap;
+        /* wrap: flex items will wrap onto multiple lines, from top to bottom. */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-list">
+      <div class="home">Home</div>
+      <div class="abt">About</div>
+      <div class="cnt">Contact</div>
+    </nav>
+  </body>
+</html>

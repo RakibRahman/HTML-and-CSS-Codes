@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Linear Gradient Background</title>
+    <style>
+      h1,
+      h5 {
+        text-align: center;
+      }
+      div {
+        height: 15vh;
+      }
+      #l-g1 {
+        background: #466368;
+        background: linear-gradient(yellow, lightgreen, red);
+      }
+      #l-g2 {
+        background: #466368;
+        background: linear-gradient(to right bottom, yellow, lightgreen, red);
+      }
+      #l-g3 {
+        background: #466368;
+        background: linear-gradient(45deg, lightgreen 50%, red 50%);
+      }
+      #l-g4 {
+        background: linear-gradient(to top right, lightgreen 50%, red 50%);
+      }
+      /*
+      The gradient line thus doesn’t point into the top right corner, unless the background area is perfectly square—it points into the top right quadrant (quarter) of the background area.
+       */
+      #l-g5 {
+        background: linear-gradient(to top right, lightgreen 50%, red 50%);
+      }
+      #l-g6 {
+        background-image: repeating-linear-gradient(
+          190deg,
+          rgba(0, 102, 255, 0.678),
+          rgba(255, 255, 0, 0.788) 7%,
+          rgba(0, 128, 0, 0.582) 10%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linear Gradient Background</h1>
+    <h5>
+      The linear gradient is perfect for a gradient moving from one direction to
+      another
+    </h5>
+    <div id="l-g1"></div>
+    <h5>background: linear-gradient(yellow, lightgreen, red);</h5>
+    <br />
+    <br />
+    <div id="l-g2"></div>
+    <h5>
+      background: linear-gradient(to right bottom, yellow, lightgreen, red);
+    </h5>
+    <br />
+    <br />
+    <div id="l-g3"></div>
+    <h5>background: linear-gradient(45deg, lightgreen 50%, red 50%);</h5>
+    <br />
+    <br />
+    <div id="l-g4"></div>
+    <h5>background:linear-gradient(to top right, lightgreen 50%, red 50%)</h5>
+    <br />
+    <br />
+    <div id="l-g5"></div>
+    <h5>background:linear-gradient(to top left, green 50%, red 50%)</h5>
+    <!-- 315deg can be used to move the gradient to top left  -->
+    <!-- 135deg can be used to move the gradient to right bottom  -->
+    <div id="l-g6"></div>
+    <h5>
+      background-image: repeating-linear-gradient(190deg,blue,yellow 7%,green
+      10%);
+    </h5>
+  </body>
+</html>

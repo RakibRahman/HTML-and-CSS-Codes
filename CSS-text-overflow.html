@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text-Overflow</title>
+    <style>
+      .t-o {
+        white-space: nowrap; /*specifies how white-space inside an element is handled.*/
+        border: 1px solid goldenrod;
+        width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*
+        ""white-space: nowrap;
+        &
+        overflow: hidden;""
+        => text-overflow requires above properties to work
+        */
+      }
+      .t-o:hover {
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The text-overflow Property</h1>
+    <div class="t-o">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, natus.
+      Beatae, voluptatem, quidem sed aliquam ducimus, id iusto illum
+    </div>
+  </body>
+</html>

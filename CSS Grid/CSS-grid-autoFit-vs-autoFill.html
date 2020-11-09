@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-fit vs. Auto-fill</title>
+    <style>
+        html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+
+
+.container2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container2 > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container2 > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container2 > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+
+.title {
+  color: #ff6f69;
+  background-color: #ffeead;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0px;
+}
+/* ====================
+Grid
+================== */
+.container{
+    border:2px solid blueviolet;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-rows: 100px 100px;
+}
+.container2{
+    border:2px solid blueviolet;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    /* Auto-fill will add new column tracks */
+    grid-template-rows: 100px 100px;
+}
+    </style>
+</head>
+<body>
+    <h1 class="title">AUTO-FIT</h1>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h1 class="title">AUTO-FILL</h1>
+    <div class="container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+         /* .demo ,.demo th, .demo td{
+       border:2px aqua solid;
+       border-collapse: collapse;
+     }
+    */
+
+     /* Row and Column Highlighting */
+     table{
+         overflow: hidden;
+     }
+    
+     tr:hover {
+        background-color: seagreen;
+}
+th,td{
+    position: relative;
+    padding: 10px;
+}
+th:hover:after,td:hover:after{
+    content: "";
+    position: absolute;
+    background-color: seagreen;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1; /* z-index specifies the stack order of an element. */
+}
+/* Focus stuff for mobile */
+td:focus::before,
+tbody th:focus::before {
+  background-color: lightblue;
+  content: '';  
+  height: 100%;
+  top: 0;
+  left: -5000px;
+  position: absolute;  
+  width: 10000px;
+  z-index: -1; 
+  
+}
+
+     /* .demo tr:hover { background: yellow; } */
+    </style>
+</head>
+<body>
+    <table class="demo">
+        <caption>
+          Demo Table V2
+        </caption>
+        <tr>
+          <th></th>
+        <th>Bananas</th>
+        <th>Oranges</th>
+        <th>Apples</th>
+        </tr>
+        <tr>
+          <td>Year 2017</td>
+          <td>2500</td>
+          <td>1200</td>
+          <td>1500</td>
+        </tr>
+        <tr>
+          <td>Year 2018</td>
+          <td>1200</td>
+          <td>1400</td>
+          <td>1600</td>
+        </tr>
+        <tr>
+          <td>Year 2019</td>
+          <td>2100</td>
+          <td>1400</td>
+          <td>1300</td>
+        </tr>
+        <tr>
+          <td>Year 2020</td>
+          <td>1100</td>
+          <td>900</td>
+          <td>1300</td>
+        </tr>
+      </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.container > li {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+    box-sizing: border-box;
+    background-color: #96ceb4;
+    list-style-type: none;
+  }
+  
+  html, body {
+    background-color: #ffeead;
+    margin: 10px;
+  }
+  
+  .container {
+    padding: 0;
+  }
+  .search-input {
+    background: #ff6e68;
+    border: 0;
+    width: 100%;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ffeead;
+    color: #ffeead;
+  }
+  ::placeholder{
+    color: #ffeead;
+    font-size: 2em;
+  }
+  :placeholder-shown{
+    height: auto;
+  }
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .container > li {
+    background-color: #96ceb4;
+  }
+  /*============================  */
+  .container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+  }
+  
+  .search {
+    flex: 1;
+  }

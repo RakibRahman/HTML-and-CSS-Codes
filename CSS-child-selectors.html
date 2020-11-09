@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Child Selectors</title>
+  <style>
+    article h3{
+      color: tomato;
+      
+    }
+    article > p{
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+<h1>Descendant Selector</h1>
+<p>
+  <strong><q>article h3</q></strong> <br>
+  The article h3 selector is a descendant selector, only selecting h3 elements that fall inside of an article element.
+</p>
+<article>
+  <h3>Hello World</h3>
+  <h2>Welcome</h2>
+  <h3>Hello Again</h3>
+  <p>Follow your passion</p>
+</article>
+<hr>
+<h1>Direct Child Selector</h1>
+<p> 
+  <strong><q>article p</q></strong> <br>
+  article > p is a direct child selector only identifying p elements that fall directly within an article element. Any p element placed outside of an article element, or nested inside of another element other than the article element, will not be selected.</p>
+<article>
+  <h4>Hey you!!!</h4>
+  <p>Don't waste time</p>
+</article>
+<div>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nihil labore illum odit libero doloremque similique, maiores sint suscipit voluptates aspernatur tenetur unde corporis? Totam, reiciendis tenetur! Officiis, unde officia.</p>
+</div>
+<hr>
+
+</body>
+
+</html>

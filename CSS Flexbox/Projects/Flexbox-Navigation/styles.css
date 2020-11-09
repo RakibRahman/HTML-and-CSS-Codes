@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: darkslateblue;
+}
+li,a,button{
+    font-family: 'Krona One', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.logo{
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+  
+}
+.logo:hover{
+    /* filter: invert(85%); */
+    filter: opacity(55%);
+   
+}
+
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    /* margin-right: 10px; */
+    padding: 0 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    transition: all 0.3s ease 0s;
+    color: firebrick;
+    
+}
+
+button{
+    padding: 9px 25px;
+    background: rgba(0,136,169,1);
+    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+button:hover{
+    background: rgba(0,136,169,0.8);
+    
+}
+
+/* =================
+Navigation Bar One
+===================*/
+#nav-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+/* =================
+Navigation Bar Two
+===================*/
+#nav-two{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+#nav-two .nav-links li:nth-child(1){
+    padding: 0 20px 0 0; /*Remove extra padding
+    
+    */
+}
+.logo2{
+  margin-right: auto;
+}
+.button-two{
+    margin-left: 20px;
+}
+
+/* =================
+Navigation Bar Three
+===================*/
+#nav-three{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.logo3{
+    order: 3;
+    margin-left: auto;
+}
+.cta{
+    order: 2;
+}
+#nav-three nav{
+    order: 1;
+}
+.button-three{
+    margin-left: 20px;
+}
+#nav-three .nav-links li:nth-child(1){
+    padding: 0 20px 0 0;
+}
+
+
+
+/* Responsive */
+/*not so good build*/
+@media all and (max-width:500px){
+    #nav-two{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .logo2{
+        margin-bottom: 5px;
+    }
+    #nav-two nav li{
+        display: block;
+        padding: 5px;
+        margin-top: 10px;
+        margin-right: 150px;
+    }
+    .button-two{
+        margin-top: 10px;
+        margin-right: 150px;
+    }
+ }

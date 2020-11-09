@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  font-weight: normal;
+  color: #272727;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5em;
+}
+:root {
+  --bg1: #3a3e4b;
+  --bg2: #383c49;
+  --txt1: white;
+  --btn: #444857;
+  --txt2: #ffffe4;
+}
+/* Main Styles */
+
+/* Codepen */
+
+.codepen {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  border: 2px solid red;
+  height: 100vh;
+  background-color: var(--bg1);
+  color: var(--txt1);
+}
+.codepen > * {
+  /* border: 2px solid violet; */
+}
+
+
+/* Pen Header */
+.pen {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  align-items: center;
+  background: black;
+}
+
+
+/* Editor */
+.code {
+  display: grid;
+  background: var(--bg1);
+  grid-template-columns: repeat(3, 1fr);
+}
+.editor {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+/* Editor Header */
+.editor_header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 5px;
+  padding: 5px;
+  align-items: center;
+  color:var(--txt2);
+}
+.editor_code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.editor_number {
+  display: block;
+  padding: 0 10px;
+}
+.editor_input {
+  font-size: x-large;
+  resize: none;
+  border: none;
+  color: var(--txt2);
+  background: black;
+}
+
+.preview {
+  display: grid;
+  background: var(--bg2);
+}
+/* =======
+  Buttons
+  ========== */
+.button {
+  padding: 10px;
+  background: var(--btn);
+  border: none;
+  font-size: 15px;
+  color: var(--txt2);
+  position: relative;
+}
+.button-small {
+  font-size: 12px;
+  padding: 4px;
+}
+.button-dirty:before {
+  background: rgb(132, 245, 4);
+  content: "";
+  display: block;
+  height: 2px;
+  width: calc(100% - 12px);
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+.settings {
+  padding: 10px;
+  background: black;
+  border-top: 2px solid var(--bg2);
+}
+.cool {
+  margin: 20px 0 0 30px;
+}

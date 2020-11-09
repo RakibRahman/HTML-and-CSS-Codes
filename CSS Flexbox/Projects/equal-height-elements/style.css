@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(241, 39, 17), rgb(245, 175, 25));
+
+}
+.item{
+    background:rgba(255,255,255,0.2);
+    margin:10px;
+    padding:20px;
+    font-size: 30px;
+}
+.small{
+    font-size: 20px;
+    color: purple;
+}
+.large{
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+/* Flexbox */
+.elements{
+    display: flex;
+    flex-wrap: wrap;/*to make single line to multiple lines*/
+    /* justify-content: space-between; */
+}
+.item{
+    flex: 1 1  calc(33.33%-20px);
+}

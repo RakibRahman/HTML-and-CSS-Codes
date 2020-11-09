@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions with border-radius and RGBa</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font: 2.25rem arial, helvetica, sans-serif;
+            color: #000;
+            background: #06c;
+        }
+
+        h1 {
+            margin: 2.5rem;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            height: 22.5rem;
+            padding: 1.5rem;
+        }
+
+        a,
+        img {
+            display: block;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            text-decoration: none;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;/*to define speed/time of hover effect*/
+            
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: white;
+            border-color: white;
+        }
+
+        #convert {
+            background: rgba(221, 10, 10, 0.3);
+        }
+
+        #convert a {
+            height: 7.5rem;
+            width: 7.5rem;
+            padding: 4rem;
+            border-radius: 5rem;
+            border: 3.75rem solid rgba(255, 255, 255, 0.5);
+        }
+
+        #convert a:hover {
+            border-radius: 50%;
+        }
+
+        #color {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        #bg-gradient {
+            background: rgba(0, 0, 0, 0.514);
+        }
+
+        #color a,
+        #bg-gradient a {
+            width: 5rem;
+            height: 5rem;
+            padding: 2.5rem;
+            border-radius: 3.75rem;
+            border: 2.5rem solid rgba(255, 255, 255, 0.5);
+            margin: 3.75rem auto;
+            font-size: 1.5rem;
+        }
+
+        #color a:hover {
+            height: 7.5rem;
+            width: 7.5rem;
+            padding: 3.75rem;
+            border-width: 3.75rem;
+            border-radius: 50%;
+            font-size: 2.25rem;
+            margin: 0 auto; /* To make it fixed on initial position  */
+        }
+
+        #bg-gradient a:hover {
+            height: 2.5rem;
+            width: 2.5rem;
+            padding: 1.25rem;
+            font-size: 0.75rem;
+            border-width: 1.25rem;
+            border-radius: 3.75rem;
+            margin: 7.5rem auto;
+        }
+
+        #learn a {
+            width: 7rem;
+            margin-top: 7.8rem;
+            background: white;
+            border: 0.625rem solid white;
+            border-radius: 0.625rem;
+            opacity: 0.7;
+        }
+
+        #learn a:hover {
+            background: white;
+            box-shadow: 0 0 6rem 3.125rem rgba(255, 255, 255, 0.5);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transitions with border-radius and RGBa</h1>
+    <hr />
+    <p id="convert">
+        <a href="https://nekocalc.com/px-to-rem-converter">Covert PX to REM</a>
+    </p>
+    <p id="color"><a href="https://htmlcolors.com/">Pick your color</a></p>
+    <p id="bg-gradient">
+        <a href="https://webgradients.com/">Choose your BG Gradient</a>
+    </p>
+    <p id="learn">
+        <a href="https://www.coursera.org/programs/leading-university-on-coursera-jka3d"><img src="img/arrow.png"
+                alt="" />
+        </a>
+    </p>
+</body>
+
+</html>

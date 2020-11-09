@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox Intro V2</title>
+    <style>
+      html,
+      body {
+        background-color: #addeff;
+        margin: 10px;
+        height: 100%; /*needed to work with flex height*/
+      }
+
+      .nav-list > div {
+        padding: 10px;
+        font-size: 2rem;
+        text-align: center;
+        color: whitesmoke;
+      }
+      .nav-list > :nth-child(1) {
+        background-color: indianred;
+      }
+      .nav-list > :nth-child(2) {
+        background-color: rgb(133, 205, 92);
+      }
+      .nav-list > :nth-child(3) {
+        background-color: indianred;
+      }
+      .nav-list > :nth-child(4) {
+        background-color: rgb(133, 205, 92);
+      }
+      /* ===========
+        Flexbox
+        ============= */
+      .nav-list {
+        border: 0.5rem goldenrod solid;
+        display: flex;
+        height: 100%;
+        /* justify-content: center; */
+        align-items: center;  
+      }
+      .home{
+          align-self:flex-end;
+      }
+      .cnt{
+          align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-list">
+      <div class="home">Home</div>
+      <div class="abt">About</div>
+      <div class="cnt">Contact</div>
+    </nav>
+  </body>
+</html>

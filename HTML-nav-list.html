@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigational List</title>
+    <style>
+      body {
+        margin-top: 13px;
+      }
+      .navlist ul {
+        font: bold 11px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+      .navlist li {
+        display: inline-block;
+      }
+      .navlist a {
+        background: darkgreen;
+        background: linear-gradient(to top, red, rgba(0, 0, 0, 0.336));
+        padding: 12px 20px;
+        border-right: 1px solid rgba(0, 0, 0, .3);
+        color: blanchedalmond;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .navlist a:hover {
+        background: blueviolet;
+        /* box-shadow: 3px 3px 1px rgba(255, 0, 0, 0.541); */
+        box-shadow: inset 0 0 10px 1px whitesmoke;
+        /*inset = Inner Shadow */
+      }
+      .navlist li:first-child a {
+        border-radius: 14px 0 0 10px;
+      }
+      .navlist li:last-child a {
+        border-right: 0;
+        border-radius: 0 14px 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navlist">
+      <ul>
+        <li><a href="">Home</a></li><!--
+       --><li><a href="">About</a></li><!--
+       --><li><a href="">FAQ</a></li><!--
+        --><li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

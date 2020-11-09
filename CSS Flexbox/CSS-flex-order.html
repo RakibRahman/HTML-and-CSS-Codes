@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order Property</title>
+    <style>
+        html,
+        body {
+            background-color: #addeff;
+            margin: 10px;
+
+        }
+
+        .nav-list>div {
+            padding: 10px;
+            font-size: 2rem;
+            text-align: center;
+            color: whitesmoke;
+
+        }
+
+        .nav-list> :nth-child(1) {
+            background-color: indianred;
+        }
+
+        .nav-list> :nth-child(2) {
+            background-color: rgb(133, 205, 92);
+        }
+
+        .nav-list> :nth-child(3) {
+            background-color: indianred;
+        }
+
+        .nav-list> :nth-child(4) {
+            background-color: rgb(133, 205, 92);
+        }
+
+        /* ===========
+          Flexbox
+          ============= */
+        .nav-list {
+            border: 0.5rem goldenrod solid;
+            display: flex;
+        }
+        .item1{
+            order: 1;
+        }
+        .item2{
+            order: 0;
+        }
+        .item3{
+            order: -1;
+        }
+        /* ==============
+        Container
+        ============= */
+        .box{
+            color: white;
+            font-size: 100px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        .box1{
+            background: red;
+        }
+        .box2{
+            background: green;
+        }
+        .box3{
+            background: yellow;
+        }
+        .box4{
+            background: royalblue;
+        }
+        .box5{
+            background: cyan;
+        }
+        .box6{
+            background: violet;
+        }
+        .box7{
+            background: chocolate;
+        }
+        .box8{
+            background: orangered;
+        }
+        .box9{
+            background:chartreuse;
+        }
+        .box10{
+            background: gray;
+           
+        }
+        .container{
+            display: flex;
+            border: 5px solid springgreen;
+        }
+         .box{
+             flex: 1;
+         }
+         .box3{
+            order:-4;
+         }
+         .box4{
+            order: -5;
+         }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-list">
+        <div class="item1">1 Home</div>
+        <div class="item2">2 About</div>
+        <div class="item3">3 Contact</div>
+
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+</body>
+
+</html>

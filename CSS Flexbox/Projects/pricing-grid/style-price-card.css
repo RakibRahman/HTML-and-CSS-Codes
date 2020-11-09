@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250), rgb(255, 255, 255));
+    background-size: cover;
+    background-repeat: repeat-y;
+
+}
+/* Button */
+button{
+    border-radius: 4px;
+    padding:10px;
+}
+button > img,
+button > span {
+  vertical-align: middle;
+}
+
+/* Typography */
+.plan h2{
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom:8px;
+}
+button span{
+    color: coral;
+    font-weight: 300;
+}
+.price{
+    font-size: 50px;
+    margin: 10px 0;
+}
+.price:hover{
+    font-size: 60px;
+    font-weight: bolder;
+}
+button:hover{
+    background: crimson;
+    transform: scale(1.3);
+    cursor: pointer;
+   
+}
+button span:hover{
+    color: whitesmoke;
+   
+}
+
+/* Stylization */
+.price-card{
+    max-width: 46.875rem;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    /* padding: 50px; */
+}
+.plan ul{
+    list-style:none ;
+    margin: 0;
+    padding: 0;
+}
+.plan ul li{
+    border-bottom: 1px solid rgba(150, 7, 7, 0.37);
+    padding: 10px;
+}
+.plan ul li:last-child{
+    border-bottom: 0;
+}
+
+/* FlexBox Stuff */
+
+.price-card{
+    display: flex;
+    align-items: center; /*align-items: stretch; to make it full width*/
+}
+.plan{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /*flex-direction: columns*/
+
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #b6f4bc 0%,#b7f3bf 100%);
+    
+}
+.plan > *{
+    flex: 1 1 100%;
+}
+.plan .cta{
+    align-self: flex-end; 
+    /* .plan is its container */
+
+}

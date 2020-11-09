@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Demo</title>
+    <link rel="stylesheet" href="layout.css">
+    
+</head>
+<body>
+    <header class="clearfix">
+        <h1 id="top">WebDev</h1>
+        <nav>
+            <ul>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#vs">Versus</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#differ">Information</a></li>
+                <li><a href="#follow">Follow Us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="bdr"></div>
+    <div class="form-wrapper">
+        <form action="">
+            <div class="form-row">
+                <label for="name">Your Name:</label>
+                <input type="text">
+            </div>
+            <div class="form-row">
+                <label for="name">You Email:</label>
+                <input type="email">
+            </div>
+            <div>
+                <button>Subscribe</button>
+            </div>
+        </form>
+    </div>
+    <!--End form section-->
+
+    <div id="vs" class="column-layout">
+        <div class="main-column">
+            <h2>Front End Development vs Back End Development</h2>
+            <img src="img/front-vs-back.png" alt="">
+        </div>
+        <div class="side-column1">
+            <h3>What Is a Front-End Developer?</h3>
+            <p>Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.</p>
+        </div>
+        <div class="side-column2">
+            <h3>What Is a Back-End Developer?</h3>
+            </h3>
+            <p>Back end Development refers to the server side of development where you are primarily focused on how the site works. Making updates and changes in addition to monitoring functionality of the site will be your primary responsibility. This type of web development usually consists of three parts: a server, an application, and a database. Code written by back end developers is what communicates the database information to the browser. Anything you can’t see easily with the eye such as databases and servers is the work of a back end developer.  Back end developer positions are often called programmers or web developers.</p>
+        </div>
+    </div> <!-- end of main-column -->
+    <div id="skill" class="category-wrapper">
+        <div class="category-list">
+            <h4>
+               Front End Skills:
+            </h4>
+           <ul class="skill">
+               <li>HTML</li>
+               <li>CSS</li>
+               <li>JavaScript</li>
+               <li>Js Frameworks</li>
+               <li>CSS Preprocessors</li>
+           </ul>
+        </div>
+        <div class="category-list">
+            <h4>
+               Full Stack Skills:
+            </h4>
+         <ul class="skill">
+             <li>Program a browser (like using JavaScript, jQuery, Angular, or Vue)</li>
+             <li>Program a server (like using PHP, ASP, Python, or Node)</li>
+             <li>Program a database (like using SQL, SQLite, or MongoDB)</li>
+         </ul>
+        </div>
+        <div class="category-list">
+            <h4>
+               Back End Skills:
+            </h4>
+            <ul class="skill">
+                <li>Web Development Languages</li>
+                <li>Database and cache</li>
+                <li>Server</li>
+                <li>API (REST & SOAP)</li>
+            </ul>
+        </div>
+    </div> <!-- end of category-wrapper -->
+
+    <div id="gallery" class="gallery">
+        <div class="gallery-items">
+            <img src="img/html.jpg" alt="">
+        </div>
+        <div class="gallery-items">
+            <img src="img/css.jpg" alt="">
+        </div>
+        <div class="gallery-items">
+            <img src="img/JS.jpg" alt="">
+        </div>
+        <div class="gallery-items">
+            <img src="img/vscode.png" alt="">
+        </div>
+        <div class="gallery-items">
+            <img src="img/node.jpeg" alt="">
+        </div>
+    </div> <!--End of gallery-->
+
+   <div class="center">
+    <div class="center-me"><img src="img/wd2.jpg" alt=""></div>
+   </div> <!--end of center-->
+
+   <div id="differ" class="same-height-container">
+       <div class="first-column">
+           <h3>Web Design or Web Development, What’s The Difference?</h3>
+           <p>We can tell by looking at our Google Analytics that businesses are searching for both Web Design Company and Web Development Company. Nowadays these terms are virtually interchangeable as “web companies” alternate the way they describe their services. The truth is that the terms reference two fundamentally different aspects of the website building process requiring two unique skill sets. Why is it important that you know the difference as you look for someone to design and develop your company’s website? Let’s see if we can provide some clarity.
+           </p>
+          <p>In essence, web design refers to both the aesthetic portion of the website and it’s usability. Web designers use various design programs such as Adobe Photoshop to create the layout and other visual elements of the website.</p>
+          <p>Web Developers on the other hand, take a website design and actually make a functioning website from it. Web developers use HTML, CSS, Javascript, PHP and other programming languages to bring to life the design files.</p>
+       </div>
+
+       <div class="second-column">
+           <div class="col-2-1">
+               <h4>Web Development</h4>
+               <p>Web developers, sometimes called programmers, take the design created and build a fully functioning website. To put it (very) simply, think of the design as a non-interactive “picture” of a website. Developers take that design and break it up into it’s components. They then either use just HTML or a more dynamic approach incorporating programming languages such as PHP to develop the various website pages. More advanced web developers may choose to utilize a Content Management System (CMS) like WordPress or Joomla in order to streamline development and allow clients an easy way to maintain and update their website.</p>
+           </div>
+           <div class="col-2-2">
+            <h4>Web Design</h4>
+            <p>Web designers must always begin by considering a client’s website objectives and then move on to an Information Architecture (IA) to set a website’s information hierarchy and help guide the design process. Next, web designers can start creating wireframes and finally move to the design stage. Web designers may use several basic design principles to achieve an aesthetically pleasing layout which also offers excellent user experience.</p>
+           </div>
+       </div>
+   </div>
+   <footer id="follow" class="clearfix">
+       <h4>CopyRight:Rakibur Talukder</h4>
+       <a href="#top" class="back">Back To Top</a>
+       <div class="s-icon">
+           <span>Follow @ </span>
+        <img src="img/fb.png" alt="">
+        <img src="img/twitter.png" alt="">
+        <img src="img/instra.png" alt="">
+       </div>
+   </footer>
+</body>
+</html>

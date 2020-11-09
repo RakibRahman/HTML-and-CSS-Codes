@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Pseudo-classes</title>
+    <style>
+        a:link{
+        color: rebeccapurple;
+             /* Unvisited Link */
+        }
+        a:visited{
+        background-color: red;
+        /* Visited Link */
+    
+        }
+        a:focus{
+            background-color:green;
+            /*  focus point of the page of an element */
+        }
+        a:hover{
+        background-color: rgb(225, 0, 255);
+        /* mouse over link */
+        }
+        a:active{
+        background-color: rgb(164, 240, 23);
+        /* selected link */
+        }
+        input:focus{
+            color: whitesmoke;
+            background-color: red;
+        }
+        input:hover{
+                background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#sign">SignUp</a>
+                <a href="https://icons8.com/">Payment</a>
+                <a href="wwwwwwwwww">Log IN</a>
+            </li>
+        </ul>
+    </nav>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+    <label for="name">User-Name:</label>
+    <input id="name" type="text"><br>
+    <label for="password">Password:</label>
+    <input type="password" name="name" id="name">
+</body>
+</html>

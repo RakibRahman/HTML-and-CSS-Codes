@@ -1,0 +1,113 @@
+/* Grid Example One */
+.main{
+    background: rgb(236, 107, 107);
+    padding: 20px;
+}
+.quote{
+    background: steelblue;
+    padding: 10px;
+    border-bottom: 3px solid skyblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+/* Flexbox Example One  */
+.ctrl{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+
+    /* display: grid;
+    grid-template-columns: auto auto auto 1fr auto auto; */
+}
+.scrubber{
+    height: 10px;
+    min-width: 100px;
+    background: rgb(8, 223, 36);
+    border-radius: 10px;
+    flex: 1;
+}
+.bg{
+    background: rgba(0,0,0,0.3);
+    padding: 50px;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+/* Grid Example Two */
+.center-grid{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+/* Flexbox Example Two */
+.center-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Example Three */
+.item{
+    background: beige;
+    font-size: large;
+    padding: 10px;
+}
+.grid-wrapper{
+    background: chartreuse;
+    color: black;
+    height: 300px;
+    width: 300px;
+    border: 5px solid black;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    align-items: end;
+    justify-items: end;
+
+}
+.corner:nth-child(1),.corner:nth-child(2){
+    align-self: start;
+}
+
+.corner:nth-child(1),.corner:nth-child(3){
+    justify-self: start;
+}
+
+/* Flexbox Example Two */
+.flex-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.flex-wrapper>*{
+    width: 30%;
+    margin-bottom: 20px;
+}
+/* Grid Example Four */
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.known{
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    justify-content: center;
+    grid-gap: 20px;
+}
+/* Flexbox Example Four */
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+.flex-container>*{
+    flex: 1;
+    margin-right: 20px;
+}

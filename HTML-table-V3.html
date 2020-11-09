@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Table</title>
+    <style>
+      /* Basic Styles of Table */
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        color: purple;
+        font-size: 14px;
+        line-height: 1.4;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      th,
+      td {
+        padding: 10px 15px;
+        vertical-align: middle;
+      }
+      thead {
+        background: royalblue;
+        color: whitesmoke;
+      }
+      th:first-child {
+        text-align: left;
+      }
+      tbody tr:nth-child(even) {
+        background: #bfbfe4af;
+      }
+      tbody tr:nth-child(odd) {
+        background: thistle;
+      }
+      td {
+        border-bottom: 1px solid #f14e0d;
+        border-right: 1px solid #f14e0d;
+      }
+      td:first-child {
+        border-left: 1px solid #f14e0d;
+      }
+      /* Text Alignment */
+      .itm-title {
+        color: black;
+        display: block;
+      }
+      .itm-qty,
+      .itm-stock {
+        text-align: center;
+      }
+      .itm-price {
+        text-align: right;
+      }
+      .itm-multiple {
+        display: block;
+        color: cornflowerblue;
+      }
+      tfoot {
+        text-align: right;
+      }
+      tfoot tr:last-child {
+        background: grey;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" colspan="2">Items</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong class="itm-title"> Kill me Now</strong>
+            By Robert Yohan
+          </td>
+          <td class="itm-stock">In Stock</td>
+          <td class="itm-qty">1</td>
+          <td class="itm-price">$57</td>
+        </tr>
+        <tr>
+          <td>
+            <strong class="itm-title"> Learn HTM5 Easily</strong>
+            By Naruto Uchiha
+          </td>
+          <td class="itm-stock">In Stock</td>
+          <td class="itm-qty">2</td>
+          <td class="itm-price">
+            $97 <span class="itm-multiple">$26.47 &#215; 2</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong class="itm-title"> Heal Me Now</strong>
+            By Robert Yohan
+          </td>
+          <td class="itm-stock">Stock Out</td>
+          <td class="itm-qty">0</td>
+          <td class="itm-price">$27</td>
+        </tr>
+        <tr>
+          <td>
+            <strong class="itm-title">A little Secret</strong>
+            By James Miah
+          </td>
+          <td class="itm-stock">In Stock</td>
+          <td class="itm-qty">2</td>
+          <td class="itm-price">$47</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Subtotal</td>
+          <td>157$</td>
+        </tr>
+        <tr>
+          <td colspan="3">Tax</td>
+          <td>10$</td>
+        </tr>
+        <tr>
+          <td colspan="3">Grand Total</td>
+          <td>167$</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

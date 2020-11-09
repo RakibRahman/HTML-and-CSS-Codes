@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Inline Block</title>
+  <style>
+    code {
+      color: greenyellow;
+      background: black;
+      display: block;
+      padding: 25px 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    header,
+    section,
+    footer {
+      margin: 0 1.5% 24px 1.5%;
+      ;
+    }
+
+    section {
+      display: inline-block;
+      width: 30%;
+
+    }
+
+    .bdr {
+      border-top-right-radius: 66px;
+      border-bottom-left-radius: 66px;
+
+    }
+
+    footer {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <code>&#60;Header&#62;</code>
+  </header>
+  <section>
+    <code class="bdr">
+      &#165;Section&#165; <br> Display: <br> Inline-Block;
+      
+    </code>
+  </section><!--
+  --><section>
+    <code class="bdr">
+      &#165;Section&#165; <br> Display: <br> Inline-Block;
+    </code>
+  </section><section> <!-- put each new <section> element’s opening tag on the same line as the previous <section> element’s closing tag => to remove space between inline-block elements-->
+    <code class="bdr">
+      &#165;Section&#165; <br> Display: <br> Inline-Block;
+    </code>
+  </section>
+  <footer>
+    <code>
+      &#60;Footer&#62;
+    </code>
+  </footer>
+<!-- Another way to remove the white space between inline-block elements is to open an HTML comment directly after an inline-block element’s closing tag.(see above) -->
+</body>
+
+</html>

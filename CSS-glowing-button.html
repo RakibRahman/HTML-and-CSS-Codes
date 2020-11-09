@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowing Gradient Button</title>
+    <style>
+      fieldset {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        height: 220px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+      div {
+        margin-top: 1em;
+      }
+      label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+      }
+      label,
+      legend {
+        color: rgb(44, 219, 9);
+      }
+      input,
+      textarea {
+        width: 300px;
+        font: 1em sans-serif;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+      }
+      input:focus,
+      textarea:focus {
+        color: whitesmoke;
+        background-color: blueviolet;
+      }
+      textarea {
+        vertical-align: top;
+        /* Align multiline text fields with their labels */
+        height: 5em;
+      }
+
+      /*================
+             Glow Animation
+         ================= */
+      .btn{
+          position: relative;
+         top:6px;
+      }
+      button {
+        /* margin: 20px 0 0 124px; */
+        cursor:pointer;
+        border-radius: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 2px;
+        width: 140px;
+        height:30px;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        background: linear-gradient(90deg,#9348e4,#1ddae7,#f3558e,#faee1c);
+        background-size: 400%;
+        z-index: 1;
+      }
+      button:hover{
+         animation: glow 8s linear infinite;
+     }
+     @keyframes glow{
+         0%{
+             background-position: 0%;
+         }
+         100%{
+             background-position: 400%;
+         }
+     }
+     button:before{
+         content: '';
+         position: absolute;
+         top:-5px;
+         left:-5px;
+         bottom: -5px;
+         right: -5px;
+         z-index: -1;
+         background: linear-gradient(90deg,#581b98,#1ddae7,#f3558e,#faee1c);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+        
+     } 
+     button:hover::before{
+      filter: blur(10px);
+      opacity: 1;
+      animation: glow 8s linear infinite;
+     }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <form action="">
+        <fieldset>
+          <legend>Contact</legend>
+          <div>
+            <label for="name"> Name: </label>
+            <input type="text" />
+          </div>
+          <div>
+            <label for="mail"> Email: </label>
+            <input type="text" />
+          </div>
+          <div>
+            <label for="message"> Message: </label>
+            <textarea name="user-message" id="message"></textarea>
+          </div>
+         <div class="btn"> <button>Send Your Message</button></div>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+         .container>div{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container>div:nth-child(even){
+            color: floralwhite;
+            background: forestgreen;
+        }
+        .container>div:nth-child(odd){
+            color: floralwhite;
+            background: tomato;
+        }
+        /* Grid */
+        .container{
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px auto 40px;
+            grid-gap: 5px;
+            grid-template-areas: 
+            "m h h h h h h h h h h ."
+            "m c c c c c c c c c c c"
+            "m f f f f f f f f f f f"
+            ;
+            /* layout must be rectangle to apply grid-template-areas; */
+        }
+        .header{
+            grid-area: h;
+        }
+        .menu{
+            grid-area: m;
+        }
+        .content{
+           grid-area: c;
+        }
+        .footer{
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>

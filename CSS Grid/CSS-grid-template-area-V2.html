@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+         .container>div:nth-child(even){
+            background: crimson;
+        }
+        .container>div:nth-child(odd){
+            background: blue;
+        }
+        /* Grid */
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5,150px);
+            grid-template-rows: repeat(4,100px);
+            grid-template-areas: 
+            "x y y y y"
+            "x center center center w"
+            "x center center center w"
+            "x z z z z"
+             ;
+        }
+       #x{
+           grid-area: x;
+           background: #FACDE3;
+       }
+       #y{
+           grid-area: y;
+           background: #C5F2E7;
+       }
+       #center{
+           grid-area: center;
+           background: #F2E3C4;
+       }
+       #w{
+           grid-area: w;
+           background: #A98670;
+       }
+       #z{
+           grid-area: z;
+           background:#C5D2F2;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left" id="x">Left</div>
+        <div class="header" id="y">Header</div>
+        <div class="footer" id="z">Footer</div>
+        <div class="right" id="w">Right</div> 
+        <div class="center" id="center">Center</div>       
+        
+    </div>
+</body>
+</html>

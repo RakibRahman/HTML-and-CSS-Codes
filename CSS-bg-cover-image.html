@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Background Cover Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainDiv {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(img/venue.jpg);
+                /* 
+                linear-gradient(
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5)
+    ) red tint
+                 */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 33rem;
+        }
+
+        .info {
+            color: whitesmoke;
+            text-transform: capitalize;
+            text-align: center;
+            position: relative;
+            top: 10rem;
+        }
+
+        .info h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bolder;
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+            letter-spacing: 0.2rem;
+        }
+
+        .info button {
+            padding: 0.94rem 3.125rem 0.94rem 3.125rem;
+            font-size: 1.14rem;
+            color: whitesmoke;
+            background: none;
+            border: 0.2rem solid #ffffff;
+            border-radius: 0.5rem;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+        }
+
+        button:hover {
+            background: whitesmoke;
+            color: tomato;
+            font-size: 1.8rem;
+            border-radius: 30%;
+            margin: 0.3rem auto;
+        }
+
+        h1 {
+            font-weight: bolder;
+            text-align: center;
+            margin: 2.3rem 0;
+        }
+
+        p {
+            word-spacing: 0.2rem;
+            line-height: 130%;
+            margin: 2.3rem 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div class="info">
+            <h2>Welcome to Awesome Theater</h2>
+            <button>Book Now!</button>
+        </div>
+    </div>
+    <h1>Who Are We</h1>
+    <p>
+        Awesome Theatre is a 501(c)(3) Non-Profit Arts Organization based in San
+        Francisco, Ca. We are dedicated to producing new, relevant, stylized,
+        theatrical, live multimedia entertainment that will not only appeal to
+        theatre audiences but to those who are just as likely to see a stand up
+        comic, a movie, or a concert as they are a play. We strive to create work
+        that is accessible, creative, unique and knowing without being
+        pretentious. Theatre is one of the last things we cant do or experience
+        alone, there always has to be another person in the room. Our goal at
+        Awesome Theatre is to create a lasting and original adventure for every
+        audience member and collaborator, a shared escapade of escapist
+        entertainment.
+    </p>
+</body>
+
+</html>

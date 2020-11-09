@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Remove Extra Space Between Inline-Block Elements</title>
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    ul li {
+        display: inline-block;
+        background: #ffa500;
+        padding: 5px 20px;
+    }
+    /* Third Method */
+    .ul3 li{
+        margin-right: -4px;
+    }
+    /* Fourth Method */
+    .ul4{
+        font-size:0 ;
+    }
+    .ul4 li{
+        font-size:1rem;
+    }
+</style>
+</head>
+<body>
+    
+    <h2>Normal Behavior</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <hr>
+    <h1>After Removing Spaces</h1>
+    <h2>First Method</h2>
+    <small><b>By using  <q>comments</q> </b></small>
+    <ul>
+        <li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li>
+    </ul>
+    <h2>Second Method</h2>
+    <ul>
+      <li><a href="#">Home</a></li><!--
+      --><li><a href="#">About</a></li><!--
+    --><li><a href="#">Contact</a></li>
+  </ul>
+  <h2>Third Method</h2>
+  <small><b>By using negative <q>margin-right</q> property</b></small>
+  <ul class="ul3">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<h2>Fourth Method</h2>
+<small><b>By setting the "font-size" to zero</b></small>
+<ul class="ul4">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</body>
+</html>

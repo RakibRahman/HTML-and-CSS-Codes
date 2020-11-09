@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-Self</title>
+    <style>
+        
+        .container{
+            border: 3px gold solid;
+            width: 310px;
+            height: 150px;
+            display: flex;
+            align-items: flex-start;
+            
+        }
+        .container>div{
+            margin: 5px;
+            
+            font-size: 2rem;
+            
+        }
+        .container>:nth-child(1){
+            background-color: hotpink;
+        }
+        .container>:nth-child(2){
+            background-color: rgb(199, 7, 103);
+        }
+        .container>:nth-child(3){
+            background-color: hotpink;
+        }
+        .html{
+            align-self: flex-start;
+        }
+        .css{
+            align-self: center;
+        }
+        .js{
+            align-self: flex-end;
+        }
+        /* =========================== */
+        .box{
+            color: white;
+            font-size: 100px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        .box1{
+            background: red;
+        }
+        .box2{
+            background: green;
+        }
+        .box3{
+            background: yellow;
+        }
+        .box4{
+            background: royalblue;
+        }
+        .box5{
+            background: cyan;
+        }
+        .box6{
+            background: violet;
+        }
+        .box7{
+            background: chocolate;
+        }
+        .box8{
+            background: orangered;
+        }
+        .box9{
+            background:chartreuse;
+        }
+        .box10{
+            background: gray;
+        }
+        .container2{
+            display: flex;
+            border:10px solid slateblue;
+            height: 100vh;
+            align-items: flex-start;
+        }
+        .box{
+            width: 33.333%;
+        }
+        .box1{
+            align-self: stretch;
+        }
+        .box3{
+            padding-bottom: 20px;
+
+        }
+        .box6{
+            padding-bottom: 0px;
+            align-self: center;
+        }
+        .box9{
+            padding-bottom: 190px;
+            align-self: flex-end;
+        }
+        .box10{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>The align-self property specifies the alignment for the selected item inside the flexible container.</h1>
+    <h2> The align-self property overrides the container's align-items property.</h2>
+    <main class="container">
+        <div class="html">HTML</div>
+        <div  class="css">CSS</div>
+        <div  class="js">JavaScript</div>
+    </main>
+    <div class="container2">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+</body>
+</html>

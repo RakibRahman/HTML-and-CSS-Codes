@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        .title{
+            font-size: 15px;
+            color: firebrick;
+            transition: all 0.5s;
+        }
+        .title2{
+            font-size: 15px;
+            color: rgb(46, 14, 190);
+            transition-property: font-size;
+            transition-duration: 0.5s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in;
+        }
+        .title:hover{
+            
+            color: rgb(13, 214, 113);
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+        .title2:hover{
+            font-size: 25px;
+
+        }
+        .title3{
+            font-size: 15px;
+            color: firebrick;
+            transition: font-size 0.5s ease-in 0s;
+            /* Transition Shorthand
+                transition: transition-property transition-duration transition-timing-function transition-delay;
+             */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Hover over me to see Transformation </h1>
+    <h1 class="title2">Hover over me to see Transformation </h1>
+    <h1 class="title3">Hover over me to see Transformation </h1>
+
+
+</body>
+</html>

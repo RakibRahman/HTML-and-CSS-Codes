@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <style>
+        div {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute; 
+  content: '✖';
+  padding-left: 2px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 2px;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+          <label for="uname">Choose a username: </label>
+          <input type="text" id="uname" name="name" pattern="[a-z]{4,10}" required>
+          <span class="validity"></span>
+        </div>
+        <div>
+            <label for="password">
+                Pin:
+            </label>
+            <input type="password" name="" id="" required minlength="4">
+            <span class="validity"></span>
+            <p>Usernames must be lowercase and 4-8 characters in length.</p>
+
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
+      </form>
+</body>
+</html>

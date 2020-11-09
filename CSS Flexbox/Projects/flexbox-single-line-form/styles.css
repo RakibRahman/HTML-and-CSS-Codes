@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background: #7464e0;
+}
+/* Form Stylization */
+.flex-form > *{
+    border: 0;
+    padding: 10px;
+    background: white;
+    line-height: 50px;
+    font-size: 20px;
+    border-right:1px solid rgba(212, 5, 5, 0.849);
+    outline: 0;
+    -webkit-appearance:none; /*removes "arrow" icon from select/option*/
+}
+.flex-form>*:last-child{
+    border-right: 0;
+}
+input[type="submit"]{
+    color: white;
+    background: crimson;
+}
+input:focus{
+    color: royalblue;
+}
+/* Flexbox Stuff */
+.wrapper{
+    height:100vh; /*needed for display: flex; to work*/
+    width:100%;
+  }
+  .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+.flex-form{
+    display: flex;
+    border: 20px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+input[type="search"]{
+    flex-basis: 350px;
+}

@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
+    background-repeat: repeat-y;
+    background-size:cover;
+    font-family: 'Chilanka', cursive;
+}
+.wrapper{
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: 3.125rem;
+}
+header{
+    margin-top: 1rem;
+    color: ivory;
+    background: rgba(0, 0,0, 0.3);
+    padding: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.125rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: salmon;
+    font-weight: 300;
+    text-align: center;
+    background:rgba(0,0,0,0.2);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem 0.313rem;
+    transition:all 0.5;
+}
+.main a:hover{
+    background:rgba(233, 79, 79, 0.308);
+    color: rgb(0, 236, 102);
+}
+.toggleNav{
+    display: none;
+}
+.nav-bar{
+    margin-top: 2.5rem;
+}
+.nav-bar ul{ /*Flex Container*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    border: 0.065rem solid black;
+}
+/* Flex Items */
+.nav-bar li{
+    flex: 3;
+}
+.nav-bar .social{
+    flex: 1;
+}
+.nav-bar .social img{
+    width: 1.26rem;
+    height: 1.26rem;
+}
+.social img:hover{
+    transform: scale(2.2);
+   background: none;
+   box-shadow: 0.063rem 0.125rem 0.188rem whitesmoke;
+   border-radius: 0.625rem;
+}
+/* Main img section */
+.main-img{
+
+    background:rgba(0,0,0,0.2);
+    padding: 0.625rem;
+    margin-top: 2.5rem;
+}
+.main-img img{
+    width: 100%;
+}
+/* summary,form section & footer */
+section,footer{
+    background:rgba(0,0,0,0.2);
+    margin-top: 2rem;
+    padding: 1.26rem;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 300;
+}
+input{
+    padding: 0.625rem;
+    border: 0;
+    outline: none;
+    border-radius: 0.6rem;
+}
+input[type="submit"]{
+    background-color: tomato;
+    color: whitesmoke;
+    border-radius: 0.6rem;
+}
+/* ==============
+Responsive
+================== */
+@media all and (max-width:62.5rem){
+    .nav-bar ul{
+        flex-wrap: wrap;
+    }
+    .nav-bar li{
+        flex: 1 1 50%;
+    }
+    .nav-bar .social{
+        flex: 1 1 25%;
+    }
+}
+@media all and (max-width:500px){
+.nav-bar li{
+    flex-basis: 100%;
+}
+.wrapper{ /*Flex Container*/
+    display: flex;
+    flex-direction: column;
+}
+/* Flex Items */
+.wrapper > *{
+    order: 9999;
+}
+
+.nav-bar{
+    order: 1;
+}
+.toggleNav{
+    display: block;
+}
+.nav-bar ul{
+    display: none;
+}
+.nav-bar ul.open{
+    display: flex;
+}
+.intro{
+    order: 2;
+}
+.summary{
+    order: 3;
+}
+.sign-form{
+    order: 4;
+}
+}

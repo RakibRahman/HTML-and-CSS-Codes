@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .wrapper{
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%); 
+        }
+        .container>div{
+        
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        .container>div:nth-child(even){
+            background: turquoise;
+        }
+        .container>div:nth-child(odd){
+            background: chartreuse;
+        }
+        /* Grid */
+        .container{
+            display: grid;
+            grid-template-columns: 100px auto 100px; /*3 columns*/
+            grid-template-rows: 50px 100px; /*2 rows*/
+            grid-gap: 3px;
+            /* MISC.
+            Use grid-template-columns to define number and width of columns.
+            Use grid-template-rows to define number and height of rows.
+            
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Six</div>
+        </div>
+    </div>
+</body>
+</html>

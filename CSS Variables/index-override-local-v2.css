@@ -1,0 +1,37 @@
+:root{
+    --red:crimson;
+    --yellow: yellowgreen;
+    --home:wheat;
+    --link:green;
+}
+
+
+html, body {
+    background:var(--home);
+    color: var(--red);
+}
+
+h1, p {
+    color:  var(--red);
+}
+
+
+#nav li{
+    color: var(--link);
+}
+
+.item {
+    --item-button:forestgreen;
+    --red:#ff8e69; /*overriding variable*/
+    background: var(--yellow);
+}
+
+button {
+    background:  var(--red);
+    color: var(--item-button);
+}
+
+.featured{
+    --yellow: #ffe55b; /*overriding variable*/
+    --red: #ff5564;
+}

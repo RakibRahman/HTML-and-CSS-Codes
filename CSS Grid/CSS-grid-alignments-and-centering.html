@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Alignment and Centering</title>
+   
+    <style>
+        :root{
+    --black:black;
+    --green:palegreen;
+    --yellow: #ffc600;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body{
+    background: linear-gradient(to right, rgb(241, 39, 17), rgb(245, 175, 25));
+    margin: 50px;
+}
+/* Grid */
+        .container{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows: repeat(5,100px);
+            /* justify-items and align-items */
+            justify-items: center;
+            align-items: center;
+        }
+        .num{
+            background: chartreuse;
+        }
+        .wrapper{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(5,100px);
+            grid-template-rows: repeat(5,100px);
+            border:5px solid cornsilk;
+            /* justify-content and align-content */
+            justify-content: center;
+            /* align-content: space-between; */
+        }
+        /* Justify-self and align-self */
+        .num3{
+            justify-self: stretch;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="num num1">1</div>
+        <div class="num num2">2</div>
+        <div class="num num3">3</div>
+        <div class="num num4">Rakib</div>
+        <div class="num num5">5</div>
+        <div class="num num6">6</div>
+        <div class="num num7">7</div>
+        <div class="num num8">8</div>
+        <div class="num num9">9</div>
+        <div class="num num10">10</div>
+        <div class="num num11">11</div>
+        <div class="num num12">12</div>
+        <div class="num num13">13</div>
+        <div class="num num14">14</div>
+        <div class="num num15">15</div>
+        <div class="num num16">16</div>
+        <div class="num num17">17</div>
+        <div class="num num18">18</div>
+        <div class="num num19">19</div>
+        <div class="num num20">20</div>
+        <div class="num num21">21</div>
+        <div class="num num22">22</div>
+        <div class="num num23">23</div>
+        <div class="num num24">24</div>
+        <div class="num num25">25</div>
+        <div class="num num26">26</div>
+        <div class="num num27">27</div>
+        <div class="num num28">28</div>
+        <div class="num num29">29</div>
+        <div class="num num30">30</div>
+        <div class="num num31">31</div>
+        <div class="num num32">32</div>
+        <div class="num num33">33</div>
+        <div class="num num34">34</div>
+        <div class="num num35">35</div>
+        <div class="num num36">36</div>
+        <div class="num num37">37</div>
+        <div class="num num38">38</div>
+        <div class="num num39">39</div>
+        <div class="num num40">40</div>
+    </div>
+    <hr>
+    <div class="wrapper">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">17</div>
+        <div class="item">18</div>
+        <div class="item">19</div>
+        <div class="item">20</div>
+        <div class="item">21</div>
+        <div class="item">22</div>
+        <div class="item">23</div>
+        <div class="item">24</div>
+        <div class="item">25</div>
+        <div class="item">26</div>
+        <div class="item">27</div>
+        <div class="item">28</div>
+        <div class="item">29</div>
+        <div class="item">30</div>
+        <div class="item">31</div>
+        <div class="item">32</div>
+        <div class="item">33</div>
+        <div class="item">34</div>
+        <div class="item">35</div>
+        <div class="item">36</div>
+        <div class="item">37</div>
+        <div class="item">38</div>
+        <div class="item">39</div>
+        <div class="item">40</div>
+    </div>
+</body>
+</html>

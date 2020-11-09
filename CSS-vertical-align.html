@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Alignment</title>
+    <style>
+      .parent {
+        height: 400px;
+        width: 800px;
+        border: 2px solid purple;
+        margin: 1em;
+        padding: 0 1em;
+      }
+      .child {
+        color: royalblue;
+        font-size: 1.2rem;
+        position: relative;
+        top: 50%; /*50% moves the top of the child element to the center of the parent*/
+        transform: perspective(1px) translateY(-50%); /*move the child element up 50% of its height*/
+
+        /*
+        translateY function: it will reposition the elements vertically
+        perspective function: it will prevent blurriness;
+        */
+      }
+
+      .parent2 {
+        height: 80vh;
+        width: 60vw;
+        border: 2px solid purple;
+        margin: 1em;
+        padding: 0 1em;
+        /*Center vertically*/
+        display: flex; /*display: grid;*/
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /*to make it top to bottom*/
+        /*^^^Easy method*/
+      }
+      .child2 {
+        border: 2px solid red;
+      }
+
+      .child2 img {
+        width: 300px;
+        height: 200px;
+      }
+      .div3 {
+        display: grid;
+        place-items: center; /*Easiest Method*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nostrum
+        inventore nihil voluptatibus quod blanditiis explicabo cupiditate
+        maiores voluptate veniam quas id, itaque quis consectetur dolore libero
+        atque adipisci et. Error doloremque id consequatur praesentium sequi
+        eius ipsam corporis nihil! Modi in eligendi atque, nisi voluptatem
+        tempora enim accusantium. Amet temporibus reiciendis sed impedit
+        obcaecati recusandae et aut expedita officiis? Ipsa, quos. Delectus ea
+        rem quos vel magni ratione accusamus exercitationem amet ipsa ullam,
+        recusandae aut molestiae dolore quidem minus facilis quo dicta deserunt,
+        consectetur ducimus. Recusandae ipsa voluptatum cumque?
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nostrum
+        inventore nihil voluptatibus quod blanditiis explicabo cupiditate
+        maiores voluptate veniam quas id, itaque quis consectetur dolore libero
+        atque adipisci et. Error doloremque id consequatur praesentium sequi
+        eius ipsam corporis nihil! Modi in eligendi atque, nisi voluptatem
+        tempora enim accusantium. Amet temporibus reiciendis sed impedit
+        obcaecati recusandae et aut expedita officiis? Ipsa, quos. Delectus ea
+        rem quos vel magni ratione accusamus exercitationem amet ipsa ullam,
+        recusandae aut molestiae dolore quidem minus facilis quo dicta deserunt,
+        consectetur ducimus. Recusandae ipsa voluptatum cumque?
+      </div>
+    </div>
+    <div class="parent2">
+      <div class="child2">
+        <img src="img/note.png" alt="" />
+      </div>
+      <div class="child2">
+        <img src="img/note.png" alt="" />
+      </div>
+    </div>
+    <div class="div3">
+      Hello
+    </div>
+  </body>
+</html>

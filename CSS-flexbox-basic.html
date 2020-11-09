@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Flexbox Basic</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-size: 1.3rem;
+            }
+            header{
+                background-color: steelblue;
+                color: sandybrown;
+                text-align: center;
+                padding: 1.5rem;
+                font-size: 1.5rem;
+            }
+            .intro{
+                width: 31.25rem;
+                margin: 6.25rem auto;
+                text-align: center;
+            }
+            .skills{
+                padding: 3.6rem 0;
+                background-color: darkblue;
+                color: whitesmoke;
+            }
+            .skills h2{
+                text-align: center;
+            }
+            .columns{
+                display: flex;
+                width: 66rem;
+                margin: 0.625rem auto;
+            }
+            .column{
+                margin:0 0.525rem;
+                word-spacing: 0.5rem;
+                line-height: 1.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Intro to the Web Development</h1>
+        </header>
+        <main>
+            <div class="intro">
+                <h2>HTML and CSS are the building blocks of the web</h2>
+                <p>HTML is used to create the actual content of the page, such as written text, and CSS  is responsible for the design or style of the website, including the layout, visual effects and background color. </p>
+            </div>
+            
+            <div class="skills">
+                <h2>Must Be good at a bunch of stuff!</h2>
+                
+                <div class="columns"> <!--Parent Element--> <!-- width, centered, and flex to make columns -->
+                    <!-- column 1 -->
+                    <div class="column"> <!--Child Element-->
+                        <h3>HTML</h3>
+                        <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. </p>
+                    </div>
+                    
+                    <!-- column 2 -->
+                    <div class="column"><!--Child Element-->
+                        <h3>CSS</h3>
+                        <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. </p>
+                    </div>
+                    
+                    <!-- column 3 -->
+                    <div class="column"> <!--Child Element-->
+                        <h3>JavaScript!</h3>
+                        <p>JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.  </p>
+                    </div>
+                    
+                </div> <!-- / columns --> 
+            </div> <!-- skills -->
+                      
+        </main>
+    </body>
+</html>

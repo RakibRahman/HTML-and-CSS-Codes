@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Items</title>
+    <style>
+        .container>div{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container>div:nth-child(even){
+            color: floralwhite;
+            background: forestgreen;
+        }
+        .container>div:nth-child(odd){
+            color: floralwhite;
+            background: tomato;
+        }
+        /* Grid */
+        .container{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px 200px 40px;
+            grid-gap: 5px;
+        }
+        .header{
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /*grid-column: 1 / 3;*/ /*short hand ex1*/ /*span from first column to last column*/
+
+            /*grid-column: 1 / span 2;*/ /*short hand ex2*/
+
+            grid-column: 2 / -1; 
+            /*-1 if there too much or unknown number of columns*/ /*short hand ex3*/
+            /*span from second column to last column*/
+        }
+        .menu{
+            grid-row: 1 / 3; /*spans from first row line to third row line*/
+        }
+        .content{
+            grid-column: 2 / -1; /*column starts at 2*/
+        }
+        .footer{
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>

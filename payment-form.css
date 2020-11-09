@@ -1,0 +1,64 @@
+h1{
+    margin-bottom: 0;
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+form{
+    margin: 0 auto;
+    width: 420px;
+    padding: 1em;
+    border:2px double goldenrod;
+    border-radius: 1em;
+}
+label span{
+    /*Align inputs vertically*/
+    display: inline-block;
+    width: 120px; 
+    text-align: right;
+}
+input{
+    font: 1em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid rgb(190, 209, 16);
+}
+input[type=radio] {
+    width: auto;
+    border: none;
+}
+input:focus {
+    border-color: rgb(11, 235, 97);
+}
+fieldset{
+    width: 250px;
+    box-sizing: border-box;
+    margin-left: 136px;
+    border: 2px solid rgb(190, 209, 16);
+}
+button {
+    margin: 20px 0 0 124px;
+}
+
+/* =================
+Validation
+====================== */
+div{
+    
+    position: relative;
+}
+input+.validation{
+    padding-right: 30px;
+}
+input:invalid+.validation:after{
+   position: absolute;
+  content: '✖';
+  padding-left: 5px;
+}
+input:valid+.validation:after {
+ position: absolute;
+    content: '✓';
+    padding-left:5px;
+  }

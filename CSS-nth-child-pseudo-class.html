@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS nth Child Pseudo Selector </title>
+    <style>
+        h1{
+            text-align: center;
+        }
+         ol li:nth-child(1n){
+            color: green;
+        }
+       ol li:nth-child(2n){
+            color: red;
+        }
+        ul li:nth-last-child(3n){
+            background-color: yellow;
+        }
+        p:nth-child(2n+3){
+            color: turquoise;
+            /*now selector will identify every second  element/tag/item starting with the third and then onward. 
+            
+            */
+        }
+        .aaa p:nth-child(-n+6){
+            color: tomato;
+            /*  the li:nth-child(-n+6) selector is ONLY identifying the top six items. */
+        }
+        div li:nth-child(-2n+5){
+            background-image: url(img/arrow.png);
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            padding-left: 25px;
+            background-size: contain;
+            list-style: none;
+            /* nth-child(-2n+5) selector identifies every second list item within the first five list items starting with the first list item */
+        }
+        nav li:nth-last-child(3n+2){
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>:nth-child(n) & :nth-last-child(n)</h1>
+    <p>
+    The :nth-child(n) works from the beginning of the document tree while the :nth-last-child(n) works from the end of the
+        document tree.
+    </p>
+    <h3>:nth-child(n)</h3>
+    <ol>
+    <li>Green</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Red</li>
+    </ol>
+    <br>
+    <h3>:nth-last-child(n)</h3>
+    <ul>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Green</li>
+        <li>Red</li>
+        <li>Yellow</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Green</li>
+        <li>Red</li>
+    </ul>
+    <hr>
+    <hr>
+    <h3>nth-child(2n+3)</h3>
+    <blockquote>now selector will identify every second element/tag/item starting with the third and then onward.</blockquote>
+    <article>
+        <p>1.Peace</p>
+        <p>2.Peace Again</p>
+        <p>3.Peaceful</p>
+        <p>4.Peacefully</p>
+        <p>5.Peaceful Again</p>
+        <p>6.Peace</p>
+        <p>7.Peace Again</p>
+        <p>8.Peaceful</p>
+        <p>9.Peacefully</p>
+        <p>10.Peaceful Again</p>
+    </article>
+<hr>
+<h3>:nth-child(-n+6)</h3>
+<blockquote>the li:nth-child(-n+6) selector is ONLY identifying the top six items</blockquote>
+<article class="aaa">
+    <p>1.Peace</p>
+    <p>2.Peace Again</p>
+    <p>3.Peaceful</p>
+    <p>4.Peacefully</p>
+    <p>5.Peaceful Again</p>
+    <p>6.Peace</p>
+    <p>7.Peace Again</p>
+    <p>8.Peaceful</p>
+    <p>9.Peacefully</p>
+    <p>10.Peaceful Again</p>
+</article>
+<hr>
+<h3>:nth-child(-2n+5)</h3>
+<blockquote>nth-child(-2n+5) selector identifies every second list item within the first five list items starting with the first
+list item</blockquote>
+<div>
+<li>Green</li>
+<li>Yellow</li>
+<li>Green</li>
+<li>Red</li>
+<li>Yellow</li>
+<li>Red</li>
+<li>Green</li>
+<li>Yellow</li>
+<li>Green</li>
+<li>Red</li>
+</div>
+<hr>
+<hr>
+<h3>:nth-last-child(3n+2)</h3>
+<blockquote>:nth-last-child(3n+2) selector, for example, will identify every third list item starting from the second to last item
+in a list, moving towards the beginning of the list.</blockquote>
+<nav>
+    <li>Green</li>
+    <li>Yellow</li>
+    <li>Green</li>
+    <li>Red</li>
+    <li>Yellow</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Yellow</li>
+    <li>Green</li>
+    <li>Red</li>
+</nav>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root{
+    --red:crimson;
+    --yellow: yellowgreen;
+    --home:wheat;
+    --link:rgb(236, 223, 213);
+}
+
+
+html, body {
+    background:var(--home);
+    color: var(--red);
+}
+
+h1, p {
+    color:  var(--red);
+}
+
+#navbar li {
+    color:  var(--link);
+}
+
+.item {
+    background: var(--yellow);
+}
+
+button {
+    background:  var(--red);
+    color: var(--link);
+}

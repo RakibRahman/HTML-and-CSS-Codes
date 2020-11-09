@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation Prefix</title>
+    <style>
+      .hover-text {
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+      }
+
+      .hover-text:hover {
+        color: #002903;
+        font-size: 20px;
+      }
+
+      .box {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background: crimson;
+        border: 1px solid black;
+        animation: grow ease-out 0.5s infinite alternate both;
+        -webkit-animation: grow ease-out 0.5s infinite alternate both; /*chrome,safari,ios Support*/
+        -ms-animation: grow ease-out 0.5s infinite alternate both; /*IE,edge Support*/
+        -moz-animation: grow ease-out 0.5s infinite alternate both; /*Mozilla Support*/
+        -o-animation: grow ease-out 0.5s infinite alternate both; /*Opera Support*/
+      }
+
+      @keyframes grow {
+        100% {
+          transform: scale(0.3, 0.3);
+          background: forestgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="hover-text">Hover over me!</p>
+    <div class="box"></div>
+  </body>
+</html>

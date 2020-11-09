@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items</title>
+    <style>
+        .box{
+            color: white;
+            font-size: 100px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        .box1{
+            background: red;
+        }
+        .box2{
+            background: green;
+        }
+        .box3{
+            background: yellow;
+            color: slateblue;
+            font-size: 200px;
+        }
+        .box4{
+            background: royalblue;
+            font-size: 140px;
+        }
+        .box5{
+            background: cyan;
+            font-size: 220px;
+        }
+        .box6{
+            background: violet;
+            font: 50px;
+        }
+        .box7{
+            background: chocolate;
+        }
+        .box8{
+            background: orangered;
+            font-size: 150px;
+        }
+        .box9{
+            background:chartreuse;
+        }
+        .box10{
+            background: gray;
+        }
+        .container{
+            display: flex;
+           border: 10px solid slateblue;
+           align-items: baseline;
+           min-height: 100vh;
+          /* 
+          align-items: stretch | flex-start | flex-end | center | baseline  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+</body>
+</html>

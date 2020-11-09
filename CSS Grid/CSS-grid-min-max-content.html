@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-content and max-content</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .wrapper2{
+            display: grid;
+            grid-template-columns: repeat(3,min-content);
+            /* grid-template-columns: min-content 1 fr 1fr; */
+        }
+        .wrapper3{
+            display: grid;
+            grid-template-columns:  repeat(3,max-content);
+        }
+
+        .wrapper>div{
+            border: 2px solid red;
+        }
+        .wrapper2>div{
+            border: 2px solid green;
+        }
+        .wrapper3>div{
+            border: 2px solid cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Normal Value</h2>
+    <div class="wrapper">
+        <div>CSS</div>
+        <div>Grid</div>
+        <div>Practice</div>
+    </div>
+    <h2>min-content Value</h2>
+    <div class="wrapper2">
+        <div>Cascading Style Sheets</div>
+        <div>Grid</div>
+        <div>Practice</div>
+    </div>
+    <h2>max-content Value</h2>
+    <div class="wrapper3">
+        <div>Cascading Style Sheets</div>
+        <div>Grid</div>
+        <div>Practice</div>
+    </div>
+</body>
+</html>

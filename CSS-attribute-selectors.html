@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selectors</title>
+    <style>
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        color: #0087cc;
+        padding-left: 20px;
+        padding-right:2px ;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+      }
+a:hover{
+    box-shadow: 0 0 0.5rem coral;
+    border-bottom:0.2rem solid coral;
+}
+
+      a[href$="https://icons8.com/"]
+      {
+        background-image: url("img/icons8-paypal-20.png");
+      }
+      a[href$="home"]
+      {
+        background-image: url("img/icons8-home-20.png");
+      }
+      a[href$="products"]
+      {
+        background-image: url("img/icons8-shirt-20.png");
+      }
+      a[href*="sign"]
+      {
+        background-image: url("img/icons8-registration-20.png");
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#sign">SignUp</a>
+          <a href="https://icons8.com/">Payment</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Properties</title>
+    <style>
+      /*embedding web fonts*/
+      @font-face {
+        font-family: 'Lobster';
+        src: local('Lobster'), url('lobster.woff') format('woff');
+      }
+      body {
+        color: #555;
+        font: 19px/20px 'Lemonada', 'Helvetica Neue', Helvetica, Arial,
+          sans-serif;
+      }
+      a {
+        text-decoration: none; /*removes underline*/
+      }
+      a:hover {
+        color: blueviolet;
+      }
+      h2 {
+        font-size: 24px;
+        letter-spacing: 0.2em;
+      }
+      .txt {
+        text-shadow: 3px 5px 4px rgba(220, 20, 60, 0.521);
+        word-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .info {
+        color: #9799a7;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        margin-bottom: 28px;
+      }
+      .info a {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><a href="#">Be a pace bowler!</a></h2>
+
+    <p class="txt">
+      Shoaib Akhtar is considered to be the fastest bowler in the world.
+    </p>
+
+    <p class="info">
+      Pace bowler is one of two main approaches to bowling in the sport of
+      cricket, the other being spin bowling. Practitioners of pace bowling are
+      usually known as fast bowlers, quicks, or pacemen.
+      <a href="#">Continue&#8230;</a>
+    </p>
+  </body>
+</html>

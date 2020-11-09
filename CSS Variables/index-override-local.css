@@ -1,0 +1,39 @@
+:root{
+    --red:crimson;
+    --yellow: yellowgreen;
+    --home:wheat;
+    --link:rgb(236, 223, 213);
+}
+
+
+html, body {
+    background:var(--home);
+    color: var(--red);
+}
+
+h1, p {
+    color:  var(--red);
+}
+
+#nav{
+    --nav-color:rgb(5, 228, 72); /*Local Variable*/
+}
+#nav li{
+    color: var(--nav-color);
+}
+
+.item {
+    --item-button:forestgreen;
+    --red:#ff8e69; /*overriding variable*/
+    background: var(--yellow);
+}
+
+button {
+    background:  var(--red);
+    color: var(--item-button);
+}
+
+.featured{
+    --yellow: #ffe55b; /*overriding variable*/
+    --red: #ff5564;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .box,.box2,.box3 {
+
+            width: 50px;
+            height: 50px;
+            margin: 50px auto;
+            background: red;
+            border: 1px solid black;
+
+            /* Animation */
+            /* animation-name: shift; */
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes shift {
+            0% {
+                width: 50px;
+                height: 50px;
+                background: red;
+            }
+            25%{
+                width: 70px;
+                height: 70px;
+                background: slateblue;
+            }
+
+            50% {
+                width: 100px;
+                height: 50px;
+                background: green;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                background: blue;
+                border-bottom: 3px solid seashell;
+        }
+        }
+        /* Box2 */
+        .box2{
+            /* animation-name: grow; animation name */
+            animation-duration: 2s; /*animation duration*/
+            animation-delay: 2s; /*times taken to start the animation*/
+            animation-iteration-count: 3; /*how many times animation should run*/
+            animation-timing-function:ease; /*specifies speed/flow curve of  animation*/
+            animation-direction: alternate;
+            /* defines whether an animation should be played forwards, backwards or in alternate cycles. */
+
+        }
+        @keyframes grow{
+            from{
+                width: 100px;
+                height: 100px;
+                background: blue;
+            }
+            to{
+                width: 10px;
+                height: 10px;
+                background: coral;
+            }
+        }
+        .box3{
+            animation:animated 1s ease 0s infinite alternate;
+        }
+        @keyframes animated{
+            from{
+                width: 100px;
+                height: 100px;
+                background: blue;
+            }
+            to{
+                width: 10px;
+                height: 10px;
+                background: coral;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+</body>
+</html>

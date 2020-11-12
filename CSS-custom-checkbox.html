@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom CheckBox</title>
+    <style>
+        .container {
+            display: grid;
+            place-items: center;
+            margin-top: 250px;
+        }
+
+        .chk-container {
+            display: block;
+            position: relative;
+            user-select: none;
+            padding-left: 40px;
+            margin-bottom: 12px;
+            font-size: 22px;
+            /* -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; */
+        }
+
+        .chk-container input {
+            /* Hide the original input checkbox */
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .chk-container .checkmark {
+            /* create custom checkbox */
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background: crimson;
+            cursor: pointer;
+
+        }
+
+        .chk-container:hover input~.checkmark {
+            /* change checkbox BG color on hover */
+            background-color: springgreen;
+
+        }
+
+        .chk-container input:checked~.checkmark {
+            background-color: deepskyblue;
+            /* change checkbox BG on checked */
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .chk-container .checkmark:after {
+            content: " ";
+            position: absolute;
+            display: none;
+        }
+
+        .chk-container input:checked~.checkmark::after {
+            display: block;
+            /* Show the checkmark when checked */
+        }
+
+        /* Style the checkmark/indicator */
+        .chk-container .checkmark::after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid whitesmoke;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label class="chk-container" for="checkbox1">
+            <input type="checkbox" checked="checked" id="checkbox1">
+            <span class="checkmark"></span>
+            Remember Me
+        </label>
+        <!-- 
+            Each label must have a for attribute value exactly matching the id of the checkbox it is meant to activate.
+         -->
+    </div>
+</body>
+
+</html>

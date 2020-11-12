@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Button Hover Effects</title>
+    <style>
+        body{
+            background-color: dimgray;
+        }
+        .wrapper{
+            margin-top: 250px;
+            text-align: center;
+        }
+        .btn{
+            padding: 10px 20px;
+           border: 1px solid dodgerblue;
+           margin:10px ;
+           font-size: large;
+           background: none;
+           cursor: pointer;
+           transition: 0.8s ;
+           position: relative;
+           overflow: hidden;
+        }
+        .btn1,.btn2{
+            color: hotpink;
+        }
+        .btn3,.btn4{
+            color: deeppink;
+        }
+        .btn1:hover,.btn2:hover{
+            color: deepskyblue;
+        }
+        .btn3:hover,.btn4:hover{
+            color: springgreen;
+        }
+        .btn::before{
+            content: ' ';
+            position: absolute;
+            left: 0;
+            background: whitesmoke;
+            height:0%;
+            width: 100%;
+            z-index: -1;
+            transition: 0.8s
+        }
+        .btn1::before,.btn3::before{
+            top: 0;
+            border-radius:0 0 50% 50%;
+        }
+        .btn2::before,.btn4::before{
+            bottom: 0;
+            border-radius:50% 50% 0 0;
+        }
+        .btn3::before,.btn4::before{
+            height: 180%;
+        }
+        .btn1:hover:before,.btn2:hover::before{
+            height: 180%;
+        }
+        .btn3:hover:before,.btn4:hover::before{
+            height:0%;
+        }
+    </style>
+</head>
+<body>
+   <div class="wrapper">
+        <button class="btn btn1">Hover</button>    
+        <button class="btn btn2">Hover</button>    
+        <button class="btn btn3">Hover</button>    
+        <button class="btn btn4">Hover</button> 
+   </div>   
+</body>
+</html>

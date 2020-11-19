@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1287a5;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  margin: 30px;
+  border-radius: 15px;
+}
+.container .card .box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background: #ebf5fc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.container .card:hover .box {
+  transform: translateY(-50px);
+  background: linear-gradient(to right, rgb(127, 0, 255), rgb(225, 0, 255));
+}
+
+.container .card .box .content {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+.container .card .box .content h2 {
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.02);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.container .card:hover .box .content h2 {
+  color: rgba(0, 0, 0, 0.06);
+}
+.container .card .box .content h3 {
+  margin: 10px 0;
+  font-size: 1.1em;
+  z-index: 1;
+  transition: 0.5s;
+  color: #777;
+}
+.container .card .box .content p {
+  font-size: 1.1em;
+  font-weight: 300;
+  z-index: 1;
+  transition: 0.5s;
+  color: #777;
+}
+.container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: lightcoral;
+  color: whitesmoke;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card:hover .box .content > * {
+  color: whitesmoke;
+}

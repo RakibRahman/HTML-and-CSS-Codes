@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Unit</title>
+    <style>
+        p {
+            margin: 120px auto;
+            max-width: 18ch;
+        }
+
+        p::first-letter {
+            float: left;
+            font-size: 55px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-top: 50px;
+        }
+
+        ul li::first-letter {
+            font-size: 55px;
+            -webkit-text-fill-color: orangered;
+            -webkit-text-stroke: 3px green;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio necessitatibus, quasi voluptas aliquid deserunt
+        distinctio, quidem omnis aperiam perferendis est nam velit sit quibusdam quisquam praesentium architecto maiores
+        doloremque odit.
+    </p>
+    <ul>
+        <li>This</li>
+        <li>World</li>
+        <li>Shall</li>
+        <li>Know</li>
+        <li>Pain</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Sibling Combinator</title>
+    <style>
+        .intro {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .p-container img~p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="intro">The general sibling combinator (~) separates two selectors and matches all iterations of the second
+        element, that are
+        following the first element (though not necessarily immediately), and are children of the same parent element.
+    </p>
+    <hr>
+    <div class="p-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias maiores non asperiores incidunt
+            consequuntur voluptates dolore blanditiis voluptatum neque dolorem facere aliquam error laborum ducimus
+            impedit dolorum quam, inventore eos!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cumque quis possimus autem tempore
+            adipisci optio, nam ipsam magnam vero earum ut corrupti illum error? Sequi nostrum praesentium fugit veniam.
+        </p>
+        <img src="img/leaf-152047_640.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt placeat nostrum tenetur id corporis
+            esse aliquam amet itaque ea quis, eaque non repudiandae facere excepturi nihil ab inventore ipsa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellendus ipsum fugiat consequatur magnam
+            eligendi magni, expedita quas, quod beatae quae. Inventore laudantium voluptas cumque. Et provident suscipit
+            harum rem!</p>
+        <h1>painnnnnn</h1>
+        <p>lorem</p>
+    </div>
+</body>
+
+</html>

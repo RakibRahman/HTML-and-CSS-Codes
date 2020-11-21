@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conic Gradient</title>
+    <style>
+        .piechart {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: conic-gradient(lightblue 0% 65%, cadetblue 66% 86%, chartreuse 87% 100%);
+        }
+
+        .piechart p {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="piechart">
+        <p>Social Media Usage</p>
+    </div>
+    <div>
+        <p style="background-color: lightblue; display: inline-block;">Facebook</p>
+        <p style="background-color: cadetblue; display: inline-block;">Twitter</p>
+        <p style="background-color: chartreuse; display: inline-block;">Others</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur</title>
+    <style>
+        .img-container {
+            width: 100%;
+            height: 80vh;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin: 220px auto;
+            /* filter: blur(5px); */
+            animation: move 1s ease-in 0s 1;
+
+        }
+
+        @keyframes move {
+            from {
+                filter: blur(5px);
+            }
+
+            to {
+                filter: blur(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container"><img src="img/leaf-152047_640.png" alt=""></div>
+</body>
+
+</html>

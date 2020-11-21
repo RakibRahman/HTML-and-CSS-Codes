@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Shadow</title>
+    <style>
+        .img-container {
+            width: 100%;
+            height: 80vh;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin: 220px auto;
+            animation: leaf 3s ease-in infinite;
+            filter: drop-shadow(1px 4px 14px red);
+        }
+
+        @keyframes leaf {
+            to {
+                transform: translateY(-80px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container"><img src="img/leaf-152047_640.png" alt=""></div>
+</body>
+
+</html>

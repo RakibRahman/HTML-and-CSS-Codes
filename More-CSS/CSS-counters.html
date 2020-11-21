@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+    <style>
+        ol {
+            list-style: none;
+        }
+
+        ol li {
+            font-size: 24px;
+            counter-increment: list-element;
+            position: relative;
+            left: 0;
+            margin: 20px 0;
+            padding-left: 25px;
+            padding-top: 10px;
+            font-size: 25px;
+        }
+
+        ol li::before {
+            content: counter(list-element);
+            background: palegreen;
+            color: red;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 25px;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: -30px;
+            vertical-align: middle;
+            line-height: 45px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>Apple</li>
+        <li>MSI</li>
+        <li>HP</li>
+        <li>Acer</li>
+        <li>Dell</li>
+        <li>Toshiba</li>
+        <li>Sony</li>
+        <li>Lenovo</li>
+        <li>Compaq</li>
+    </ol>
+</body>
+
+</html>

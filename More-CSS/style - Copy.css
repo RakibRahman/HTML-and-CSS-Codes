@@ -1,0 +1,25 @@
+header {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+  background-attachment: fixed;
+  background-image: url(img/banana-4289613_1280.png),
+    url(img/bananas-575773_1280.png);
+  background-size: 200px, 300px;
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+header h1 {
+  text-align: center;
+}
+nav ul {
+  font-size: larger;
+  list-style: none;
+  display: flex;
+}
+nav ul > * {
+  margin-right: 10px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Bullet Points</title>
+    <style>
+        .list li {
+            list-style: none;
+            position: relative;
+            padding: 30px 0 0 55px;
+
+        }
+
+        .list li::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 22px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: black;
+            /* content: url(img/envelop.png); */
+            vertical-align: middle;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list">
+        <li>Banana</li>
+        <li>Banana</li>
+        <li>Banana</li>
+        <li>Banana</li>
+        <li>Banana</li>
+        <li>Banana</li>
+        <li>Banana</li>
+
+    </ul>
+</body>
+
+</html>

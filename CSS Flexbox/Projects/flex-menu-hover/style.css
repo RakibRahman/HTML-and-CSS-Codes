@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.navigation ul {
+  list-style: none;
+}
+.navigation ul li a {
+  text-decoration: none;
+  font: normal normal 700 3em/100% "ribeye", sans-serif;
+  color: #f14ef1;
+  padding: 10px 20px;
+  display: inline-flex;
+}
+.navigation ul:hover li a {
+  color: #0003;
+}
+.navigation ul li:hover a {
+  color: #000;
+  background: springgreen;
+  border-radius: 20px;
+}
+.navigation ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*to center ::before "content" while hovering*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 90%;
+  color: rgba(211, 8, 8, 0.829);
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px; /*for transition effect*/
+  font-size: 4.8em;
+  transition: letter-spacing 0.5s, left 0.5s;
+  z-index: -1; /*to ul li items properly while hovering*/
+}
+.navigation ul li a:hover::before {
+  content: attr(data-text);
+  opacity: 1;
+  letter-spacing: 10px;
+  width: 100%;
+  height: 100%;
+}
+.navigation ul li:nth-child(even) a::before {
+  background: rgb(2, 216, 37);
+  color: whitesmoke;
+}
+.navigation ul li:nth-child(odd) a::before {
+  background: #f14e0d;
+  color: whitesmoke;
+}

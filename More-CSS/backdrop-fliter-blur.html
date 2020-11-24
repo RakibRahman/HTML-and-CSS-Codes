@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backdrop-filter:blur</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Ribeye', cursive;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(img/leaves-15757_1280.jpg) no-repeat fixed center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        section h1 {
+            font-size: 4rem;
+            color: whitesmoke;
+            pointer-events: none;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        section .glass {
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background: transparent;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            -moz-backdrop-filter: blur(10px);
+            transition: 0.2s;
+
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>
+            Backdrop-Filter:Blur;
+        </h1>
+        <div class="glass">
+
+        </div>
+
+    </section>
+    <p>
+        Note: Backdrop-filter has issue with firefox. <br>
+        Works on Chrome and Edge.
+    </p>
+    <!-- JS Script -->
+    <script>
+        document.addEventListener("mousemove", function (e) {
+            const glass = document.querySelector('.glass');
+            glass.style.left = e.offsetX + 'px';
+            glass.style.top = e.offsetY + 'px';
+
+        })
+    </script>
+</body>
+
+</html>

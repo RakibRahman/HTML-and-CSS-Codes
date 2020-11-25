@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effect</title>
+    <style>
+        .container {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: slategrey;
+        }
+
+        .container a {
+            color: springgreen;
+            font-size: 25px;
+            text-decoration: none;
+            position: relative;
+            width: 220px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container a:hover {
+            color: cornflowerblue;
+        }
+
+        .container a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            background: url(img/demo.jpg);
+            background-size: cover;
+            filter: brightness(250%);
+            transform-origin: left;
+            transition: 0.5s;
+        }
+
+        .container a:hover:before {
+            width: 100%;
+
+
+        }
+
+        .container a span {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#"><span>Click Me</span></a>
+    </div>
+</body>
+
+</html>

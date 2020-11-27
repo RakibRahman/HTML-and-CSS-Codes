@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container {
+  text-align: center;
+}
+.face {
+  width: 230px;
+  height: 260px;
+  background: forestgreen;
+  position: absolute;
+  top: 25vh;
+  left: 35vw;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  z-index: 1000;
+}
+.eyes {
+  width: 170px;
+  height: 45px;
+  background: #556839;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.eye-left {
+  width: 55px;
+  height: 35px;
+  background: white;
+  position: absolute;
+  left: 20px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+.eye-right {
+  width: 55px;
+  height: 35px;
+  background: white;
+  position: absolute;
+  left: 95px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.eye-ball {
+  width: 35px;
+  height: 20px;
+  background: #1e1e1e;
+  position: absolute;
+  left: 10px;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  animation: roll 5s 0.5s 3;
+}
+.nose {
+  width: 50px;
+  height: 15px;
+  border-top: 7px solid #556839;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px;
+  left: 60px;
+}
+.mouth {
+  width: 65px;
+  height: 30px;
+  border-top: 6px solid #556837;
+  border-radius: 50px;
+  position: absolute;
+  top: 110px;
+  left: 65px;
+}
+.scratch {
+  width: 90px;
+  height: 5px;
+  background: #556837;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  border-radius: 25px;
+}
+.hair {
+  width: 250px;
+  height: 60px;
+  background: black;
+  position: absolute;
+  left: -10px;
+  top: -40px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+.scratch .a {
+  height: 35px;
+  width: 4px;
+  background: #556837;
+  position: absolute;
+  top: -16px;
+}
+.scratch .left {
+  left: 15px;
+}
+.scratch .center {
+  left: 40px;
+}
+.scratch .right {
+  left: 65px;
+}
+.hair .flick1 {
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  width: 70px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+}
+.hair .flick2 {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  width: 80px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  top: 45px;
+  left: 35px;
+}
+.hair .flick3 {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  width: 80px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  top: 45px;
+  left: 90px;
+}
+.hair .flick4 {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  width: 80px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  top: 45px;
+  left: 150px;
+}
+.hair .flick5 {
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  width: 70px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+}
+.nail {
+  width: 30px;
+  height: 30px;
+  background: brown;
+  position: absolute;
+  z-index: 999;
+}
+.lft {
+  top: 116px;
+  left: -29px;
+}
+.rgt {
+  top: 116px;
+  left: 229px;
+}
+.nail1 {
+  width: 20px;
+  height: 45px;
+  background: cadetblue;
+  position: absolute;
+  top: -8px;
+  border-radius: 5px;
+}
+.nail2 {
+  width: 20px;
+  height: 45px;
+  background: cadetblue;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+/* Animation */
+@keyframes roll {
+  0% {
+    left: 10px;
+  }
+  10% {
+    left: 10px;
+  }
+  30% {
+    left: 0px;
+  }
+  55% {
+    left: 20px;
+  }
+  70% {
+    left: 0px;
+  }
+  100% {
+    left: 10px;
+  }
+}

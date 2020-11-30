@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS:Not Selector</title>
+    <style>
+        .ul1 li:not(:last-child) {
+            color: crimson;
+        }
+
+        .ul2 li:not(.test) {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="ul1">
+        <li>item*</li>
+        <li>item*</li>
+        <li>item*</li>
+        <li>item*</li>
+        <li>item*</li>
+    </ul>
+    <ul class="ul2">
+        <li>item*</li>
+        <li class="test">item*</li>
+        <li>item*</li>
+        <li>item*</li>
+        <li class="test">item*</li>
+
+        <li>item*</li>
+        <li class="test">item*</li>
+
+        <li>item*</li>
+        <li>item*</li>
+    </ul>
+</body>
+
+</html>

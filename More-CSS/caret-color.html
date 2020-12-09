@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caret Color</title>
+    <style>
+        div {
+            margin-top: 250px;
+            display: grid;
+            place-content: center;
+        }
+
+        input {
+            caret-color: crimson;
+
+        }
+
+        textarea {
+            caret-color: springgreen;
+        }
+
+        p {
+            font-size: 5ch;
+            caret-color: tomato;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <label for="name">
+                Name:
+                <input type="text">
+            </label>
+            <br>
+            <br>
+            <label for="comment">
+                Comment:
+                <textarea name="" id="" cols="10" rows="0"></textarea>
+            </label>
+        </form>
+    </div>
+    <br>
+    <p contenteditable="true">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium eos impedit delectus, voluptas dolor harum
+        vitae. Distinctio delectus repellat qui nostrum necessitatibus rerum ab sequi impedit et quo, iste aspernatur?
+    </p>
+</body>
+
+</html>

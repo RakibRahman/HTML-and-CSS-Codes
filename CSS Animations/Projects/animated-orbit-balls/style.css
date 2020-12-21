@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("https://images.pexels.com/photos/1655166/pexels-photo-1655166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    no-repeat center center;
+  background-size: cover;
+  display: grid;
+  font-family: "Inconsolata", monospace;
+  min-height: 100vh;
+  place-items: center;
+}
+.holder {
+  position: relative;
+}
+.holder::before,
+.holder::after {
+  animation: orbit 5s linear infinite;
+  content: " ";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.holder:before {
+  background: #24a5d4;
+  background: -webkit-radial-gradient(right, #24a5d4, #d64f09);
+  background: -moz-radial-gradient(right, #24a5d4, #d64f09);
+  background: radial-gradient(to left, #24a5d4, #d64f09);
+}
+.holder::after {
+  background: #51e50d;
+  background: -webkit-radial-gradient(right, #51e50d, #3d40d2);
+  background: -moz-radial-gradient(right, #51e50d, #3d40d2);
+  background: radial-gradient(to left, #51e50d, #3d40d2);
+  animation-delay: 2.5s;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.card {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  width: 370px;
+}
+.card:before {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card__text {
+  color: #6f7886;
+  margin-left: 30px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+.name {
+  color: #0adb26;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 3;
+}
+/* Animation */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}

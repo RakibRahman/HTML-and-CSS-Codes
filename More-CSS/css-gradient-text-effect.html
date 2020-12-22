@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradient Text Effect</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: thistle;
+      }
+      h1 {
+        font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 6ch;
+        background: #000000;
+        background: -webkit-linear-gradient(top, #000000, #f2120e);
+        background: -moz-linear-gradient(top, #000000, #f2120e);
+        background: linear-gradient(to bottom, #000000, #f2120e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      This World
+      <br />
+      Shall Know
+      <br />
+      Pain
+    </h1>
+  </body>
+</html>

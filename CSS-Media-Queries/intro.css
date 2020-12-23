@@ -1,0 +1,24 @@
+h1 {
+  color: orangered;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 300px;
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 4.5rem;
+    color: orchid;
+  }
+}
+@media (min-width: 62em) {
+  h1 {
+    font-size: 5rem;
+    color: forestgreen;
+  }
+}
+@media (min-width: 87em) {
+  h1 {
+    font-size: 5.5rem;
+    color: blueviolet;
+  }
+}

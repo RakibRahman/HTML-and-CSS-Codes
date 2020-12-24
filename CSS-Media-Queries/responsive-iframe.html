@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Iframe</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .ar-16x9 {
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 66.66%;  3:2 Aspect Ratio */
+        /*padding-top: 75%;  4:3 Aspect Ratio */
+      }
+      .container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>5 Projects Every Programmer Should Try</h1>
+    <div class="container ar-16x9">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jOFco1xuIeo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>

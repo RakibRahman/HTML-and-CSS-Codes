@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@MEDIA Print</title>
+    <style>
+      .txt {
+        background: tomato;
+        color: whitesmoke;
+        padding: 15px;
+      }
+      .txt h1,
+      .txt h2 {
+        text-align: center;
+      }
+      .img {
+        display: grid;
+        place-items: center;
+        background: chartreuse;
+      }
+      .img img {
+        margin-top: 20px;
+      }
+      /* Media Queries */
+      @media print {
+        .txt {
+          background-color: transparent;
+        }
+        .txt h2 {
+          display: none;
+        }
+        .img {
+          background-color: transparent;
+        }
+        .img img {
+          filter: invert(90%);
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+        consequuntur exercitationem aliquam temporibus aliquid beatae explicabo
+        totam? Sequi eligendi tempora veniam mollitia eius nemo praesentium
+        autem id! Amet, enim id?
+      </h1>
+      <h2>Press CTRL+P to print page.</h2>
+    </div>
+    <div class="img">
+      <img
+        src="https://images.unsplash.com/photo-1608671611568-895aaf8ec972?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        alt=""
+      />
+      <img
+        src="https://images.unsplash.com/photo-1608660901287-a60012177b60?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

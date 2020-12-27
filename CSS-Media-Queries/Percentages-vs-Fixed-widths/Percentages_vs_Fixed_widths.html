@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percentages vs Fixed widths</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        background: turquoise;
+        padding: 50px;
+        width: 900px;
+        /* Fixed Width is not responsive */
+      }
+      .parent2 {
+        background: turquoise;
+        padding: 50px;
+        width: 80%;
+        /* % is responsive */
+      }
+      .child {
+        background: tomato;
+        height: 250px;
+      }
+      /* Challenge 1 */
+    </style>
+  </head>
+  <body>
+    <h1>Fixed Width</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <hr />
+    <h1>% Width</h1>
+
+    <div class="parent2">
+      <div class="child"></div>
+    </div>
+    <hr />
+  </body>
+</html>

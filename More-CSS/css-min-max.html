@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS min() & max()</title>
+    <style>
+      body {
+        background: gray;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-size: 1.125em;
+        line-height: 1.6;
+      }
+      .content {
+        background: whitesmoke;
+        padding: 3em;
+
+        /* width: 70%;
+        max-width: 600px; */
+        width: min(600px, 70%);
+        width: max(400px, 50%, 50vh);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">this world shall know pain</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque
+        nobis voluptas nostrum adipisci porro minima quaerat cupiditate earum
+        facere animi itaque totam numquam, at recusandae, quibusdam, possimus
+        aspernatur quae!
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Overflow:ellipsis</title>
+    <style>
+      .card {
+        width: 400px;
+        background: turquoise;
+        margin: 0 auto;
+      }
+      .card h1 {
+        text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      h2 {
+        font-size: 5rem;
+        background-image: url("https://picsum.photos/200");
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+    </div>
+    <h2>This World Shall Know Pain</h2>
+  </body>
+</html>

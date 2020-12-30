@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: chocolate;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease;
+  animation: moving 3s ease 10s infinite normal;
+}
+@keyframes moving {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 0;
+    top: calc(100% - 100px);
+    background: slateblue;
+    /* calc(100% - 100px{height of box}) is used to keep box within the viewport */
+  }
+  50% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+    background: royalblue;
+  }
+  75% {
+    left: calc(100% - 100px);
+    top: 0;
+    background: rgb(71, 255, 126);
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}

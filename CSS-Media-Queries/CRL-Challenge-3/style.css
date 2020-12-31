@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: RobotoBlack;
+  src: url(fonts/Roboto-Black.ttf);
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+.container {
+  background: #23424a;
+  width: 100%;
+  padding: 80px 50px;
+}
+.intro {
+  width: 50%;
+}
+.intro p,
+.intro button {
+  margin-top: 20px;
+}
+.intro h1 {
+  font-size: 48px;
+  font-family: RobotoBlack, cursive, sans-serif;
+  color: whitesmoke;
+}
+.intro p {
+  font-size: 21px;
+  font-family: RobotoRegular, cursive, sans-serif;
+  color: silver;
+}
+.intro button {
+  background: #38cfd9;
+  mix-blend-mode: normal;
+  border-radius: 31.5px;
+  padding: 10px 15px;
+  border: 0;
+}
+.intro button a {
+  font-size: 21px;
+  font-family: RobotoBold, cursive, sans-serif;
+  text-decoration: none;
+  color: black;
+}

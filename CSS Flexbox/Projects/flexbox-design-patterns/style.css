@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+}
+/*===========
+Even Columns
+=============== */
+.even-columns {
+  display: flex;
+}
+.even-columns div {
+  padding: 10px;
+  border: 1px solid slateblue;
+}
+.even-columns > * {
+  flex-basis: 100%;
+}
+
+/*==========
+Grid Type
+=========== */
+.grid-type {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.grid-type div {
+  padding: 10px;
+  border: 1px solid blue;
+}
+.grid-type > * {
+  flex: 1 1 10em;
+}
+.grid-type > * + * {
+  color: springgreen;
+}
+
+/*=================
+Content And Sidebar
+==================== */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-sidebar1,
+.content-sidebar2 {
+  padding: 25px;
+  border: 1px solid slateblue;
+}
+.content-sidebar1 {
+  flex: 1 1 70%;
+  min-width: 30ch;
+}
+.content-sidebar2 {
+  flex: 1 1 30%;
+  min-width: 15ch;
+}

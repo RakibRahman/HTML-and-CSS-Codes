@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width And Max-Width</title>
+    <style>
+      div {
+        padding: 10px;
+        background: crimson;
+        color: black;
+        margin: 15px auto;
+      }
+      .one {
+        width: 600px;
+        max-width: 100%;
+      }
+      .two {
+        width: 100%;
+        max-width: 600px;
+        /* more preferable */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, illum
+      voluptates autem voluptate a quos aspernatur inventore non odio, velit
+      fugiat, enim ducimus ipsam officia nesciunt voluptatibus! Id, fuga, aut?
+    </div>
+
+    <div class="two">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, illum
+      voluptates autem voluptate a quos aspernatur inventore non odio, velit
+      fugiat, enim ducimus ipsam officia nesciunt voluptatibus! Id, fuga, aut?
+    </div>
+  </body>
+</html>

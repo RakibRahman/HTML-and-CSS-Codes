@@ -1,0 +1,140 @@
+/* 
+////// For this challenge ///////
+
+- You will have to modify the HTML
+
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another as per the design specs
+   provided
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created 
+   during the demo, so you'll have to 
+   add it back in
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.hero .container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container2 {
+  width: 80%;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 5rem;
+}
+.demand {
+  flex-basis: 60%;
+}
+.demand h3 {
+  color: #136c72;
+}
+.row {
+  padding: 0 10px;
+  flex-basis: 40%;
+  color: whitesmoke;
+  background: #136c72;
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  width: 100%;
+}
+.col h2 {
+  color: #b7629a;
+}
+.col p,
+h2 {
+  text-align: center;
+}
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__text {
+  width: 60%;
+  margin: 0 auto;
+}
+.hero__text h1 {
+  margin-top: 0;
+}
+.hero p {
+  margin-bottom: 3em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+.hero__img {
+  width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+.hero__img img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  background: #38cfd9;
+  padding: 20px;
+  display: flex;
+}
+.col {
+  width: 100%;
+}
+.wrapper .col p,
+.wrapper .col h2 {
+  text-align: center;
+  color: whitesmoke;
+}
+.wrapper .col + .col {
+  margin-left: 20px;
+}

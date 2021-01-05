@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Mask Image</title>
+    <style>
+      div {
+        width: 100%;
+      }
+      div img {
+        width: 400px;
+        mask-image: url(img/Blue-Abstract-Texture-PNG-Photos.png);
+        /* mask-image: linear-gradient(to bottom, transparent 5%, red 95%); */
+        mask-image: image(url(img/bananas-575773_1280.png), skyblue);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="img/leaves-15757_1280.jpg" alt="" />
+    </div>
+  </body>
+</html>

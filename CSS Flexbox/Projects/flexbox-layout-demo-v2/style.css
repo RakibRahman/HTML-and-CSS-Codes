@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  height: 40vh;
+  background: coral;
+  text-align: center;
+}
+.body {
+  background: powderblue;
+  text-align: center;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.body nav {
+  order: 2;
+  flex: 0 0 8rem;
+  background: crimson;
+}
+.body aside {
+  order: 0;
+  flex: 0 0 8rem;
+  background: brown;
+}
+.body main {
+  order: 1;
+  flex: 1 1 auto;
+}
+footer {
+  height: 100px;
+  background: plum;
+  text-align: center;
+}

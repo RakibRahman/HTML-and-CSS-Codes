@@ -77,8 +77,13 @@ header {
 nav {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
 }
 .nav__list {
+  /* border: 2px solid rosybrown; */
   margin: 0;
   padding: 0;
   list-style: none;

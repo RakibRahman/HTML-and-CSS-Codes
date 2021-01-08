@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angled Divs</title>
+    <style>
+      .div-one,
+      .div-two {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: rgba(40, 40, 40, 1);
+        box-sizing: border-box;
+        padding: 30px;
+        color: #fff;
+        margin-bottom: 200px;
+      }
+      .div-two {
+        /* margin-top: 350px; */
+        background: cyan;
+      }
+      .div-one::after {
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: top left;
+        transform: skewY(4deg);
+        z-index: -1;
+      }
+      .div-two::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        width: 100%;
+        height: 100%;
+        transform-origin: top right;
+        transform: skewY(4deg);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-one">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        repudiandae deleniti sint provident odio delectus quas, minima cum. Sint
+        unde, repudiandae cumque velit quam deserunt magnam numquam corporis
+        distinctio nihil. Illum ullam placeat nemo quisquam quam dolor minus
+        nisi maxime consectetur dolores! Asperiores unde, sed, quas voluptas
+        veritatis, alias fugit earum culpa error laudantium soluta dolorem nemo
+        illo a ipsam? Labore fugiat, consequatur quas molestiae eligendi dolor
+        cum vero, maxime, voluptatum porro quod repellat cupiditate. Laboriosam
+        a at, tempore similique ad qui porro dignissimos debitis sunt beatae?
+        Tempora, ex et! A, consectetur veniam. Atque repellat repudiandae maxime
+        officia tenetur laudantium dolores ratione voluptas praesentium?
+        Suscipit facere minima accusantium ut, in expedita sint tempora iure
+        fuga laudantium, dolorum odio maiores nobis. Quos, laboriosam tempora
+        quidem repellat ratione sit voluptates quisquam, fuga numquam mollitia
+        nostrum sapiente, beatae ex eligendi doloremque modi aliquam velit
+        magnam amet dolores! Veniam rerum tempore corrupti a debitis.
+      </p>
+    </div>
+    <div class="div-two">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        repudiandae deleniti sint provident odio delectus quas, minima cum. Sint
+        unde, repudiandae cumque velit quam deserunt magnam numquam corporis
+        distinctio nihil. Illum ullam placeat nemo quisquam quam dolor minus
+        nisi maxime consectetur dolores! Asperiores unde, sed, quas voluptas
+        veritatis, alias fugit earum culpa error laudantium soluta dolorem nemo
+        illo a ipsam? Labore fugiat, consequatur quas molestiae eligendi dolor
+        cum vero, maxime, voluptatum porro quod repellat cupiditate. Laboriosam
+        a at, tempore similique ad qui porro dignissimos debitis sunt beatae?
+        Tempora, ex et! A, consectetur veniam. Atque repellat repudiandae maxime
+        officia tenetur laudantium dolores ratione voluptas praesentium?
+        Suscipit facere minima accusantium ut, in expedita sint tempora iure
+        fuga laudantium, dolorum odio maiores nobis. Quos, laboriosam tempora
+        quidem repellat ratione sit voluptates quisquam, fuga numquam mollitia
+        nostrum sapiente, beatae ex eligendi doloremque modi aliquam velit
+        magnam amet dolores! Veniam rerum tempore corrupti a debitis.
+      </p>
+    </div>
+  </body>
+</html>

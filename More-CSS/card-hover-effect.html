@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Hover Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-main {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-color: #f14e0d;
+        background-image: url(img/banana-4289613_1280.png);
+        background-size: 100% 100%;
+        border-radius: 32px;
+        transition: all 0.3s ease-in-out;
+        margin-right: 20px;
+      }
+      .card-hover {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border-radius: 32px;
+        opacity: 0;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+      .card-main:hover .card-hover,
+      .card-main:active .card-hover {
+        opacity: 1;
+        transform: scale(1.03);
+      }
+      .form {
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-main">
+      <div class="card-hover">
+        <h4>Banana</h4>
+        <p>Khete vari moja</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+    <div class="card-main">
+      <div class="card-hover form">
+        <h4>Message</h4>
+        <br />
+        <input type="text" name="" id="" />
+        <br />
+        <button>Send</button>
+      </div>
+    </div>
+  </body>
+</html>

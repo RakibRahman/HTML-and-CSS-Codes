@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neumorphic Design</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #ecf0f3;
+      }
+      .container {
+        width: 400px;
+        height: 500px;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 120px auto 0;
+        background: #ecf0f3;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+      }
+      .img-box {
+        width: 80px;
+        height: 80px;
+        background: url("img/Behance.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        margin: auto;
+        box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+      }
+      h1 {
+        text-align: center;
+        margin: 10px 0 20px;
+        color: #1769ff;
+        font-weight: bolder;
+      }
+      .form {
+        display: grid;
+        grid-gap: 2rem;
+      }
+      input {
+        background: #ecf0f3;
+        height: 50px;
+        padding: 10px 10px 10px 20px;
+        border-radius: 100vh;
+        border: 0;
+        font-size: 16px;
+        box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+      }
+      button {
+        margin-top: 20px;
+        background: #1769ff;
+        height: 50px;
+        border-radius: 20px;
+        border: 0;
+        box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+        transition: all 0.3s ease-in-out;
+        font-size: 18px;
+        color: whitesmoke;
+        font-weight: 900;
+        cursor: pointer;
+      }
+      button:hover {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-box"></div>
+      <h1>Join Today</h1>
+      <div class="form">
+        <input type="text" name="" id="" />
+        <input type="password" name="" id="" />
+        <button>Login</button>
+      </div>
+    </div>
+  </body>
+</html>

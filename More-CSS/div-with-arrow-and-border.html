@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div with Arrow & Outside Border</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        max-width: 1200px;
+        height: 60vh;
+        margin: 0 auto;
+        background: #cc3340;
+        display: flex;
+        align-items: center;
+      }
+      .box {
+        text-align: center;
+        padding: 20px 5px 0px;
+        width: 250px;
+        height: 150px;
+        border: 2px solid whitesmoke;
+        position: relative;
+        margin: 0 auto;
+      }
+      .box::after,
+      .box::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 100%;
+        left: 50%;
+      }
+      .box::after {
+        border-top: 20px solid whitesmoke;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        margin-left: -20px;
+      }
+      .box::before {
+        border-top: 25px solid white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        margin-left: -25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

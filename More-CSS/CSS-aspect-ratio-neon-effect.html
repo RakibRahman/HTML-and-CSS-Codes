@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Aspect-Ratio & Neon Effect</title>
+    <style>
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: steelblue;
+      }
+      .box {
+        width: 600px;
+        height: 0;
+        padding-bottom: calc(600px * 9 / 16); /*Aspect Ratio:16/9*/
+        background: black;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+          0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+      }
+      .box h1 {
+        color: white;
+        text-align: center;
+        margin-top: 150px;
+        font-size: 3rem;
+        letter-spacing: 5px;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+          0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18,
+          0 0 75px #49ff18;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <h1>Pain</h1>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Card</title>
+    <style>
+      .card {
+        background-color: transparent;
+        width: 300px;
+        height: 500px;
+        perspective: 1000px; /* for the 3D effect */
+        margin: auto;
+      }
+      .card-faces {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease 0.5s;
+        transform-style: preserve-3d;
+      }
+      .card:hover .card-faces {
+        background: slateblue;
+        transform: rotateY(180deg);
+      }
+      .front-face,
+      .back-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        text-align: center;
+      }
+      .front-face {
+        background-color: slateblue;
+        color: whitesmoke;
+      }
+      .card .front-face img {
+        width: 100%;
+      }
+      .back-face {
+        display: grid;
+        place-content: center;
+        grid-gap: 10px;
+        background-color: dodgerblue;
+        color: black;
+        transform: rotateY(180deg); /*Important*/
+      }
+      .back-face p:nth-child(even) {
+        color: aqua;
+      }
+      .contact {
+        width: 100%;
+        position: absolute;
+        /* top: 0; */
+        left: 0;
+        bottom: 0;
+        padding: 10px 0;
+        font-weight: bolder;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-faces">
+        <div class="front-face">
+          <img src="img/myAvatar_(14).png" alt="John" />
+          <h1>John Doe</h1>
+          <p class="title">CEO & Founder</p>
+          <p>RRT Corporation</p>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <button class="contact">Contact</button>
+        </div>
+        <div class="back-face">
+          <p>Email:rrt@ceo.com</p>
+          <p>Facebook:Mokhless123</p>
+          <p>Twitter:Moga123</p>
+          <p>Hashnode:Mokhless123</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

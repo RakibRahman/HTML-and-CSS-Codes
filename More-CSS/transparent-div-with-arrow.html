@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transparent div with Arrow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        max-width: 1200px;
+        height: 60vh;
+        margin: 0 auto;
+        background: #cc3340;
+        display: flex;
+        align-items: center;
+      }
+      .box {
+        text-align: center;
+        padding: 20px 5px 0px;
+        width: 250px;
+        height: 150px;
+        border: 2px solid whitesmoke;
+        position: relative;
+        margin: 0 auto;
+      }
+      .box::after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 100%;
+        left: 50%;
+        border-top: 0px solid whitesmoke;
+        border-left: 0px solid whitesmoke;
+        border-right: 2px solid whitesmoke;
+        border-bottom: 2px solid whitesmoke;
+        /* transform-origin: top left; */
+        transform: rotate(45deg);
+        margin-top: -13px;
+        margin-left: -13px;
+        background: #cc3340;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam
+          tenetur nostrum nam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

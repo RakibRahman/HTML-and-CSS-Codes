@@ -144,3 +144,21 @@ nav {
   color: #fff;
   background-color: #136c72;
 }
+@media (max-width: 600px) {
+  nav,
+  .row {
+    display: block;
+  }
+  .nav__list {
+    margin-top: 10px;
+  }
+  .hero__img,
+  .hero__text,
+  .primary-content,
+  .sidebar {
+    width: 100%;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
+}

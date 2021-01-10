@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div Shapes Using Svg</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .waves {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        background: #320aea;
+      }
+      .waves h1 {
+        color: whitesmoke;
+        font-weight: 900;
+        margin-top: 0;
+        font-size: 3em;
+        line-height: 1.56;
+      }
+      .waves p {
+        margin: 0 auto;
+        width: 55ch;
+        font-size: 18px;
+        line-height: 1.65;
+        color: springgreen;
+        font-weight: bolder;
+      }
+      .waves svg {
+        display: block;
+      }
+      .container .top {
+        background: white;
+        /* transform: rotate(180deg); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="waves top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+          <path
+            fill="#320aea"
+            fill-opacity="1"
+            d="M0,160L48,181.3C96,203,192,245,288,229.3C384,213,480,139,576,106.7C672,75,768,85,864,106.7C960,128,1056,160,1152,192C1248,224,1344,256,1392,272L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+      <div class="waves">
+        <h1>Hello Guest</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia hic quo
+          vitae ducimus sed aliquam dolores repellat aliquid sapiente doloribus
+          magnam laborum recusandae, esse odio quae, in soluta mollitia porro.
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,160L48,181.3C96,203,192,245,288,229.3C384,213,480,139,576,106.7C672,75,768,85,864,106.7C960,128,1056,160,1152,192C1248,224,1344,256,1392,272L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

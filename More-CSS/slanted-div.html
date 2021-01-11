@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slanted DIV</title>
+    <style>
+      .wrapper {
+        margin: 200px auto;
+        width: 100%;
+        max-width: 800px;
+        height: 500px;
+        background: black;
+        display: flex;
+      }
+      .one {
+        width: calc(50% - 40px); /* calc width - half of border-left*/
+        height: 100%;
+        background: whitesmoke;
+      }
+      .two {
+        width: calc(50% + 40px);
+        height: 100%;
+        background: blueviolet;
+        border-left: 80px solid whitesmoke;
+        border-bottom: 500px solid transparent; /*Same Value as wrapper height*/
+        box-sizing: border-box;
+      }
+      .info {
+        text-align: center;
+        padding: 10px 20px;
+        line-height: 1.5;
+      }
+      .info img {
+        border-radius: 100vh;
+      }
+      @media (max-width: 650px) {
+        .wrapper {
+          flex-direction: column;
+        }
+        .one,
+        .two {
+          all: initial;
+        }
+        .one {
+          color: lawngreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="one">
+        <div class="info">
+          <img src="img/myAvatar_(14).png" alt="" />
+          <h1>Title</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            quaerat suscipit nisi itaque odio saepe nostrum nesciunt alias
+            repudiandae autem, ullam pariatur dolore distinctio officia nemo
+            molestias corporis voluptatibus reprehenderit.
+          </p>
+        </div>
+      </div>
+      <div class="two">
+        <div class="info">
+          <img src="img/myAvatar_(14).png" alt="" />
+          <h1>Title</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            quaerat suscipit nisi itaque odio saepe nostrum nesciunt alias
+            repudiandae autem, ullam pariatur dolore distinctio officia nemo
+            molestias corporis voluptatibus reprehenderit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

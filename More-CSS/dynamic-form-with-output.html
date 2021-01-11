@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form With Output</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrapper {
+        width: 300px;
+        height: auto;
+        background: #558cb3;
+        padding: 10px 15px 20px;
+        border-radius: 5px;
+        border-top-right-radius: 55px;
+      }
+      form,
+      form h1 {
+        text-align: center;
+        color: whitesmoke;
+      }
+      form label {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      form input {
+        caret-color: cornflowerblue;
+        border-radius: 100vh;
+        border: 0;
+        padding: 10px 5px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 5px 15px;
+        background: #413287;
+        color: whitesmoke;
+        border-radius: 100vh;
+        cursor: pointer;
+      }
+      .output {
+        max-width: 300px;
+        background: #413287;
+        padding: 20px;
+      }
+      .output input {
+        appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <h1>Enter your details</h1>
+        <label for="firstname">
+          First Name:
+          <input
+            type="text"
+            name=""
+            id="firstname"
+            oninput="showfirstname.value = firstname.value "
+          />
+        </label>
+        <label for="lastname">
+          Last Name:
+          <input
+            type="text"
+            name=""
+            id="lastname"
+            oninput="showlastname.value = lastname.value "
+          />
+        </label>
+        <label for="email">
+          Email:
+          <input
+            type="text"
+            name=""
+            id="email"
+            oninput="showemail.value = email.value "
+          />
+        </label>
+        <button>Submit</button>
+      </form>
+      <div class="output">
+        <input type="text" id="showfirstname" readonly />
+        <input type="text" id="showlastname" readonly />
+        <input type="text" id="showemail" readonly />
+      </div>
+    </div>
+  </body>
+</html>

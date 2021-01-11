@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Image Carousel</title>
+    <style>
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: saddlebrown;
+      }
+      .slider {
+        width: 1000px;
+        height: 100px;
+        background: whitesmoke;
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        display: flex;
+        overflow: hidden;
+      }
+      .slide {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        animation: carousel 8s linear infinite;
+      }
+      .slide img {
+        padding: 0 30px;
+        height: 70px;
+      }
+      @keyframes carousel {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="slider">
+        <div class="slide">
+          <img src="img/carousel/013-olive oil.png" alt="" />
+          <img src="img/carousel/015-bruschetta.png" alt="" />
+          <img src="img/carousel/021-dessert.png" alt="" />
+          <img src="img/carousel/024-burger.png" alt="" />
+          <img src="img/carousel/025-breakfast.png" alt="" />
+          <img src="img/carousel/031-tea.png" alt="" />
+          <img src="img/carousel/042-pot.png" alt="" />
+          <img src="img/carousel/050-cocktail.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="img/carousel/013-olive oil.png" alt="" />
+          <img src="img/carousel/015-bruschetta.png" alt="" />
+          <img src="img/carousel/021-dessert.png" alt="" />
+          <img src="img/carousel/024-burger.png" alt="" />
+          <img src="img/carousel/025-breakfast.png" alt="" />
+          <img src="img/carousel/031-tea.png" alt="" />
+          <img src="img/carousel/042-pot.png" alt="" />
+          <img src="img/carousel/050-cocktail.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

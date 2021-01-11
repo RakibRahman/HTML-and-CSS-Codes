@@ -39,6 +39,30 @@
           transform: translateX(0);
         }
       }
+      .slider::before,
+      .slider::after {
+        content: "";
+        height: 100px;
+        width: 200px;
+        position: absolute;
+
+        background: linear-gradient(
+          to right,
+          white 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: 2;
+      }
+      .slider::before {
+        top: 0;
+        left: 0;
+      }
+      .slider::after {
+        top: 0;
+        right: 0;
+        transform: rotateZ(180deg);
+        /* background: magenta; */
+      }
     </style>
   </head>
   <body>

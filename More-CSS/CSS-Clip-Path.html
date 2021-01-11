@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Clipping</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       .bg {
         width: 100vw;
         height: 100vh;
@@ -19,12 +24,55 @@
           0% 80%,
           0% 20%
         );
-        position: absolute;
+        position: relative;
+        /* position: absolute; */ /*otherwise it will overlap with another div*/
         z-index: -1;
+      }
+      .wrapper {
+        margin: 120px auto;
+        width: 30%;
+        background: black;
+        color: chartreuse;
+        position: relative;
+      }
+
+      .inner {
+        text-align: center;
+        width: 100%;
+        background: #00bbff;
+        color: white;
+        padding: 5px;
+        clip-path: circle(10% at 0% 0%);
+        transition: clip-path 0.3s ease-in-out;
+        opacity: 0;
+      }
+      .wrapper::before {
+        content: "Reveal Info";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+      }
+      .wrapper:hover .inner {
+        clip-path: circle(75%);
+        opacity: 1;
       }
     </style>
   </head>
   <body>
-    <div class="bg"></div>
+    <!-- <div class="bg"></div> -->
+    <div class="wrapper">
+      <div class="inner">
+        <img src="img/myAvatar_(14).png" alt="" />
+        <h1>Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          officia tenetur animi voluptatem deserunt quia rerum ipsum dolor
+          similique, quod vel? Mollitia omnis eius consequatur quaerat, nobis
+          accusantium dolore tempore!
+        </p>
+      </div>
+    </div>
   </body>
 </html>

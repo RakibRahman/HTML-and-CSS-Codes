@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Cube</title>
+    <style>
+      .wrapper {
+        width: 100%;
+        min-height: 800px;
+        background: black;
+        position: relative;
+      }
+      .cube-holder {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-box-shadow: 10px 10px 28px -8px rgba(241, 78, 13, 0.7);
+        -moz-box-shadow: 10px 10px 28px -8px rgba(241, 78, 13, 0.7);
+        box-shadow: 10px 10px 28px -8px rgba(241, 78, 13, 0.7);
+      }
+
+      .cube,
+      .cube > * {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease-in-out;
+      }
+      .cube .front {
+        background: url(img/carousel/024-burger.png) #fff no-repeat center;
+        background-size: 100%;
+      }
+      .cube .top {
+        background: url(img/carousel/031-tea.png) #fff no-repeat center;
+        background-size: 100%;
+        transform: translate(0, -100%) rotateX(90deg);
+        transform-origin: bottom;
+      }
+      .cube-holder:hover .cube {
+        transform: translate(0, 50%) rotateX(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="cube-holder">
+        <div class="cube">
+          <div class="top"></div>
+          <div class="front"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

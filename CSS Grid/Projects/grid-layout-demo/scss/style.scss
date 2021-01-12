@@ -24,7 +24,7 @@ body {
     "sbar1 sbar1 content content      content content content content        content content sbar2 sbar2"
     "sbar1 sbar1 content content      content content content content        content content sbar2 sbar2"
     "footer footer footer footer      footer footer footer footer          footer footer footer footer";
-  /* 3 colmuns and 6 rows */
+  /* 3 columns and 6 rows */
 }
 [class^="box-"] {
   display: grid;
@@ -48,4 +48,51 @@ body {
 }
 .box-6 {
   grid-area: footer;
+}
+
+// Media Query
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "pc": 1440px,
+);
+@mixin query($screen) {
+  @each $key, $value in $breakpoints {
+    @if ($screen == $key) {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+@include query(tablet) {
+  .wrapper {
+    grid-template-areas:
+      "nav nav nav nav                  nav nav nav nav                        nav nav nav nav"
+      "mini mini mini mini              mini mini mini mini                    mini mini mini mini"
+      "sbar1 sbar1 content content      content content content content        content content content content"
+      "sbar1 sbar1 content content      content content content content        content content content content"
+      "sbar1 sbar1 content content      content content content content        content content content content "
+      "sbar1 sbar1 content content      content content content content        content content content content "
+      "sbar2 sbar2 footer  footer       footer footer footer footer            footer footer footer footer";
+  }
+  [class^="box-"] {
+    border: 2px solid whitesmoke;
+  }
+}
+@include query(mobile) {
+  .wrapper {
+    grid-template-areas:
+      "nav nav nav nav                nav nav nav nav                                   nav nav nav nav"
+      "mini mini mini mini           mini mini mini mini                          mini mini mini mini"
+      "content content content content      content content content content        content content content content"
+      "content content content content      content content content content        content content content content"
+      "sbar1 sbar1 sbar1 sbar1      sbar1 sbar1 sbar1 sbar1        sbar1 sbar1 sbar1 sbar1 "
+      "sbar2 sbar2 sbar2 sbar2        sbar2 sbar2 sbar2 sbar2           sbar2 sbar2 sbar2 sbar2"
+      "footer footer footer footer      footer footer footer footer          footer footer footer footer";
+  }
+  [class^="box-"] {
+    border: 2px solid coral;
+  }
 }

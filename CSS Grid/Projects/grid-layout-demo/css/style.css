@@ -24,7 +24,7 @@ body {
   display: grid;
   grid-gap: 10px;
       grid-template-areas: "nav nav nav nav                nav nav nav nav                                   nav nav nav nav" "sbar1 sbar1 mini mini           mini mini mini mini                          mini mini sbar2 sbar2" "sbar1 sbar1 content content      content content content content        content content sbar2 sbar2" "sbar1 sbar1 content content      content content content content        content content sbar2 sbar2" "sbar1 sbar1 content content      content content content content        content content sbar2 sbar2" "footer footer footer footer      footer footer footer footer          footer footer footer footer";
-  /* 3 colmuns and 6 rows */
+  /* 3 columns and 6 rows */
 }
 
 [class^="box-"] {
@@ -77,5 +77,23 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+        grid-template-areas: "nav nav nav nav                  nav nav nav nav                        nav nav nav nav" "mini mini mini mini              mini mini mini mini                    mini mini mini mini" "sbar1 sbar1 content content      content content content content        content content content content" "sbar1 sbar1 content content      content content content content        content content content content" "sbar1 sbar1 content content      content content content content        content content content content " "sbar1 sbar1 content content      content content content content        content content content content " "sbar2 sbar2 footer  footer       footer footer footer footer            footer footer footer footer";
+  }
+  [class^="box-"] {
+    border: 2px solid whitesmoke;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+        grid-template-areas: "nav nav nav nav                nav nav nav nav                                   nav nav nav nav" "mini mini mini mini           mini mini mini mini                          mini mini mini mini" "content content content content      content content content content        content content content content" "content content content content      content content content content        content content content content" "sbar1 sbar1 sbar1 sbar1      sbar1 sbar1 sbar1 sbar1        sbar1 sbar1 sbar1 sbar1 " "sbar2 sbar2 sbar2 sbar2        sbar2 sbar2 sbar2 sbar2           sbar2 sbar2 sbar2 sbar2" "footer footer footer footer      footer footer footer footer          footer footer footer footer";
+  }
+  [class^="box-"] {
+    border: 2px solid coral;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -131,7 +131,28 @@ header {
   height: auto;
   position: relative;
 }
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__list--primary {
+  margin-bottom: 2em;
+}
+.nav__list--secondary .nav__link--button {
+  color: violet;
+  background: whitesmoke;
+  padding: 5px;
 
+  border-radius: 100vh;
+}
+.nav__list li a {
+  color: white;
+  text-decoration: none;
+}
+.nav__item {
+  margin-top: 0.8em;
+}
 .logo {
   height: 30px;
 }
@@ -169,8 +190,17 @@ header {
   .nav {
     visibility: visible;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
   }
-
+  .nav__list {
+    display: flex;
+    margin: 0;
+  }
+  .nav__item {
+    margin: 0 0 0 1.5em;
+  }
   .row {
     display: flex;
     justify-content: space-between;

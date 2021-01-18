@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Border</title>
+    <style>
+      button {
+        display: block;
+        margin: 150px auto;
+        background: transparent;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 0.5em 1em;
+        border: 10px solid;
+        /* simplified from preview image */
+        border-image: linear-gradient(
+            to right,
+            rgb(18, 194, 233),
+            rgb(196, 113, 237),
+            rgb(246, 79, 89)
+          )
+          1;
+      }
+      .btn2,
+      .btn3 {
+        border-style: solid;
+        border-width: 0;
+        border-left-width: 3px;
+        border-image: linear-gradient(
+            to right,
+            rgb(18, 194, 233),
+            rgb(196, 113, 237),
+            rgb(246, 79, 89)
+          )
+          1;
+      }
+      .btn3 {
+        border-right-width: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click Me</button>
+    <button class="btn2">Click Me</button>
+    <button class="btn3">Click Me</button>
+  </body>
+</html>

@@ -23,7 +23,7 @@ h1 {
 .card-deck .card {
   border: 1px solid red;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
 }
 
@@ -53,6 +53,17 @@ h1 {
     max-width: 40%;
     margin: 0px 20px;
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .card-deck .card a {
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0;
+  }
+  .card-deck .card a:last-child {
+    grid-column: 3/7;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.card-deck {
+  border: 1px solid red;
+  margin-top: 5px;
+  display: grid;
+  place-content: center;
+}
+
+.card-deck .card {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+
+.card-deck .card a {
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.card-deck .card a img {
+  max-width: 100%;
+  border-radius: 100vh;
+}
+
+.card-deck .card a p,
+.card-deck .card a h2 {
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 320px) {
+  .card-deck .card a {
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+  }
+  .card-deck .card a * {
+    max-width: 40%;
+    margin: 0px 20px;
+    align-self: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

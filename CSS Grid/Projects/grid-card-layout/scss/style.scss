@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.card-deck {
+  border: 1px solid red;
+
+  margin-top: 5px;
+  display: grid;
+  place-content: center;
+  & .card {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+
+    & a {
+      padding: 20px;
+      text-decoration: none;
+      text-align: center;
+      & img {
+        max-width: 100%;
+        border-radius: 100vh;
+      }
+      & p,
+      h2 {
+        margin: 10px 0;
+      }
+
+      @media screen and (min-width: 320px) {
+        grid-column: 1/9;
+        margin: 20px 0;
+        display: flex;
+        & * {
+          max-width: 40%;
+          margin: 0px 20px;
+          align-self: center;
+        }
+      }
+    }
+  }
+}

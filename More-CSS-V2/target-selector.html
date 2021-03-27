@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:TARGET Selector</title>
+    <style>
+      .tab div {
+        display: none;
+      }
+      .tab div:target {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+
+      <div id="link1">
+        <h3>Content to Link 1</h3>
+        <p>Hello World!</p>
+      </div>
+
+      <div id="link2">
+        <h3>Content to Link 2</h3>
+        <h4>Great success!</h4>
+      </div>
+
+      <div id="link3">
+        <h3>Content to Link 3</h3>
+        <p>Yeah!</p>
+      </div>
+    </div>
+  </body>
+</html>

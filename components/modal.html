@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal with CSS</title>
+    <style>
+      body {
+        padding: 2rem;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .modal {
+        display: none;
+      }
+
+      .modal:target {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .modal {
+        backdrop-filter: blur(2px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        padding: 2rem;
+      }
+      .modal__overlay {
+        border: 1px solid red;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        cursor: default;
+      }
+
+      .modal__content {
+        /* min-width: 480px; */
+        position: relative;
+        background-color: #f5f5f5;
+        padding: 2rem;
+      }
+
+      .modal__close {
+        color: initial;
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 0.5rem;
+        display: inline-block;
+      }
+      button {
+        padding: 5px;
+        background-color: blueviolet;
+      }
+      button a {
+        color: white;
+        text-decoration: none;
+      }
+      .content {
+        width: 400px;
+        height: auto;
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <button><a href="#modal"> Show Info </a></button>
+    <div class="modal" id="modal" tabindex="-1">
+      <a href="#" class="modal__overlay" aria-label="Close modal"></a>
+      <div class="modal__content">
+        <a href="#" class="modal__close" aria-label="Close modal">&times;</a>
+        <div class="content">
+          <img src="https://picsum.photos/200/300" alt="pic" />
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+            modi molestias quibusdam. Accusamus est laudantium perferendis
+            cumque assumenda, praesentium provident facilis. Aliquam ducimus
+            placeat officiis ab enim magnam exercitationem soluta.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

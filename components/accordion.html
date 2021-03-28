@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <style>
+      .toggleable__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
+      }
+
+      .toggleable__control:checked ~ .toggleable__content {
+        transition-timing-function: ease-in-out;
+        max-height: 800px;
+      }
+      .hidden--visually {
+        border: 0;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      body {
+        max-width: 600px;
+        padding: 3rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.333;
+        font-family: sans-serif;
+        margin: 0 auto;
+      }
+
+      .toggleable {
+        border-bottom: 2px solid lightgray;
+      }
+
+      .toggleable__label {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem 0;
+        cursor: pointer;
+      }
+
+      .toggleable__content {
+        margin-top: 1rem;
+        padding: 0 2rem;
+      }
+
+      .toggleable__control:checked ~ .toggleable__content {
+        margin-bottom: 1rem;
+      }
+
+      .toggleable__label::after {
+        content: "▼";
+        font-size: 0.8rem;
+      }
+
+      .toggleable__control:checked ~ .toggleable__label::after {
+        content: "▲";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toggleable">
+      <input
+        class="toggleable__control hidden--visually"
+        id="toggleable1"
+        type="checkbox"
+      />
+      <label class="toggleable__label" for="toggleable1"> Toggleable </label>
+
+      <div class="toggleable__content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+        sit amet. Senectus et netus et malesuada. Amet aliquam id diam maecenas
+        ultricies mi eget mauris pharetra. Elementum tempus egestas sed sed
+        risus pretium. Porta nibh venenatis cras sed felis eget velit aliquet
+        sagittis. Turpis egestas pretium aenean pharetra magna ac. Aliquet eget
+        sit amet tellus cras adipiscing enim. Massa id neque aliquam vestibulum
+        morbi. Augue mauris augue neque gravida in fermentum et. Augue ut lectus
+        arcu bibendum. Id aliquet lectus proin nibh nisl. Vulputate enim nulla
+        aliquet porttitor. Sollicitudin aliquam ultrices sagittis orci a
+        scelerisque.
+      </div>
+    </div>
+
+    <div class="toggleable">
+      <input
+        class="toggleable__control hidden--visually"
+        id="toggleable2"
+        type="checkbox"
+        name="t2"
+      />
+      <label class="toggleable__label" for="toggleable2"> Toggleable </label>
+
+      <div class="toggleable__content">
+        <img src="https://picsum.photos/200/300?random=1" />
+        <img src="https://picsum.photos/200/300?random=2" />
+      </div>
+    </div>
+
+    <div class="toggleable">
+      <input
+        class="toggleable__control hidden--visually"
+        id="toggleable3"
+        type="checkbox"
+      />
+      <label class="toggleable__label" for="toggleable3"> Toggleable </label>
+
+      <div class="toggleable__content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+        sit amet. Senectus et netus et malesuada. Amet aliquam id diam maecenas
+        ultricies mi eget mauris pharetra. Elementum tempus egestas sed sed
+        risus pretium. Porta nibh venenatis cras sed felis eget velit aliquet
+        sagittis. Turpis egestas pretium aenean pharetra magna ac. Aliquet eget
+        sit amet tellus cras adipiscing enim. Massa id neque aliquam vestibulum
+        morbi. Augue mauris augue neque gravida in fermentum et. Augue ut lectus
+        arcu bibendum. Id aliquet lectus proin nibh nisl. Vulputate enim nulla
+        aliquet porttitor. Sollicitudin aliquam ultrices sagittis orci a
+        scelerisque.
+      </div>
+    </div>
+
+    <div class="toggleable">
+      <input
+        class="toggleable__control hidden--visually"
+        id="toggleable4"
+        type="checkbox"
+      />
+      <label class="toggleable__label" for="toggleable4"> Toggleable </label>
+
+      <div class="toggleable__content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+        sit amet. Senectus et netus et malesuada. Amet aliquam id diam maecenas
+        ultricies mi eget mauris pharetra. Elementum tempus egestas sed sed
+        risus pretium. Porta nibh venenatis cras sed felis eget velit aliquet
+        sagittis. Turpis egestas pretium aenean pharetra magna ac. Aliquet eget
+        sit amet tellus cras adipiscing enim. Massa id neque aliquam vestibulum
+        morbi. Augue mauris augue neque gravida in fermentum et. Augue ut lectus
+        arcu bibendum. Id aliquet lectus proin nibh nisl. Vulputate enim nulla
+        aliquet porttitor. Sollicitudin aliquam ultrices sagittis orci a
+        scelerisque.
+      </div>
+    </div>
+
+    <div class="toggleable">
+      <input
+        class="toggleable__control hidden--visually"
+        id="toggleable5"
+        type="checkbox"
+      />
+      <label class="toggleable__label" for="toggleable5"> Toggleable </label>
+
+      <div class="toggleable__content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+        sit amet. Senectus et netus et malesuada. Amet aliquam id diam maecenas
+        ultricies mi eget mauris pharetra. Elementum tempus egestas sed sed
+        risus pretium. Porta nibh venenatis cras sed felis eget velit aliquet
+        sagittis. Turpis egestas pretium aenean pharetra magna ac. Aliquet eget
+        sit amet tellus cras adipiscing enim. Massa id neque aliquam vestibulum
+        morbi. Augue mauris augue neque gravida in fermentum et. Augue ut lectus
+        arcu bibendum. Id aliquet lectus proin nibh nisl. Vulputate enim nulla
+        aliquet porttitor. Sollicitudin aliquam ultrices sagittis orci a
+        scelerisque.
+      </div>
+    </div>
+  </body>
+</html>

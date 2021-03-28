@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Rating</title>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        font-size: 2rem;
+      }
+
+      .rating {
+        display: inline-flex;
+        flex-direction: row-reverse;
+      }
+      .hidden--visually {
+        border: 0;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      .rating__label {
+        cursor: pointer;
+        color: gray;
+        padding: 0 0.25rem;
+      }
+      .rating__icon::before {
+        content: "★";
+      }
+      .rating__input:hover ~ .rating__label {
+        color: lightgray;
+      }
+      .rating__input:checked ~ .rating__label {
+        color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rating">
+      <input
+        class="rating__input hidden--visually"
+        type="radio"
+        id="5-star"
+        name="rating"
+        value="5"
+        required
+      />
+      <label class="rating__label" for="5-star" title="5 out of 5 rating"
+        ><span class="rating__icon" aria-hidden="true"></span
+        ><span class="hidden--visually">5 out of 5 rating</span></label
+      >
+      <input
+        class="rating__input hidden--visually"
+        type="radio"
+        id="4-star"
+        name="rating"
+        value="4"
+      />
+      <label class="rating__label" for="4-star" title="4 out of 5 rating"
+        ><span class="rating__icon" aria-hidden="true"></span
+        ><span class="hidden--visually">4 out of 5 rating</span></label
+      >
+      <input
+        class="rating__input hidden--visually"
+        type="radio"
+        id="3-star"
+        name="rating"
+        value="3"
+      />
+      <label class="rating__label" for="3-star" title="3 out of 5 rating"
+        ><span class="rating__icon" aria-hidden="true"></span
+        ><span class="hidden--visually">3 out of 5 rating</span></label
+      >
+      <input
+        class="rating__input hidden--visually"
+        type="radio"
+        id="2-star"
+        name="rating"
+        value="2"
+      />
+      <label class="rating__label" for="2-star" title="2 out of 5 rating"
+        ><span class="rating__icon" aria-hidden="true"></span
+        ><span class="hidden--visually">2 out of 5 rating</span></label
+      >
+      <input
+        class="rating__input hidden--visually"
+        type="radio"
+        id="1-star"
+        name="rating"
+        value="1"
+      />
+      <label class="rating__label" for="1-star" title="1 out of 5 rating"
+        ><span class="rating__icon" aria-hidden="true"></span
+        ><span class="hidden--visually">1 out of 5 rating</span></label
+      >
+    </div>
+  </body>
+</html>

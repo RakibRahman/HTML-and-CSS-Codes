@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-decoration-break</title>
+    <style>
+      body {
+        font: size 20px;
+      }
+      div {
+        width: 500px;
+      }
+      span {
+        border: 5px solid red;
+        padding: 0em 1em;
+        border-radius: 16px;
+        font-size: 24px;
+        line-height: 2;
+      }
+      .ex1 {
+        box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+      .ex2 {
+        box-decoration-break: slice;
+        -webkit-box-decoration-break: slice;
+        /* default value  */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The <strong>box-decoration-break</strong> property specifies how the
+      background, padding, border, border-image, box-shadow, margin, and
+      clip-path of an element is applied when the box for the element is
+      fragmented.
+    </p>
+    <div>
+      <h1>What are you doing?</h1>
+      <span class="ex1">CSS<br />is<br />easy<br />to learn</span>
+      <br />
+      <span class="ex2">CSS<br />is<br />easy<br />to learn</span>
+    </div>
+  </body>
+</html>

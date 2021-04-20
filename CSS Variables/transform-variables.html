@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables Examples</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        margin-top: 50px;
+        gap: 20px;
+        border: 0;
+        outline: none;
+      }
+      .btn {
+        background-color: #f14e0d;
+        width: 130px;
+        height: 50px;
+        transform: scale(var(--scale, 1.2)) rotate(var(--rotate, 10deg));
+      }
+      .big {
+        --scale: 2;
+      }
+      .tilted {
+        margin: 40px;
+        --rotate: 130deg;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn"></button>
+    <button class="btn big"></button>
+    <button class="btn tilted"></button>
+    <button class="btn big tilted"></button>
+  </body>
+</html>

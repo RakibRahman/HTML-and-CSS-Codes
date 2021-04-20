@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resize</title>
+    <style>
+      .wrapper {
+        display: flex;
+        width: 800px;
+        justify-content: space-between;
+      }
+      div {
+        width: 320px;
+        overflow: hidden; /*important for resize */
+        text-align: center;
+        resize: both;
+      }
+      div img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <img src="../img/birds.png" alt="" />
+        <h1>Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          molestiae delectus, magnam repellendus, quisquam excepturi quaerat
+          exercitationem qui expedita dolor voluptate quidem, quis possimus
+          sequi culpa. Voluptatum pariatur nesciunt sint?
+        </p>
+      </div>
+      <div>
+        <img src="../img/birds.png" alt="" />
+        <h1>Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          molestiae delectus, magnam repellendus, quisquam excepturi quaerat
+          exercitationem qui expedita dolor voluptate quidem, quis possimus
+          sequi culpa. Voluptatum pariatur nesciunt sint?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
